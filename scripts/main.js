@@ -5,4 +5,5 @@
 
 import { MyModule } from './modules/my-module.js';
 
+
 MyModule.init();

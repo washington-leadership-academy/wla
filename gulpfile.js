@@ -13,13 +13,28 @@ var source = require('vinyl-source-stream');
 
 // Gulp modules.
 var less = require('gulp-less');
+var batch = require('gulp-batch');
+var watch = require('gulp-watch');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
 var minifyCSS = require('gulp-minify-css');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
 /**
- *
+ * Watches for changes to certain files and builds the site accordingly.
+ */
+gulp.task('watch', function() {
+  watch('./styles/**/*.less', batch(function (events, done) {
+    gulp.start('less', done);
+  }));
+
+  watch('./scripts/**/*.js', batch(function (events, done) {
+    gulp.start('browserify', done);
+  }));
+});
+
+/**
+ * Compiles es6 code into a browserify bundle.
  */
 gulp.task('browserify', function () {
   return browserify('./scripts/main.js', { debug: true })
@@ -36,7 +51,7 @@ gulp.task('browserify', function () {
 gulp.task('less', function () {
   var autoprefix = new LessPluginAutoPrefix({ browsers: ["last 3 versions"] });
 
-  return gulp.src('./styles/*.less')
+  return gulp.src('./styles/**/*.less')
     .pipe(less({
       plugins: [ autoprefix ],
       paths: [ path.join(__dirname, 'less', 'includes') ]
@@ -86,3 +101,5 @@ gulp.task('invalidate-cached-assets', function () {
     }))
     .pipe(gulp.dest('./'));
 });
+
+gulp.task('build', ['less', 'browserify']);
