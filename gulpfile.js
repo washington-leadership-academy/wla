@@ -6,6 +6,7 @@ var fs = require('fs');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var gulp = require('gulp');
+var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
 // Vinyl modules.
 var transform = require('vinyl-transform');
@@ -18,7 +19,6 @@ var watch = require('gulp-watch');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
 var minifyCSS = require('gulp-minify-css');
-var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
 /**
  * Watches for changes to certain files and builds the site accordingly.
