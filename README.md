@@ -16,7 +16,7 @@ First fork and then clone this repository. Then in the command line do the follo
 
 The complete list of tasks that are supported right now.
 
-- watch: Watches for changes to your .less and .js files in the styles and scripts directory.
-- browserify: Compiles main.js into a browserify bundle in /template/assets/scripts.
-- less: Compiles all Less files in the root of the styles folder and puts them in /template/assets/styles.
-- invalidate-cached-assets: Assets loaded from Squarespace's assets folder are cached aggressively. This task invalidates that cache, forcing the server to load in the latest version of the asset.
+- **watch** Watches for changes to your .less and .js files in the styles and scripts directory.
+- **browserify** Compiles main.js into a browserify bundle in /template/assets/scripts.
+- **less** Compiles all Less files in the root of the styles folder and puts them in /template/assets/styles.
+- **invalidate-cached-assets** Assets loaded from Squarespace's assets folder are cached aggressively. This task invalidates that cache, forcing the server to load in the latest version of the asset.
