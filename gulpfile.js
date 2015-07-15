@@ -102,4 +102,4 @@ gulp.task('invalidate-cached-assets', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('build', ['less', 'browserify']);
+gulp.task('build', ['less', 'browserify', 'invalidate-cached-assets']);
