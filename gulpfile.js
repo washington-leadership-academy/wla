@@ -57,7 +57,7 @@ gulp.task('browserify', function () {
 gulp.task('less', function () {
   var autoprefix = new LessPluginAutoPrefix({ browsers: ["last 3 versions"] });
 
-  return gulp.src('./styles/**/*.less')
+  return gulp.src('./styles/*.less')
     .pipe(less({
       plugins: [ autoprefix ],
       paths: [ path.join(__dirname, 'less', 'includes') ]
