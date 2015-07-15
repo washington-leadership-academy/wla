@@ -25,7 +25,7 @@ When editing Less files, anything in the root of the styles folder will get proc
 
 ### JS
 
-All JavaScript is processed with Browserify and Babel (Babelify). main.js is always the root of your website's JS and you can use ES6 imports to bring other files into the bundle.
+All JavaScript is processed with Browserify and Babel (Babelify). It will process each JS file in the root of the ./scripts folder and distribute it to the ./template/assets/scripts folder.
 
     // This is the main.js file, import all other files here.
     import { MyModule } from './modules/my-module.js';
@@ -34,10 +34,8 @@ All JavaScript is processed with Browserify and Babel (Babelify). main.js is alw
 
 The Gulp tasks create files in your /template/assets/ folder. In order to load these files up into your site you need to manually load the generated JavaScript and CSS files into your template. You can do that like this.
 
-    <!-- The script is always called main.js -->
-    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/{my-bundled-script}.js"></script>
 
-    <!-- The CSS file will take on whatever file name you gave it. -->
     <link rel="stylesheet" type="text/css" href="assets/{my-stylesheet}.css">
 
 ## Why Assets Instead of the Squarespace Script and CSS Loaders?
