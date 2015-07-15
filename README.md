@@ -20,7 +20,7 @@ Similar to grunt-init-squarespace, we're keeping your own custom styles and scri
 
 When editing Less files, anything in the root of the styles folder will get processed and turned into a corresponding file in the ./template/assets/styles folder. Files inside subfolders are not processed intentionally. This allows you to organize your Less in a sensible way, putting modular files in subfolders. You can use imports inside the files your root folder to combine files.
 
-   // This is the main less file, import all other files here.
+    // This is the main less file, import all other files here.
     @import "./modules/my-module.less";
 
 ### JS
