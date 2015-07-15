@@ -40,6 +40,13 @@ The Gulp tasks create files in your /template/assets/ folder. In order to load t
     <!-- The CSS file will take on whatever file name you gave it. -->
     <link rel="stylesheet" type="text/css" href="assets/{my-stylesheet}.css">
 
+## Why Assets Instead of the Squarespace Script and CSS Loaders?
+
+The default Squarespace script and CSS loaders cause some problems with custom code. Here are the main bullet points for why I chose to bypass them for this project:
+
+- The <squarespace:script> tag strips attributes, like async, for instance. Bypassing that gives you more freedom to load your JS the way you want.
+- Loading CSS files the Squarespace way always goes through the company's proprietary Less preprocessor. There are some edge case issues with that, the biggest one I've come across is using calc() in your CSS; when it goes through a Less preprocessor it evaluates the mathematical expression when you actually want the browser to do that.
+
 ## Tasks
 
 The complete list of tasks that are supported right now.
