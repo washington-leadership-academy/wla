@@ -37,9 +37,7 @@ gulp.task('watch', function() {
  * Compiles es6 code into a browserify bundle.
  */
 gulp.task('browserify', function () {
-  var files = fs.readdirSync('./scripts');
-
-  files.forEach(function(file) {
+  fs.readdirSync('./scripts').forEach(function(file) {
     if (file.indexOf('.js') > -1) {
       browserify('./scripts/' + file, { debug: true })
         .transform(babelify)
