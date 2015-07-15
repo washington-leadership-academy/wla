@@ -31,19 +31,23 @@ gulp.task('watch', function() {
   watch('./scripts/**/*.js', batch(function (events, done) {
     gulp.start('browserify', done);
   }));
-
-  console.log('Not\w watching for changes in ./styles and ./scripts directories.');
 });
 
 /**
  * Compiles es6 code into a browserify bundle.
  */
 gulp.task('browserify', function () {
-  return browserify('./scripts/main.js', { debug: true })
-    .transform(babelify)
-    .bundle()
-    .pipe(source('main.js'))
-    .pipe(gulp.dest('./template/assets/scripts/'));
+  var files = fs.readdirSync('./scripts');
+
+  files.forEach(function(file) {
+    if (file.indexOf('.js') > -1) {
+      browserify('./scripts/' + file, { debug: true })
+        .transform(babelify)
+        .bundle()
+        .pipe(source(file))
+        .pipe(gulp.dest('./template/assets/scripts/'));
+    }
+  });
 });
 
 /**
