@@ -1,6 +1,6 @@
 # Gulp Init Squarespace
 
-A boilerplate for working with Gulp and Squarespace. This repo makes it easy to write Less CSS and ES6 for your Squarespace project; it also ships with some Squarespace specific utility functions.
+A boilerplate for working with Gulp and Squarespace. This repo makes it easy to write Less CSS (the up-to-date JavaScript version, not the Squarespace version) and ES6 (using Babel for transpiling) for your Squarespace project; it also ships with some Squarespace specific utility functions.
 
 ## Getting Started
 
