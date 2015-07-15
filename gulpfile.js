@@ -31,6 +31,8 @@ gulp.task('watch', function() {
   watch('./scripts/**/*.js', batch(function (events, done) {
     gulp.start('browserify', done);
   }));
+
+  console.log('Not\w watching for changes in ./styles and ./scripts directories.');
 });
 
 /**
@@ -102,4 +104,12 @@ gulp.task('invalidate-cached-assets', function () {
     .pipe(gulp.dest('./'));
 });
 
+/**
+ * Make watch the default task.
+ */
+gulp.task('default', ['watch']);
+
+/**
+ * Create a build task that does everything, including cache invalidation.
+ */
 gulp.task('build', ['less', 'browserify', 'invalidate-cached-assets']);

@@ -12,6 +12,24 @@ First fork and then clone this repository. Then in the command line do the follo
     git clone https://{my-site-title}.squarespace.com/template.git
     gulp watch
 
+## Editing Files
+
+Similar to grunt-init-squarespace, we're keeping your own custom styles and scripts separate from the actual Squarespace template. When you want to edit your CSS and JS, go into the styles and scripts folders in the root directory.
+
+### Less
+
+When editing Less files, anything in the root of the styles folder will get processed and turned into a corresponding file in the ./template/assets/styles folder. Files inside subfolders are not processed intentionally. This allows you to organize your Less in a sensible way, putting modular files in subfolders. You can use imports inside the files your root folder to combine files.
+
+   // This is the main less file, import all other files here.
+    @import "./modules/my-module.less";
+
+### JS
+
+All JavaScript is processed with Browserify and Babel (Babelify). main.js is always the root of your website's JS and you can use ES6 imports to bring other files into the bundle.
+
+    // This is the main.js file, import all other files here.
+    import { MyModule } from './modules/my-module.js';
+
 ## Loading Files in your Template
 
 The Gulp tasks create files in your /template/assets/ folder. In order to load these files up into your site you need to manually load the generated JavaScript and CSS files into your template. You can do that like this.
@@ -21,16 +39,6 @@ The Gulp tasks create files in your /template/assets/ folder. In order to load t
 
     <!-- The CSS file will take on whatever file name you gave it. -->
     <link rel="stylesheet" type="text/css" href="assets/{my-stylesheet}.css">
-
-Rather than writing a task to combine all of your scripts and stylesheets, I've opted to rely on ES6 and Less imports to combine files for you. So, if you want to combine all of your CSS into a single file, simply create a file called main.css in the root of the styles folder that looks something like this.
-
-    // This is the main less file, import all other files here.
-    @import "./modules/my-module.less";
-
-Similarly, for your JavaScript you can do something like this.
-
-    // This is the main.js file, import all other files here.
-    import { MyModule } from './modules/my-module.js';
 
 ## Tasks
 
