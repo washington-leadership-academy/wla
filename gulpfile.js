@@ -38,13 +38,15 @@ gulp.task('watch', function() {
  */
 gulp.task('browserify', function () {
   fs.readdirSync('./scripts').forEach(function(file) {
-    if (file.indexOf('.js') > -1) {
-      browserify('./scripts/' + file, { debug: true })
-        .transform(babelify)
-        .bundle()
-        .pipe(source(file))
-        .pipe(gulp.dest('./template/assets/scripts/'));
+    if (file.indexOf('.js') === -1) {
+      return;
     }
+
+    browserify('./scripts/' + file, { debug: true })
+      .transform(babelify)
+      .bundle()
+      .pipe(source(file))
+      .pipe(gulp.dest('./template/assets/scripts/'));
   });
 });
 
