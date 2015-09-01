@@ -1,24 +1,17 @@
-// Core node modules.
 var path = require('path');
 var fs = require('fs');
-
-// Third party node modules.
-var browserify = require('browserify');
 var babelify = require('babelify');
+var browserify = require('browserify');
 var gulp = require('gulp');
-var LessPluginAutoPrefix = require('less-plugin-autoprefix');
-
-// Vinyl modules.
-var transform = require('vinyl-transform');
-var source = require('vinyl-source-stream');
-
-// Gulp modules.
 var less = require('gulp-less');
 var batch = require('gulp-batch');
 var watch = require('gulp-watch');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
 var minifyCSS = require('gulp-minify-css');
+var transform = require('vinyl-transform');
+var source = require('vinyl-source-stream');
+var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
 /**
  * Watches for changes to certain files and builds the site accordingly.
