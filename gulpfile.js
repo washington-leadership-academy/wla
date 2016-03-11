@@ -3,22 +3,24 @@ var fs = require('fs');
 var babelify = require('babelify');
 var browserify = require('browserify');
 var gulp = require('gulp');
-var less = require('gulp-less');
 var batch = require('gulp-batch');
 var watch = require('gulp-watch');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
+var sass = require('gulp-sass');
+var autoprefixer = require('autoprefixer');
+var postcss = require('gulp-postcss');
+var sourcemaps = require('gulp-sourcemaps');
 var minifyCSS = require('gulp-minify-css');
 var transform = require('vinyl-transform');
 var source = require('vinyl-source-stream');
-var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
 /**
  * Watches for changes to certain files and builds the site accordingly.
  */
 gulp.task('watch', function() {
-  watch('./styles/**/*.less', batch(function (events, done) {
-    gulp.start('less', done);
+  watch('./styles/**/*.scss', batch(function (events, done) {
+    gulp.start('sass', done);
   }));
 
   watch('./scripts/**/*.js', batch(function (events, done) {
@@ -44,17 +46,15 @@ gulp.task('browserify', function () {
 });
 
 /**
- * Runs your CSS through the JavaScript version of Less rather than the
- * Squarespace custom Less compiler.
+ * Compiles sass into prefixed, minified CSS.
  */
-gulp.task('less', function () {
-  var autoprefix = new LessPluginAutoPrefix({ browsers: ["last 3 versions"] });
-
-  return gulp.src('./styles/*.less')
-    .pipe(less({
-      plugins: [ autoprefix ],
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
+gulp.task('sass', function () {
+  return gulp.src('./styles/**/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass()
+    .on('error', sass.logError))
+    .pipe(postcss([autoprefixer]))
+    .pipe(sourcemaps.write())
     .pipe(minifyCSS())
     .pipe(gulp.dest('./template/assets/styles'));
 });
@@ -109,4 +109,4 @@ gulp.task('default', ['watch']);
 /**
  * Create a build task that does everything, including cache invalidation.
  */
-gulp.task('build', ['less', 'browserify', 'invalidate-cached-assets']);
+gulp.task('build', ['sass', 'browserify', 'invalidate-cached-assets']);
