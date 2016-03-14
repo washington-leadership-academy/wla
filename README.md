@@ -1,3 +1,6 @@
+# Washington Leadership Academy
+A custom Squarespace website for washingtonleadershipacademy.org
+
 # Gulp Init Squarespace
 
 A boilerplate for working with Gulp and Squarespace. This repo makes it easy to write Less CSS (the up-to-date JavaScript version, not the Squarespace version) and ES6 (using Babel for transpiling) for your Squarespace project; it also ships with some Squarespace specific utility functions.
