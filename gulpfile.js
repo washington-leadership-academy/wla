@@ -49,7 +49,7 @@ gulp.task('browserify', function () {
  * Compiles sass into prefixed, minified CSS.
  */
 gulp.task('sass', function () {
-  return gulp.src('./styles/**/*.scss')
+  return gulp.src('./styles/app.scss')
     .pipe(sourcemaps.init())
     .pipe(sass()
     .on('error', sass.logError))
