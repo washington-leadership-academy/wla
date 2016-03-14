@@ -1,6 +1,14 @@
 # Washington Leadership Academy
 A custom Squarespace website for washingtonleadershipacademy.org
 
+## Waffle
+[![Design Stories in Progress](https://badge.waffle.io/washington-leadership-academy/wla.svg?label=design&title=Design)](http://waffle.io/washington-leadership-academy/wla)
+[![Dev Stories in Progress](https://badge.waffle.io/washington-leadership-academy/wla.svg?label=dev&title=Dev)](http://waffle.io/washington-leadership-academy/wla)
+[![Stories in QA](https://badge.waffle.io/washington-leadership-academy/wla.svg?label=QA%2FQA&title=QA)](http://waffle.io/washington-leadership-academy/wla)
+[![Stories in Client Review](https://badge.waffle.io/washington-leadership-academy/wla.svg?label=Client%20Review&title=Review)](http://waffle.io/washington-leadership-academy/wla)
+
+This project is being designed and developed in the open. Follow along and see our progress on this [Waffle board](https://waffle.io/washington-leadership-academy/wla).
+
 # Gulp Init Squarespace
 
 A boilerplate for working with Gulp and Squarespace. This repo makes it easy to write Less CSS (the up-to-date JavaScript version, not the Squarespace version) and ES6 (using Babel for transpiling) for your Squarespace project; it also ships with some Squarespace specific utility functions.
