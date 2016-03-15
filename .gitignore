@@ -2,6 +2,3 @@ node_modules
 npm-debug.log
 sftp-config.json
 .sqs-cache
-template/*
-
-!template/.gitkeep
