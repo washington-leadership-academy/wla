@@ -15,8 +15,11 @@ This project is being designed and developed in the open. Follow along and see o
 1. Clone this repo.
 2. `npm install` to install dependencies.
 3. `npm install -g node-squarespace-server` to install [node-squarespace-server](https://github.com/NodeSquarespace/node-squarespace-server).
+4. Update server settings in `template/template.conf` as needed
 
 #### Run
 1. `cd template`
-2. Run `gulp watch` to watch and compile static assets.
-3. Run `sqs server` to start the server.
+3. Run `gulp watch` to watch and compile static assets.
+3. Run `sqs server` to start the server. The default port is `localhost:5050`.
+
+Note: The first time you run this, you'll need to enter credentials for the squarespace site set in `template/template.conf`.
