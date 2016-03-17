@@ -1,0 +1,20 @@
+// Override styles for squarespace annoucement bar
+
+.sqs-announcement-bar-content {
+    background-color: #eee;
+
+    .sqs-announcement-bar-text p {
+        color: #222;
+
+        a {
+            color: #4cc !important;
+        }
+
+        &:before {
+            content: 'Alert';
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-right: 1em; 
+        }
+    }
+}
