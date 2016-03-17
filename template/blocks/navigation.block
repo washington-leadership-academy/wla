@@ -1,5 +1,5 @@
 <nav id="main-navigation" class="main-navigation" data-content-field="navigation-mainNav">
-  <ul class="main-navigation-list">
+  <ul class="inline-list">
     {.repeated section items}
 
         <li class="main-navigation-item {.section active} active-link{.end}{.if folderActive} active-folder{.end}">

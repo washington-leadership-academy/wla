@@ -3,10 +3,9 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1">
-    <link href="/assets/styles/app.css" rel="stylesheet">
-
     <!--Include sqs scripts, meta tags, and user content from the code injection tab.-->
     {squarespace-headers}
+    <link href="/assets/styles/app.css" rel="stylesheet">
 </head>
 <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
 
