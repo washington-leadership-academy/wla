@@ -1,0 +1,12 @@
+<!-- Summary Block -->
+
+<div class="row">
+    <div class="columns small-10 small-centered">
+        <div class="summary">
+            <div class="panel" data-content-field="main-content">
+                <h1 class="text-center">Summary</h1>
+                {squarespace.main-content}
+            </div>
+        </div>
+    </div>
+</div>

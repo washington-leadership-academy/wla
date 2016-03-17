@@ -1,0 +1,9 @@
+<!-- Open Content -->
+
+<div class="row">
+    <div class="columns small-10 small-centered">
+        <div class="panel">
+            <squarespace:block-field id="blockField1" columns="12"/>
+        </div>
+    </div>
+</div>
