@@ -40,8 +40,12 @@
 // @import 'foundation/components/offcanvas';
 // @import 'foundation/components/visibility';
 
-@import "components/component";
+// WLA Components
+@import "components/typography";
+@import "components/animations";
+@import "components/navigation";
 @import "components/footer";
 @import "components/announcement-bar";
+@import "components/utilities";
 
 @import "base"

@@ -3,13 +3,18 @@
 
 // Typefaces
 
-$source-sans: 'Source Sans Pro';
+$domine: 'Domine';
+$montserrat: 'Montserrat';
+$source-sans-pro: 'Source Sans Pro';
 
 // Primary Colors
 $deepindigo: #161e3a;
 $gold: #ffb42d;
 $jerseywhite: #f2f7f9;
 $seamint: #6bd8d3;
+
+// Secondary Colors
+$paleindigo: #71788C;
 
 // Z-index vars
 $z0 : 0;
@@ -114,8 +119,8 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: $source-sans, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-sans-serif: $source-sans-pro, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: $domine, Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
@@ -158,7 +163,7 @@ $body-font-family: $font-family-sans-serif;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
-// $font-smoothing: antialiased;
+$font-smoothing: antialiased;
 
 // We use these to control text direction settings
 // $text-direction: ltr;

@@ -4,7 +4,7 @@
         <div class="columns small-12">
             {.section website}
             <h1 class="site-title" data-content-field="site-title">
-                <div class="footer__logo">
+                <div class="footer__logo text-center mb2">
                     {.section logoImageUrl}
                     <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}">
                     {.or}
@@ -15,7 +15,7 @@
             {.end}
         </div>
         <div class="columns small-12" data-content-field="location">
-            <ul class="footer__contact-details">
+            <ul class="footer__contact-details text-center mb2">
             {.section website.location}
                 {.section addressLine1}
                 <li>
@@ -31,12 +31,12 @@
             {.section websiteSettings}
                 {.section contactEmail}
                 <li>
-                    <a class="link" href"mailto:{@}">{@}</a>
+                    <a class="text-underline" href="mailto:{@}">{@}</a>
                 </li>
                 {.end}
                 {.section contactPhoneNumber}
                 <li>
-                    <a href"tel:{@}">{@}</a>
+                    <a href="tel:{@}">{@}</a>
                 </li>
                 {.end}
             {.end}
@@ -44,7 +44,7 @@
         </div>
 
         <div class="columns small-12" data-content-field="connected-accounts">
-            <div class="social-links">
+            <div class="social-links u-center text-center">
             {.repeated section website.socialAccounts}
                 <a href="{profileUrl}">
                     {.equal? serviceName "facebook"}

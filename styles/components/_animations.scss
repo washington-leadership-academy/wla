@@ -1,0 +1,11 @@
+// Animations and Transitions
+
+
+// Include a simple transition for a specified property
+// If no property is specified, it will default to "all"
+
+// TODO: Add support for multiple properties
+@mixin transition-simple($property) {
+    $property: if(length($property) == 0, all, $property);
+    transition: $property 200ms ease-in;
+}

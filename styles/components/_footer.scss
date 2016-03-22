@@ -1,31 +1,29 @@
-header,
-.header {
-    background: $deepindigo;
-    color: $jerseywhite;
-}
-
+// Footer
 
 .footer {
     background: $deepindigo;
-    color: $jerseywhite;
-    padding: 3rem 0;
+    color: $paleindigo;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     a {
-        color: $jerseywhite;
+        color: $paleindigo;
+        @include transition-simple(color)
+
+        &:hover {
+            color: $jerseywhite;
+        }
     }
 }
 
 .footer__logo {
-    margin-bottom: 2rem;
+    // TOOD: Replace with SVG asset so we can style the fill
     opacity: .2;
-    text-align: center;
 }
 
 .footer__contact-details {
     list-style-type: none;
-    margin-bottom: 2rem;
     margin-left: 0;
-    text-align: center;
 
     @media #{$medium-up} {
         li {
@@ -45,26 +43,34 @@ header,
 }
 
 .social-links {
-    margin: auto;
-    text-align: center;
-
     a {
         margin: .5rem;
         text-transform: capitalize;
+        font-weight: 700;
+
+        svg {
+            path {
+                fill: $paleindigo;
+                @include transition-simple(fill)
+            }
+
+            &:hover {
+                path { fill: $jerseywhite; }
+            }
+        }
     }
 }
 
 .footer__bar {
-    background-color: #0C1220;
+    background-color: darken($deepindigo, 5%);
+    padding: 1rem;
 
     .copyright {
-        color: $jerseywhite;
+        color: $paleindigo;
         opacity: .75;
-        padding: 1rem;
         text-transform: uppercase;
+        font-family: $montserrat;
+        font-size: rem-calc(12);
+        letter-spacing: 1px;
     }
-}
-
-.link {
-    text-decoration: underline;
 }
