@@ -1,73 +1,85 @@
 <!-- Footer Region -->
-    <footer>
-        <div class="row">
-            <div class="columns small-12 medium-3">
-                {.section website}
-                <h1 class="site-title" data-content-field="site-title">
-                    <a href="/">
-                        {.section logoImageUrl}
-                        <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}">
-                        {.or}
-                        <img class="logo" src="http://placehold.it/200x50?text=logo" alt="{siteTitle}">
-                        {.end}
-                    </a>
-                </h1>
+<footer class="footer">
+    <div class="row">
+        <div class="columns small-12">
+            {.section website}
+            <h1 class="site-title" data-content-field="site-title">
+                <div class="footer__logo">
+                    {.section logoImageUrl}
+                    <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}">
+                    {.or}
+                    <img class="logo" width="200" src="assets/images/wla-logo.svg" alt="{siteTitle}">
+                    {.end}
+                </div>
+            </h1>
+            {.end}
+        </div>
+        <div class="columns small-12" data-content-field="location">
+            <ul class="footer__contact-details">
+            {.section website.location}
+                {.section addressLine1}
+                <li>
+                    {@}
+                </li>
                 {.end}
-            </div>
+                {.section addressLine2}
+                <li>
+                    {@}
+                </li>
+                {.end}
+            {.end}
+            {.section websiteSettings}
+                {.section contactEmail}
+                <li>
+                    <a class="link" href"mailto:{@}">{@}</a>
+                </li>
+                {.end}
+                {.section contactPhoneNumber}
+                <li>
+                    <a href"tel:{@}">{@}</a>
+                </li>
+                {.end}
+            {.end}
+            </ul>
+        </div>
 
-            <div class="columns small-12 medium-6" data-content-field="location">
-                {.section website.location}
-                <ul>
-                    {.section addressTitle}
-                    <li>
-                        {addressTitle} {.or} Physical Business Name
-                    </li>
+        <div class="columns small-12" data-content-field="connected-accounts">
+            <div class="social-links">
+            {.repeated section website.socialAccounts}
+                <a href="{profileUrl}">
+                    {.equal? serviceName "facebook"}
+                        <svg width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="#fff" d="M268 512V284h78.978l11.736-92H268v-62.426c0-26.352 7.665-44.31 45.455-44.31L362 85.24V3.837C353 2.728 324.7.25 291.416.25 221.926.25 174 42.666 174 120.56V192H96v92h78v228h94z"/>
+                        </svg>
+                    {.or equal? serviceName "twitter"}
+                        <svg width="16" class="geomicon" data-icon="twitter" viewBox="0 0 32 32" style="fill:currentcolor">
+                            <title>twitter icon</title>
+                            <path fill="#fff" d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"></path>
+                        </svg>
+                    {.or equal? serviceName "instagram"}
+                        <svg width="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <title>instagram icon</title>
+                            <path fill="#fff" fill-rule="evenodd" d="M58.966 511.373c-32.562 0-58.964-26.41-58.964-58.996V59.213C.002 26.647 26.404.25 58.966.25h393.2c32.566 0 58.964 26.397 58.964 58.963v393.164c0 32.585-26.398 58.996-58.964 58.996h-393.2zm393.2-294.9H407.67c3.242 12.584 5.157 25.733 5.157 39.33 0 86.87-70.406 157.27-157.263 157.27-86.852 0-157.263-70.4-157.263-157.27 0-13.597 1.925-26.747 5.167-39.33H58.965v216.262c0 10.842 8.805 19.643 19.68 19.643h353.842c10.873 0 19.68-8.8 19.68-19.643V216.472zm0-137.604c0-10.852-8.805-19.657-19.68-19.657h-58.963c-10.86 0-19.656 8.805-19.656 19.656v58.986c0 10.85 8.796 19.656 19.656 19.656h58.964c10.873 0 19.68-8.805 19.68-19.656V78.87zM255.563 157.51c-54.29 0-98.294 44-98.294 98.29 0 54.28 44.003 98.303 98.293 98.303 54.29 0 98.303-44.022 98.303-98.303 0-54.29-44.012-98.29-98.303-98.29z"/>
+                        </svg>
+                    {.or}
+                        {serviceName}
                     {.end}
-                    {.section addressLine1}
-                    <li>
-                        {addressLine1} {.or} Physical Address Line 1
-                    {.end}
-                    </li>
-                    {.section addressLine2}
-                    <li>
-                        {addressLine2} {.or} Physical Address Line 2
-                    </li>
-                    {.end}
-                </ul>
-                {.end}
-
-                {.section websiteSettings}
-                <ul>
-                    {.section contactEmail}
-                    <li>
-                        {contactEmail} {.or} email@example.com
-                    </li>
-                    {.end}
-                    {.section contactPhoneNumber}
-                    <li>
-                        {contactPhoneNumber} {.or} (000)000-0000
-                    </li>
-                    {.end}
-                </ul>
-                {.end}
-            </div>
-
-            <div class="columns small-12 medium-3" data-content-field="connected-accounts">
-                <h3>Social Media Icons</h3>
-                {.repeated section website.socialAccounts}
-                    <p>
-                        <strong>{serviceName}</strong>: <a href="{profileUrl}">{profileUrl}<a>
-                    </p>
-                {.end}
+                </a>
+            {.end}
             </div>
         </div>
-        <div class="row">
-            <div class="columns small-12">
-                <hr>
-                <p>Copyright {website.contentModifiedOn|date %Y} {websiteSettings.storeSettings.businessName}</p>
+    </div>
+</footer>
+
+<footer class="footer__bar">
+    <div class="row">
+        <div class="columns small-12">
+            <div class="copyright text-center">
+                Copyright {website.contentModifiedOn|date %Y} &middot; {websiteSettings.storeSettings.businessName}
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
 </html> 
