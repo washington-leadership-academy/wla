@@ -8,7 +8,7 @@
 
     a {
         color: $paleindigo;
-        @include transition-simple(color)
+        @include transition(color);
 
         &:hover {
             color: $jerseywhite;
@@ -51,7 +51,7 @@
         svg {
             path {
                 fill: $paleindigo;
-                @include transition-simple(fill)
+                @include transition(fill);
             }
 
             &:hover {

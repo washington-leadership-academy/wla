@@ -29,10 +29,10 @@
     pointer-events: none;
     padding-top: rem-calc(75);
     position: fixed;
-    transition: opacity 200ms;
     width: 100%;
     z-index: $z9;
     overflow: auto;
+    @include transition(opacity);
 
     &.is-available {
         opacity: 1;
@@ -67,8 +67,8 @@
     height: 2px;
     margin-bottom: 4px;
     position: relative;
-    @include transition-simple(all);
     width: 20px;
+    @include transition(all);
 
     .nav-icon.is-active & {
 
@@ -117,8 +117,8 @@
         position: absolute;
         top: 100%;
         transform: translateY(8px);
-        transition: opacity 200ms, transform 200ms;
         width: 100%;
+        @include transition(opacity, transform);
     }
 
     &:hover:after,
@@ -161,8 +161,8 @@
                     position: absolute;
                     top: 100%;
                     transform: translateY(2px);
-                    transition: opacity 200ms, transform 200ms;
                     width: 100%;
+                    @include transition(opacity, transform);
                 }
             }
         }
@@ -176,7 +176,6 @@
     z-index: $z1;
 
     &:before {
-        // @include transition-simple(opacity);
         background: #fff;
         content: '';
         height: 100%;
@@ -185,9 +184,9 @@
         position: absolute;
         top: 0;
         transform: translateY(8px);
-        transition: opacity 200ms, transform 200ms;
         width: 100%;
         z-index: -1;
+        @include transition(opacity, transform);
 
         .navigation--small.is-available & {
             display: none;
@@ -228,7 +227,7 @@
     opacity: 0;
     pointer-events: none;
     transform: translateY(8px);
-    transition: opacity 200ms, transform 200ms;
+    @include transition(opacity, transform);
 
     .is-active + & {
         opacity: 1;
@@ -243,8 +242,7 @@
         display: block;
         padding-bottom: .5rem;
         padding-top: .5rem;
-        @include transition(color);
-        @include transition(margin-left);
+        @include transition(color, margin-left);
 
         &:hover {
             color: lighten($deepindigo, 30%);

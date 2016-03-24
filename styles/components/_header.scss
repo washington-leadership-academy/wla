@@ -22,8 +22,7 @@
 .logo {
     width: 150px;
     opacity: 1;
-    @include transition-simple(opacity);
-    @include transition-simple(width);
+    @include transition(opacity, width);
 
     @media #{$medium-up} {
         width: 175px;
