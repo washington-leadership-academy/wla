@@ -5,11 +5,13 @@
             {.section website}
             <h1 class="site-title" data-content-field="site-title">
                 <div class="footer__logo text-center mb2">
+                    <a href="/">
                     {.section logoImageUrl}
-                    <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}">
-                    {.or}
-                    <img class="logo" width="200" src="assets/images/wla-logo.svg" alt="{siteTitle}">
+                        <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}">
+                        {.or}
+                        <img class="logo" width="200" src="/assets/images/wla-logo.svg" alt="{siteTitle}">
                     {.end}
+                    </a>
                 </div>
             </h1>
             {.end}
@@ -80,6 +82,7 @@
         </div>
     </div>
 </footer>
-
+<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+<script src="/assets/scripts/app.js"></script>
 </body>
 </html> 

@@ -1,0 +1,36 @@
+// Header
+
+.header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $deepindigo;
+    color: $paleindigo;
+    padding-bottom: 3rem;
+    padding-top: 2em;
+    
+    @media #{$medium-up} {
+        padding-top: 0;
+    }
+}
+
+.header__brand {
+    display: inline-block;
+    position: relative;
+    z-index: $z10;
+}
+
+.logo {
+    width: 150px;
+    opacity: 1;
+    @include transition-simple(opacity);
+    @include transition-simple(width);
+
+    @media #{$medium-up} {
+        width: 175px;
+    }
+
+    &:hover {
+        opacity: .85;
+    }
+
+}

@@ -1,1 +1,8 @@
 // Base layout styles
+
+body {
+    &.is-unscrollable {
+        overflow: hidden !important;
+        height: 100% !important;
+    }
+}

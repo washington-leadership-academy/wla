@@ -1,62 +1,85 @@
-<nav id="main-navigation" class="main-navigation" data-content-field="navigation-mainNav">
-  <ul class="inline-list">
-    {.repeated section items}
-
-        <li class="main-navigation-item {.section active} active-link{.end}{.if folderActive} active-folder{.end}">
-
-          {.folder?}
-
-            <!--FOLDER-->
-
-              <a href="{collection.fullUrl}">{collection.navigationTitle}</a>
-
-              <ul>
-
-                {.repeated section items}
-
-                  <!--COLLECTION IN A FOLDER-->
-
-                  {.collection?}
-                    <li class="{.section active} active-link{.end}">
-                      <a href="{collection.fullUrl}">
-                        {collection.navigationTitle}
-                      </a>
-                    </li>
-                  {.end}
-
-                  <!--EXTERNAL LINK IN A FOLDER-->
-
-                  {.section externalLink}
-                    <li class="main-navigation-dropdown">
-                      <a href="{url}"{.section newWindow} target="_blank"{.end}>
-                        {title}
-                      </a>
-                    </li>
-                  {.end}
+<div class="row show-for-medium-up">
+    <div class="small-12 columns">
+        <a class="navigation__button button right" href="http://mailchimp.com">Subscribe to Our Newsletter</a>
+    </div>
+</div>
+<div class="row">
+    <!-- Site logo -->
+    <div class="small-12 medium-4 large-3 columns">
+        {.section website}
+        <h1 class="header__brand" data-content-field="site-title">
+            <span class="show-for-sr">{siteTitle}</span>
+            <a class="hide-for-sr" href="/">
+                {.section logoImageUrl}
+                <img class="logo" width="175" src="{logoImageUrl}?format=original" alt="{siteTitle}">
+                {.or}
+                <img class="logo" width="175" src="/assets/images/wla-logo.svg" alt="{siteTitle}">
                 {.end}
-
-              </ul>
-              
-          {.or}
-
-            <!--COLLECTION-->
-
-            {.section collection}
-              <a href="{fullUrl}">{navigationTitle}</a>
+            </a>
+        </h1>
+        {.end}
+        <div class="right show-for-small-only">
+            <div class="nav-icon mt1 mr1">
+                <span class="nav-icon__bar"></span>
+                <span class="nav-icon__bar"></span>
+                <span class="nav-icon__bar"></span>
+            </div>
+        </div>
+    </div>
+    <!-- Main navigation -->
+    <div class="small-12 medium-8 large-9 columns">
+    <div class="navigation--small">
+        <nav class="navigation mt1" data-content-field="navigation-mainNav">
+            <ul>
+            {.repeated section items}
+                <li class="navigation__item
+                        {.folder?} navigation__item--parent js-nav-dropdown{.end}
+                        {.section active} is-current{.end}
+                        {.if folderActive} is-current{.end}">
+                {.folder?}
+                    <a class="navigation__dropdown-anchor js-nav-dropdown-anchor" href="{collection.fullUrl}">
+                        <span>{collection.navigationTitle}</span>
+                        <svg class="icon-caret" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" fill="#fff">
+                            <path d="M6 8 L10 4 L2 4 Z"></path>
+                        </svg>
+                    </a>
+                    <ul class="navigation__dropdown-menu js-nav-dropdown-menu">
+                    {.repeated section items}
+                        {.collection?}
+                        <!-- Collection within folder -->
+                        <li class="navigation__dropdown-item {.section active}is-current{.end}">
+                            <a href="{collection.fullUrl}">
+                                {collection.navigationTitle}
+                            </a>
+                        </li>
+                        {.end}
+                        {.section externalLink}
+                        <!-- External link within folder -->
+                        <li class="navigation__dropdown-item">
+                            <a href="{url}"{.section newWindow} target="_blank"{.end}>
+                                {title}
+                            </a>
+                        </li>
+                        {.end}
+                    {.end}
+                    </ul>
+                    
+                {.or}
+                    {.section collection}
+                        <!-- Collection -->
+                        <a href="{fullUrl}">{navigationTitle}</a>
+                    {.end}
+                    {.section externalLink}
+                        <!-- External link-->
+                        <a href="{url}"{.section newWindow} target="_blank"{.end}>
+                            {title}
+                        </a>
+                    {.end}
+                {.end}
+                </li>        
             {.end}
-
-            <!--EXTERNAL LINK-->
-
-            {.section externalLink}
-              <a href="{url}"{.section newWindow} target="_blank"{.end}>
-                {title}
-              </a>
-            {.end}
-
-          {.end}
-
-        </li>
-        
-    {.end}
-  </ul>
-</nav>
+            </ul>
+        </nav>
+    </div>
+    </div>
+</div>
