@@ -4,12 +4,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: $deepindigo;
-    color: $paleindigo;
-    padding-bottom: 3rem;
-    padding-top: 2em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     
     @media #{$medium-up} {
-        padding-top: 0;
+        padding: 0;
     }
 }
 
@@ -32,4 +31,17 @@
         opacity: .85;
     }
 
+}
+
+.button--header-cta {
+    top: 0;
+    font-size: 13px;
+    background-color: rgba(0,0,0,.4);
+    padding: .65rem 1.5rem;
+    border-radius: 0 0 3px 3px;
+    margin-bottom: 0;
+
+    &:hover {
+        background-color: $deepindigo;
+    }
 }

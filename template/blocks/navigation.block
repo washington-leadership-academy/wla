@@ -1,6 +1,6 @@
 <div class="row show-for-medium-up">
     <div class="small-12 columns">
-        <a class="navigation__button button right" href="http://mailchimp.com">Subscribe to Our Newsletter</a>
+        <a class="button--header-cta button right" href="http://mailchimp.com">Subscribe to Our Newsletter</a>
     </div>
 </div>
 <div class="row">
@@ -18,46 +18,44 @@
             </a>
         </h1>
         {.end}
-        <div class="right show-for-small-only">
-            <div class="nav-icon mt1 mr1">
-                <span class="nav-icon__bar"></span>
-                <span class="nav-icon__bar"></span>
-                <span class="nav-icon__bar"></span>
-            </div>
+        <div class="nav-icon show-for-small-only">
+            <span class="nav-icon__bar"></span>
+            <span class="nav-icon__bar"></span>
+            <span class="nav-icon__bar"></span>
         </div>
     </div>
+
     <!-- Main navigation -->
-    <div class="small-12 medium-8 large-9 columns">
-    <div class="navigation--small">
+    <div class="small-12 medium-8 large-9 columns hide-for-small">
         <nav class="navigation mt1" data-content-field="navigation-mainNav">
             <ul>
             {.repeated section items}
                 <li class="navigation__item
-                        {.folder?} navigation__item--parent js-nav-dropdown{.end}
-                        {.section active} is-current{.end}
-                        {.if folderActive} is-current{.end}">
+                        {.folder?} navigation__dropdown-wrapper js-nav-dropdown{.end}">
                 {.folder?}
-                    <a class="navigation__dropdown-anchor js-nav-dropdown-anchor" href="{collection.fullUrl}">
-                        <span>{collection.navigationTitle}</span>
-                        <svg class="icon-caret" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" fill="#fff">
-                            <path d="M6 8 L10 4 L2 4 Z"></path>
-                        </svg>
+                    <a class="navigation__link navigation__link--parent {.if folderActive}is-current{.end} js-nav-dropdown-anchor" href="{collection.fullUrl}">
+                        <span class="navigation__link-text">
+                            {collection.navigationTitle}
+                            <svg class="icon-caret" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" fill="#fff">
+                                <path d="M6 8 L10 4 L2 4 Z"></path>
+                            </svg>
+                        </span>
                     </a>
                     <ul class="navigation__dropdown-menu js-nav-dropdown-menu">
                     {.repeated section items}
                         {.collection?}
                         <!-- Collection within folder -->
-                        <li class="navigation__dropdown-item {.section active}is-current{.end}">
-                            <a href="{collection.fullUrl}">
-                                {collection.navigationTitle}
+                        <li class="navigation__item navigation__item--dropdown">
+                            <a class="navigation__link {.section active}is-current{.end}" href="{collection.fullUrl}">
+                                <span class="navigation__link-text">{collection.navigationTitle}</span>
                             </a>
                         </li>
                         {.end}
                         {.section externalLink}
                         <!-- External link within folder -->
-                        <li class="navigation__dropdown-item">
-                            <a href="{url}"{.section newWindow} target="_blank"{.end}>
-                                {title}
+                        <li class="navigation__item navigation__item--dropdown">
+                            <a class="navigation__link" href="{url}"{.section newWindow} target="_blank"{.end}>
+                                <span class="navigation__link-text">{title}</span>
                             </a>
                         </li>
                         {.end}
@@ -67,12 +65,14 @@
                 {.or}
                     {.section collection}
                         <!-- Collection -->
-                        <a href="{fullUrl}">{navigationTitle}</a>
+                        <a class="navigation__link {.section active}is-current{.end}" href="{fullUrl}">
+                            <span class="navigation__link-text">{navigationTitle}</span>
+                        </a>
                     {.end}
                     {.section externalLink}
                         <!-- External link-->
-                        <a href="{url}"{.section newWindow} target="_blank"{.end}>
-                            {title}
+                        <a class="navigation__link" href="{url}"{.section newWindow} target="_blank"{.end}>
+                            <span class="navigation__link-text">{title}</span>
                         </a>
                     {.end}
                 {.end}
@@ -81,5 +81,27 @@
             </ul>
         </nav>
     </div>
-    </div>
 </div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <!-- Mobile navigation -->
+        <nav class="navigation--small show-for-small">
+            <ul>
+            {.repeated section items}
+                <li class="navigation__item">
+                    {.section collection}
+                        <a class="navigation__link {.section active}is-current{.end}" href="{fullUrl}">
+                            <span class="navigation__link-text">{navigationTitle}</span>
+                        </a>
+                    {.end}
+                    {.section externalLink}
+                        <a class="navigation__link" href="{url}"{.section newWindow} target="_blank"{.end}>
+                            <span class="navigation__link-text">{title}</span>
+                        </a>
+                    {.end}
+                </li>        
+            {.end}
+            </ul>
+        </nav>
+    </div>

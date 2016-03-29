@@ -29,19 +29,22 @@ var MyModule = {
 
     // activate dropdown
     $('.js-nav-dropdown').mouseenter(function(){
-      $('.js-nav-dropdown-anchor').toggleClass('is-active');
+      $(this).find('.js-nav-dropdown-anchor').toggleClass('is-active');
+      $(this).find('.js-nav-dropdown-menu').toggleClass('is-active');
     });
 
     // close dropdown
     $('.js-nav-dropdown').mouseleave(function(){
-      $('.js-nav-dropdown-anchor').toggleClass('is-active');
+      $(this).find('.js-nav-dropdown-anchor').toggleClass('is-active');
+      $(this).find('.js-nav-dropdown-menu').toggleClass('is-active');
     });
 
     // Toggle navigation
     function toggleNavigation() {
       $('.nav-icon').toggleClass('is-active');
-      $('body').toggleClass('is-unscrollable');
-      $('.navigation--small').toggleClass('is-available');
+      $('html').toggleClass('is-unscrollable');
+      $('.header--mobile').toggleClass('is-active');
+      $('.navigation--small').toggleClass('is-active');
     }
 
 
