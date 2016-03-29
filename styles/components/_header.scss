@@ -4,10 +4,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: $deepindigo;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    
-    @media #{$medium-up} {
+    padding: .5rem;
+    padding-top: 1.5rem;
+
+    @media #{$large-up} {
         padding: 0;
     }
 }
@@ -23,14 +23,24 @@
     opacity: 1;
     @include transition(opacity, width);
 
-    @media #{$medium-up} {
-        width: 175px;
-    }
-
     &:hover {
         opacity: .85;
     }
 
+    @media #{$medium-up} {
+        width: 175px;
+    }
+
+    // Show small logo on extra small screens
+    @media only screen and (max-width: 250px) {
+        .logotype { display: none; }       
+    }
+
+    &.is-small {
+        @media #{$small-only} {
+            .logotype { display: none; }
+        }
+    }
 }
 
 .button--header-cta {

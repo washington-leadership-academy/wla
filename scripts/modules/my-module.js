@@ -11,9 +11,8 @@ var MyModule = {
    * @memberof MyModule
    */
   init: function() {
-    console.log('Hello, 1orld!');
     
-    const tabletWidth = 640;
+    const tabletWidth = 1024;
 
     // Executes callback in a debounced resize window event
     function resizeWindow(callback) {
@@ -42,9 +41,10 @@ var MyModule = {
     // Toggle navigation
     function toggleNavigation() {
       $('.nav-icon').toggleClass('is-active');
-      $('html').toggleClass('is-unscrollable');
+      $('body').toggleClass('is-unscrollable');
       $('.header--mobile').toggleClass('is-active');
       $('.navigation--small').toggleClass('is-active');
+      $('.logo').toggleClass('is-small');
     }
 
 

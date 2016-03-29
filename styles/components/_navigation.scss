@@ -2,22 +2,22 @@
 
 .navigation {
     > ul {
-        margin: 0;
         float: right;
+        margin: 0;
     }
 }
 
 // Navigation items
 .navigation__item {
-    font-size: rem-calc(12);
-    position: relative;
-    font-family: $montserrat;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-right: .5rem;
     display: inline-block;
+    font-family: $montserrat;
+    font-size: rem-calc(12);
+    letter-spacing: 1px;
     margin-bottom: 1rem;
+    margin-right: .5rem;
     margin-right: 1rem;
+    position: relative;
+    text-transform: uppercase;
 
     &:last-child {
         margin-right: 0;
@@ -43,15 +43,15 @@
 
     // nav links in dropdown items
     .navigation__item--dropdown & {
-        width: 100%;
-        padding-top: .5rem;
         padding-bottom: .5rem;
+        padding-top: .5rem;
+        width: 100%;
         @include transition(color, margin-left);
 
         &:hover {
             margin-left: rem-calc(5);
             
-            .navigation__link-text {
+            .navigation__text {
                 color: lighten($deepindigo, 30%);
             }
         }
@@ -59,7 +59,7 @@
 }
 
 // Add hover and current states for links
-.navigation__link-text {
+.navigation__text {
     color: #fff;
     position: relative;
     display: block;
@@ -80,8 +80,8 @@
         width: 100%;
         @include transition(opacity, transform);
         
-        .navigation__link:hover &,
-        .navigation__link.is-current & {
+        .navigation__item:hover &,
+        .navigation__item.is-current & {
             opacity: 1;
             transform: translateY(2px);
         }
@@ -122,8 +122,8 @@
     // remove default hover effect for parent dropdown link
     &.is-active {
         .icon-caret { fill: $deepindigo; }
-        .navigation__link-text { color: $deepindigo; }
-        .navigation__link-text:after { content: none; }
+        .navigation__text { color: $deepindigo; }
+        .navigation__text:after { content: none; }
     }
 
     .icon-caret {
@@ -158,7 +158,7 @@
     background: $gold;
     width: 100%;
     height: 100%;
-    overflow: scroll;
+    overflow: hidden;
     left: 0;
     top: 0;
     z-index: $z9;
@@ -171,14 +171,27 @@
 
     > ul {
         margin: 0;
-        margin-top: 10rem;
+        padding-top: 10rem;
+        padding-bottom: 3rem;
         text-align: center;
+        overflow: scroll;
+        height: 100%;
     }
 
     .navigation__item {
         display: block;
         margin-bottom: 2rem;
-        font-size: rem-calc(14);
+        font-size: rem-calc(14);    
+    }
+
+    .button--header-cta {
+        background-color: rgba(255,255,255, .2);
+        font-size: 15px;
+        border-radius: $global-radius;
+
+        &:hover {
+            background-color: rgba(255,255,255, .3);
+        }
     }
 }
 
@@ -217,7 +230,7 @@
     }
 }
 
-.is-unscrollable {
+body.is-unscrollable {
     height: 100%;
     overflow: hidden;
 }
