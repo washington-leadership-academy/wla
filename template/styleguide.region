@@ -1,0 +1,25 @@
+<!-- Static Styleguide -->
+
+<div class="row mt3 mb3">
+    <div class="columns small-12 small-centered">
+        <h1 class="heading--subheader">Heading Typogrpahy</h1>
+        <hr>
+        <h1 class="heading--jumbo">Our first academic year</h1>
+        <h1 class="heading--large">Our first academic year</h1>
+        <h1 class="heading--medium">Our first academic year</h1>
+        <h1 class="heading--small">Our first academic year</h1>
+        <h1 class="heading--subheader">Our first academic year</h1>
+    </div>
+</div>
+
+<div class="row mt3 mb3">
+    <div class="columns small-12 small-centered">
+        <h1 class="heading--subheader">Body typography</h1>
+        <hr>
+
+        <p class="type--large">Our first academic year kicks off in August 2016. Enroll today. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="type--medium">Our first academic year kicks off in August 2016. Enroll today. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="type--small">Our first academic year kicks off in August 2016. Enroll today. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="type--quote">Our first academic year kicks off in August 2016. Enroll today. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</div>
