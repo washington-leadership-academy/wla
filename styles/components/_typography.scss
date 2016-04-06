@@ -1,5 +1,98 @@
 // Typography
 
+
+// Headings
+
+%heading--jumbo,
+.heading--jumbo {
+    font-family: $font-family-serif;
+    font-size: 2rem;
+    line-height: 1.1;
+
+    @media #{$medium-up} {
+        font-size: 2.5rem;
+    }
+
+    @media #{$large-up} {
+        font-size: 3rem;
+    }
+}
+
+%heading--large,
+.heading--large {
+    font-family: $font-family-serif;
+    font-size: 2rem;
+    line-height: 1.1;
+
+    @media #{$medium-up} {
+        font-size: 2rem;
+    }
+}
+
+%heading--medium,
+.heading--medium {
+    font-family: $font-family-sans-serif;
+    font-size: 1.5rem;
+    font-weight: $font-weight-medium;
+    line-height: 1.25;
+
+    @media #{$medium-up} {
+        font-size: 1.75rem;
+    }
+}
+
+%heading--small,
+.heading--small {
+    font-family: $font-family-sans-serif;
+    font-size: 1.25rem;
+    font-weight: $font-weight-medium;
+}
+
+%heading--subheader,
+.heading--subheader {
+    font-family: $montserrat;
+    font-size: .75rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+// Body/paragraph type
+
+%type--large,
+.type--large {
+    font-family: $font-family-sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+%type--medium,
+.type--medium {
+    font-family: $font-family-sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+%type--small,
+.type--small {
+    font-family: $font-family-sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+%type--quote,
+.type--quote {
+    font-family: $font-family-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+
+    @media #{$medium-up} {
+        font-size: 1.75rem;
+    }
+}
+
+// Text utilities
+
 .text-underline {
     text-decoration: underline;
 }

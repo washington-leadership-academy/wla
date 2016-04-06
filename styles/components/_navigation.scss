@@ -9,16 +9,12 @@
 
 // Navigation items
 .navigation__item {
+    @extend %heading--subheader;
     display: inline-block;
-    font-family: $montserrat;
-    font-size: rem-calc(12);
-    letter-spacing: 1px;
     margin-bottom: 1rem;
     margin-right: .5rem;
     margin-right: 1rem;
     position: relative;
-    text-transform: uppercase;
-
     &:last-child {
         margin-right: 0;
     }
@@ -181,7 +177,7 @@
     .navigation__item {
         display: block;
         margin-bottom: 2rem;
-        font-size: rem-calc(14);    
+        font-size: 1rem;
     }
 
     .button--header-cta {
