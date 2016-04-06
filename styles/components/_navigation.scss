@@ -1,6 +1,21 @@
 // Navigation wrapper
+.navigation-wrapper {
+    margin-top: 1.5rem;
+    z-index: $z3;
+
+    @media #{$medium-up} {
+        margin: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    @media #{$large-up} {
+        margin: 0;
+    }
+}
 
 .navigation {
+    margin-top: 1rem;
+
     > ul {
         float: right;
         margin: 0;
@@ -15,6 +30,8 @@
     margin-right: .5rem;
     margin-right: 1rem;
     position: relative;
+    z-index: $z3;
+    
     &:last-child {
         margin-right: 0;
     }
@@ -94,7 +111,7 @@
     margin-left: -1rem; // compensate for the offset from padding
     margin-top: -1rem; // compensate for the offset from padding
     position: relative;
-    z-index: $z1;
+    z-index: $z3;
 
     &:before {
         background: #fff;
@@ -134,7 +151,7 @@
     position: absolute;
     background: #fff;
     min-width: rem-calc(225);
-    z-index: $z1;
+    z-index: $z3;
     opacity: 0;
     transform: translateY(8px);
     pointer-events: none;

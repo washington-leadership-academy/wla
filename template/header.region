@@ -11,6 +11,19 @@
     <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet" type="text/css">
 </head>
 <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-    <header class="header" style="background-image: url({collection.mainImage.assetUrl});">
+    <header class="header">
         <squarespace:navigation navigationId="mainNav" template="navigation"/>
+        <div class="row">
+            <div class="small-12 columns">
+                {.if collection.title}
+                    <h1 class="heading--jumbo header__title small-only-text-center">{collection.title}</h1>
+                {.end}
+            </div>
+        </div>
+        {.if collection.mainImage.assetUrl}
+            <div class="hero--image" style="background-image: url({collection.mainImage.assetUrl});"></div>
+            <div class="hero--overlay"></div>
+        {.or}
+            <div class="hero--pattern" style="background-image: url(/assets/images/wlapattern.jpg);"></div>
+        {.end}
     </header>

@@ -1,14 +1,13 @@
 // Header
 
 .header {
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: $deepindigo;
-    padding: .5rem;
-    padding-top: 1.5rem;
+    min-height: rem-calc(250);
+    position: relative;
+    @include transition(min-height);
 
     @media #{$large-up} {
-        padding: 0;
+        min-height: rem-calc(300);
     }
 }
 
@@ -50,8 +49,58 @@
     padding: .65rem 1.5rem;
     border-radius: 0 0 3px 3px;
     margin-bottom: 0;
+    z-index: $z2;
 
     &:hover {
         background-color: $deepindigo;
     }
 }
+
+// Hero
+
+.hero--image,
+.hero--pattern,
+.hero--overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: $z1;
+}
+
+.hero--image {
+    background-color: $deepindigo;
+    filter: grayscale(100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero--overlay {
+    background-color: rgba($deepindigo, .75);
+    pointer-events: none;
+}
+
+.hero--pattern {
+    background-image: url(/assets/images/wlapattern.jpg);
+    background-position: center center;
+}
+
+// Hero typography
+
+.header__title {
+    color: #fff;
+    position: relative;
+    z-index: $z2;
+    margin-top: 2rem;
+
+    @media #{$medium-up} {
+        margin-top: 2.75rem;
+    }
+
+    @media #{$large-up} {
+        margin-top: 4rem;
+    }
+}
+
