@@ -11,19 +11,35 @@
     <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet" type="text/css">
 </head>
 <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-    <header class="header">
+    <header class="header
+        {.if collection.homepage} header--homepage{.end}">
         <squarespace:navigation navigationId="mainNav" template="navigation"/>
         <div class="row">
-            <div class="small-12 columns">
-                {.if collection.title}
-                    <h1 class="heading--large header__title small-only-text-center">{collection.title}</h1>
+            <div class="small-12 large-5 large-push-7 columns">
+                {.if collection.homepage}
+                    <div class="hero__cta text-center large-text-left mb3">
+                        <h1 class="heading--large">Your Future is Calling</h1>
+                        <p class="type--medium">Code. Travel. 3D Print. Intern. Succeed in College.</p>
+                        <a class="button button--ghost button--ghost-alt" href="http://twitter.com">How To Enroll</a>
+                    </div>
+                {.or}
+                    {.if collection.title}
+                        <h1 class="heading--large header__title small-only-text-center">{collection.title}</h1>
+                    {.end}
                 {.end}
             </div>
         </div>
-        {.if collection.mainImage.assetUrl}
-            <div class="hero--image" style="background-image: url({collection.mainImage.assetUrl});"></div>
-            <div class="hero--overlay"></div>
-        {.or}
-            <div class="hero--pattern" style="background-image: url(/assets/images/wlapattern.jpg);"></div>
+        {.if collection.homepage}
+            {.if collection.mainImage.assetUrl}
+                <div class="hero hero--image hero--homepageImage" style="background-image: url({collection.mainImage.assetUrl});"></div>
+            {.end}
+        {.or }
+            {.if collection.mainImage.assetUrl}
+                <!-- {collection.mainImage.mediaFocalPoint.x} {collection.mainImage.mediaFocalPoint.y} -->
+                <div class="hero hero--image" style="background-image: url({collection.mainImage.assetUrl});"></div>
+                <div class="hero hero--overlay"></div>
+            {.or}
+                <div class="hero hero--pattern" style="background-image: url(/assets/images/wlapattern.jpg);"></div>
+            {.end}
         {.end}
     </header>

@@ -1,0 +1,25 @@
+// Buttons
+
+.button {
+    @extend %type--alt;
+    padding: 1.25em 2em;
+}
+
+.button--ghost {
+    border-color: $primary-color;
+    border-width: 2px;
+    background-color: transparent;
+    color: $primary-color;
+}
+
+.button--ghost-alt {
+    border-color: #fff;
+    color: #fff;
+
+    &:active,
+    &:hover,
+    &:focus {
+        background: #fff;
+        color: $primary-color;
+    }
+}

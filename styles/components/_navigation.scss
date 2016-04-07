@@ -24,7 +24,7 @@
 
 // Navigation items
 .navigation__item {
-    @extend %heading--subheader;
+    @extend %type--alt;
     display: inline-block;
     font-size: .75rem;
     margin-bottom: 1rem;

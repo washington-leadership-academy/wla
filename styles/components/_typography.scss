@@ -37,15 +37,21 @@
 
 %heading--subheader,
 .heading--subheader {
-    font-family: $montserrat;
+    @extend %type--alt;
+    line-height: 1.5;
+}
+
+// Body/paragraph type
+
+%type--alt,
+.type--alt {
+    font-family: $font-family-sans-alt;
     font-size: .875rem;
     font-weight: $font-weight-bold;
     letter-spacing: 2px;
     line-height: 1.3;
     text-transform: uppercase;
 }
-
-// Body/paragraph type
 
 %type--large,
 .type--large {
