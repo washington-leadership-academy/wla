@@ -116,7 +116,7 @@
                 </li>        
             {.end}
                 <li>
-                    <a class="button--header-cta button mt1" href="http://mailchimp.com">
+                    <a class="button--hero mt1" href="http://mailchimp.com">
                         Subscribe to Our Newsletter
                     </a>
                 </li>
