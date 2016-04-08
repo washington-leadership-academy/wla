@@ -1,0 +1,73 @@
+<!-- Footer Region -->
+    <footer>
+        <div class="row">
+            <div class="columns small-12 medium-3">
+                {.section website}
+                <h1 class="site-title" data-content-field="site-title">
+                    <a href="/">
+                        {.section logoImageUrl}
+                        <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}">
+                        {.or}
+                        <img class="logo" src="http://placehold.it/200x50?text=logo" alt="{siteTitle}">
+                        {.end}
+                    </a>
+                </h1>
+                {.end}
+            </div>
+
+            <div class="columns small-12 medium-6" data-content-field="location">
+                {.section website.location}
+                <ul>
+                    {.section addressTitle}
+                    <li>
+                        {addressTitle} {.or} Physical Business Name
+                    </li>
+                    {.end}
+                    {.section addressLine1}
+                    <li>
+                        {addressLine1} {.or} Physical Address Line 1
+                    {.end}
+                    </li>
+                    {.section addressLine2}
+                    <li>
+                        {addressLine2} {.or} Physical Address Line 2
+                    </li>
+                    {.end}
+                </ul>
+                {.end}
+
+                {.section websiteSettings}
+                <ul>
+                    {.section contactEmail}
+                    <li>
+                        {contactEmail} {.or} email@example.com
+                    </li>
+                    {.end}
+                    {.section contactPhoneNumber}
+                    <li>
+                        {contactPhoneNumber} {.or} (000)000-0000
+                    </li>
+                    {.end}
+                </ul>
+                {.end}
+            </div>
+
+            <div class="columns small-12 medium-3" data-content-field="connected-accounts">
+                <h3>Social Media Icons</h3>
+                {.repeated section website.socialAccounts}
+                    <p>
+                        <strong>{serviceName}</strong>: <a href="{profileUrl}">{profileUrl}<a>
+                    </p>
+                {.end}
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns small-12">
+                <hr>
+                <p>Copyright {website.contentModifiedOn|date %Y} {websiteSettings.storeSettings.businessName}</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html> 

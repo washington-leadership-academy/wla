@@ -16,7 +16,7 @@
         <div class="row">
             <div class="small-12 columns">
                 {.if collection.title}
-                    <h1 class="heading--jumbo header__title small-only-text-center">{collection.title}</h1>
+                    <h1 class="heading--large header__title small-only-text-center">{collection.title}</h1>
                 {.end}
             </div>
         </div>
