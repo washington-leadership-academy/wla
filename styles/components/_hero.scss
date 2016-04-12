@@ -1,0 +1,76 @@
+// Hero Component
+// Consists of hero overlays and hero content.
+// Lives within the header component
+
+.hero {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: $z1;
+}
+
+.hero--image {
+    background-color: $deepindigo;
+    filter: grayscale(100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero--overlay {
+    background-color: rgba($deepindigo, .75);
+    pointer-events: none;
+}
+
+.hero--pattern {
+    background-image: url(/assets/images/wlapattern.jpg);
+    background-position: center center;
+}
+
+.hero--homepageImage {
+    filter: grayscale(0);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    @media #{$medium-up} {
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
+
+    @media #{$large-up} {
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    }
+}
+
+// Hero Content
+
+.hero__content {
+    color: #fff;
+    position: relative;
+    z-index: $z2;
+}
+
+.hero__title {
+    margin-top: 2rem;
+    color: inherit;
+
+    @media #{$medium-up} {
+        margin-top: 2.75rem;
+    }
+
+    @media #{$large-up} {
+        margin-top: 4rem;
+    }
+}
+
+.hero__cta {
+    margin-top: 3.5rem;
+
+    .heading--large {
+        color: inherit;
+    }
+
+    .button {
+        font-size: .75rem;
+    }
+}

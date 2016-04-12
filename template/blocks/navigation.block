@@ -1,6 +1,10 @@
+<!-- Component consisting of header content -->
+<!-- Includes brand logo, desktop and mobile navigation, and header subscribe button -->
+
+<!-- Header Subscribe button -->
 <div class="row show-for-large-up">
     <div class="small-12 columns">
-        <a class="button--hero right" href="http://mailchimp.com">
+        <a class="header__button right" href="http://mailchimp.com">
             Subscribe to Our Newsletter
         </a>
     </div>
@@ -115,8 +119,9 @@
                     {.end}
                 </li>        
             {.end}
+                <!-- Header Subscribe button is embedded in mobile nav -->
                 <li>
-                    <a class="button--hero mt1" href="http://mailchimp.com">
+                    <a class="header__button mt1" href="http://mailchimp.com">
                         Subscribe to Our Newsletter
                     </a>
                 </li>

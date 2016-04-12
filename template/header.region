@@ -17,21 +17,25 @@
         <div class="row">
             {.if collection.homepage}
                 <div class="small-12 large-5 large-push-7 columns">
-                    <div class="hero__cta text-center large-text-left mb3">
-                        {.repeated section items}
-                            {.equal? customContent.customType heroBlock}
-                                <h1 class="heading--large">{title}</h1>
-                                <p class="type--medium">{customContent.heroDescription}</p>
-                                <a class="button button--ghost button--ghost-alt" href="{customContent.buttonLink}">{customContent.buttonText}</a>
+                    <div class="hero__content">
+                        <div class="hero__cta text-center large-text-left mb3">
+                            {.repeated section items}
+                                {.equal? customContent.customType heroBlock}
+                                    <h1 class="heading--large">{title}</h1>
+                                    <p class="type--medium">{customContent.heroDescription}</p>
+                                    <a class="button button--ghost button--ghost-alt" href="{customContent.buttonLink}">{customContent.buttonText}</a>
+                                {.end}
                             {.end}
-                        {.end}
+                        </div>
                     </div>
                 </div>
             {.or}
                 {.section collection}
                     {.if title}
                     <div class="small-12 columns">
-                        <h1 class="heading--large hero__title small-only-text-center">{title}</h1>
+                        <div class="hero__content">
+                            <h1 class="heading--large hero__title small-only-text-center">{title}</h1>
+                        </div>
                     </div>
                     {.end}
                 {.end}
