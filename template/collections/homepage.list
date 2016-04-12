@@ -1,14 +1,6 @@
-<!-- AUTHOR FILTER RESULTS ex: http://www.base-template.com/blog?author=4f046df4d09ae2cf23d1aaa2 -->
-
-{.if authorFilter}
-  <p>Filtering by Author: {author.displayName}</p>
-{.end}
-
-<!--ITEM LOOP-->
-
 {.repeated section items}
-
-  <!--WRAPPER-->
+    <div class="row show-for-large-up">
+        <div class="small-12 columns">
 
   <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
     <!--MAIN IMAGE-->
@@ -41,27 +33,6 @@
       {body}
 
     {.end}
-
-<!--PAGINATION-->
-
-{.if pagination}
-  <nav>
-
-    <!--NEWER PAGE-->
-
-    {.if pagination.prevPage}
-      <a href="{pagination.prevPageUrl}">Newer</a>
-    {.or}
-      <a class="disabled">Newer</a>
-    {.end}
-
-    <!--OLDER PAGE-->
-
-    {.if pagination.nextPage}
-      <a href="{pagination.nextPageUrl}">Older</a>
-    {.or}
-      <a class="disabled">Older</a>
-    {.end}
-
-  </nav>
+        </div>
+    </div>
 {.end}
