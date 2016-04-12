@@ -15,19 +15,23 @@
         {.if collection.homepage} header--homepage{.end}">
         <squarespace:navigation navigationId="mainNav" template="navigation"/>
         <div class="row">
-            {.section collection}
-                {.if homepage}
-                    <div class="small-12 large-5 large-push-7 columns">
-                        <div class="hero__cta text-center large-text-left mb3">
-                            <h1 class="heading--large">Your Future is Calling</h1>
-                            <p class="type--medium">Code. Travel. 3D Print. Intern. Succeed in College.</p>
-                            <a class="button button--ghost button--ghost-alt" href="http://twitter.com">How To Enroll</a>
-                        </div>
+            {.if collection.homepage}
+                <div class="small-12 large-5 large-push-7 columns">
+                    <div class="hero__cta text-center large-text-left mb3">
+                        {.repeated section items}
+                            {.equal? customContent.customType heroBlock}
+                                <h1 class="heading--large">{title}</h1>
+                                <p class="type--medium">{customContent.heroDescription}</p>
+                                <a class="button button--ghost button--ghost-alt" href="{customContent.buttonLink}">{customContent.buttonText}</a>
+                            {.end}
+                        {.end}
                     </div>
-                {.or}
+                </div>
+            {.or}
+                {.section collection}
                     {.if title}
                     <div class="small-12 columns">
-                        <h1 class="heading--large header__title small-only-text-center">{title}</h1>
+                        <h1 class="heading--large hero__title small-only-text-center">{title}</h1>
                     </div>
                     {.end}
                 {.end}
@@ -36,11 +40,11 @@
         {.section collection}
             {.if homepage}
                 {.if mainImage.assetUrl}
-                    <div class="hero hero--image hero--homepageImage" style="background-image: url({mainImage.assetUrl});"></div>
+                    <div class="hero hero--image hero--homepageImage" style="background-image: url({mainImage.assetUrl}?format=original);"></div>
                 {.end}
             {.or}
                 {.if mainImage.assetUrl}
-                    <div class="hero hero--image" style="background-image: url({mainImage.assetUrl});"></div>
+                    <div class="hero hero--image" style="background-image: url({mainImage.assetUrl}?format=original);"></div>
                     <div class="hero hero--overlay"></div>
                 {.or}
                     <div class="hero hero--pattern" style="background-image: url(/assets/images/wlapattern.jpg);"></div>

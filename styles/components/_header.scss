@@ -121,14 +121,14 @@
 
 // Hero Content
 
-.header__title,
+.hero__title,
 .hero__cta {
     color: #fff;
     position: relative;
     z-index: $z2;
 }
 
-.header__title {
+.hero__title {
     margin-top: 2rem;
 
     @media #{$medium-up} {
@@ -143,7 +143,11 @@
 .hero__cta {
     margin-top: 3.5rem;
 
-    .heading--jumbo {
+    .heading--large {
         color: #fff;
+    }
+
+    .button {
+        font-size: .75rem;
     }
 }
