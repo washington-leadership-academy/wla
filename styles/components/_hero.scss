@@ -25,11 +25,11 @@
 }
 
 .hero--pattern {
-    background-image: url(/assets/images/wlapattern.jpg);
+    background-image: url(../images/wlapattern.jpg);
     background-position: center center;
 }
 
-.hero--homepageImage {
+.hero--homepage {
     filter: grayscale(0);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 

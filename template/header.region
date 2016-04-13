@@ -20,10 +20,18 @@
                     <div class="hero__content">
                         <div class="hero__cta text-center large-text-left mb3">
                             {.repeated section items}
-                                {.equal? customContent.customType heroBlock}
-                                    <h1 class="heading--large">{title}</h1>
-                                    <p class="type--medium">{customContent.heroDescription}</p>
-                                    <a class="button button--ghost button--ghost-alt" href="{customContent.buttonLink}">{customContent.buttonText}</a>
+                                {.section customContent}
+                                    {.equal? customType "heroBlock"}
+                                        {.if title}
+                                            <h1 class="heading--large">{title}</h1>
+                                        {.end}
+                                        {.if heroDescription}
+                                            <p class="type--medium">{heroDescription}</p>
+                                        {.end}
+                                        {.if buttonLink}
+                                            <a class="button button--ghost button--ghost-alt" href="{buttonLink}">{buttonText}</a>
+                                        {.end}
+                                    {.end}
                                 {.end}
                             {.end}
                         </div>
@@ -44,14 +52,16 @@
         {.section collection}
             {.if homepage}
                 {.if mainImage.assetUrl}
-                    <div class="hero hero--image hero--homepageImage" style="background-image: url({mainImage.assetUrl}?format=original);"></div>
+                    <div class="hero hero--image hero--homepage" style="background-image: url({mainImage.assetUrl}?format=original);"></div>
+                {.or}
+                    <div class="hero hero--pattern hero--homepage"></div>
                 {.end}
             {.or}
                 {.if mainImage.assetUrl}
                     <div class="hero hero--image" style="background-image: url({mainImage.assetUrl}?format=original);"></div>
                     <div class="hero hero--overlay"></div>
                 {.or}
-                    <div class="hero hero--pattern" style="background-image: url(/assets/images/wlapattern.jpg);"></div>
+                    <div class="hero hero--pattern"></div>
                 {.end}  
             {.end}
         {.end}
