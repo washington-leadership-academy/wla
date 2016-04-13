@@ -1,10 +1,15 @@
+<!-- Component consisting of header content -->
+<!-- Includes brand logo, desktop and mobile navigation, and header subscribe button -->
+
+<!-- Header Subscribe button -->
 <div class="row show-for-large-up">
     <div class="small-12 columns">
-        <a class="button--header-cta button right" href="http://mailchimp.com">
+        <a class="header__button right" href="http://mailchimp.com">
             Subscribe to Our Newsletter
         </a>
     </div>
 </div>
+
 <div class="row">
     <div class="navigation-wrapper">
         <!-- Site logo -->
@@ -27,7 +32,7 @@
                 </a>
             </h1>
             {.end}
-            <div class="nav-icon hide-for-large-only">
+            <div class="nav-icon hide-for-large-up">
                 <span class="nav-icon__bar"></span>
                 <span class="nav-icon__bar"></span>
                 <span class="nav-icon__bar"></span>
@@ -35,7 +40,7 @@
         </div>
 
         <!-- Main navigation -->
-        <div class="large-9 columns show-for-large">
+        <div class="large-9 columns show-for-large-up">
             <nav class="navigation" data-content-field="navigation">
                 <ul>
                 {.repeated section items}
@@ -92,7 +97,6 @@
     </div> 
 </div>
 
-
 <div class="row">
     <div class="small-12 columns">
         <!-- Mobile navigation -->
@@ -115,8 +119,9 @@
                     {.end}
                 </li>        
             {.end}
+                <!-- Header Subscribe button is embedded in mobile nav -->
                 <li>
-                    <a class="button--header-cta button mt1" href="http://mailchimp.com">
+                    <a class="header__button mt1" href="http://mailchimp.com">
                         Subscribe to Our Newsletter
                     </a>
                 </li>
@@ -124,4 +129,3 @@
         </nav>
     </div>
 </div>
-

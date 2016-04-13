@@ -11,19 +11,58 @@
     <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet" type="text/css">
 </head>
 <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-    <header class="header">
+    <header class="header
+        {.if collection.homepage} header--homepage{.end}">
         <squarespace:navigation navigationId="mainNav" template="navigation"/>
         <div class="row">
-            <div class="small-12 columns">
-                {.if collection.title}
-                    <h1 class="heading--large header__title small-only-text-center">{collection.title}</h1>
+            {.if collection.homepage}
+                <div class="small-12 large-5 large-push-7 columns">
+                    <div class="hero__content">
+                        <div class="hero__cta text-center large-text-left mb3">
+                            {.repeated section items}
+                                {.section customContent}
+                                    {.equal? customType "heroBlock"}
+                                        {.if title}
+                                            <h1 class="heading--large">{title}</h1>
+                                        {.end}
+                                        {.if heroDescription}
+                                            <p class="type--medium">{heroDescription}</p>
+                                        {.end}
+                                        {.if buttonLink}
+                                            <a class="button button--ghost button--ghost-alt" href="{buttonLink}">{buttonText}</a>
+                                        {.end}
+                                    {.end}
+                                {.end}
+                            {.end}
+                        </div>
+                    </div>
+                </div>
+            {.or}
+                {.section collection}
+                    {.if title}
+                    <div class="small-12 columns">
+                        <div class="hero__content">
+                            <h1 class="heading--large hero__title small-only-text-center">{title}</h1>
+                        </div>
+                    </div>
+                    {.end}
                 {.end}
-            </div>
+            {.end}
         </div>
-        {.if collection.mainImage.assetUrl}
-            <div class="hero--image" style="background-image: url({collection.mainImage.assetUrl});"></div>
-            <div class="hero--overlay"></div>
-        {.or}
-            <div class="hero--pattern" style="background-image: url(/assets/images/wlapattern.jpg);"></div>
+        {.section collection}
+            {.if homepage}
+                {.if mainImage.assetUrl}
+                    <div class="hero hero--image hero--homepage" style="background-image: url({mainImage.assetUrl}?format=original);"></div>
+                {.or}
+                    <div class="hero hero--pattern hero--homepage"></div>
+                {.end}
+            {.or}
+                {.if mainImage.assetUrl}
+                    <div class="hero hero--image" style="background-image: url({mainImage.assetUrl}?format=original);"></div>
+                    <div class="hero hero--overlay"></div>
+                {.or}
+                    <div class="hero hero--pattern"></div>
+                {.end}  
+            {.end}
         {.end}
     </header>

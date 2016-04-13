@@ -1,0 +1,38 @@
+{.repeated section items}
+    <div class="row show-for-large-up">
+        <div class="small-12 columns">
+
+  <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
+    <!--MAIN IMAGE-->
+
+    {.main-image?}
+      <a href="{fullUrl}" class="main-image content-fill">
+        <img {@|image-meta} />
+      </a>
+    {.end}
+
+    <!--POST TILE-->
+
+    <h1 class="title" data-content-field="title">
+      {.passthrough?}
+        <a href="{sourceUrl}" target="_blank">{title}</a>
+      {.or}
+        <a href="{fullUrl}">{title}</a>
+      {.end}
+    </h1>
+
+    <!--EXCERPT OR BODY-->
+
+    {.if excerpt}
+      {excerpt}
+      <a class="link" href="{fullUrl}">Read More</a>
+    {.or}
+
+      <!--MAIN CONTENT-->
+
+      {body}
+
+    {.end}
+        </div>
+    </div>
+{.end}

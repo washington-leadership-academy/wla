@@ -1,13 +1,27 @@
-// Header
+// Header Component
+// Consists of logo, navigation and header button
+// Lives within the header component
 
 .header {
-    background-color: $deepindigo;
     min-height: rem-calc(250);
     position: relative;
     @include transition(min-height);
 
     @media #{$large-up} {
         min-height: rem-calc(300);
+    }
+}
+
+.header--homepage {
+    min-height: rem-calc(450);
+    @include transition(min-height);
+
+    @media #{$medium-up} {
+        min-height: rem-calc(500);
+    }
+
+    @media #{$large-up} {
+        min-height: rem-calc(650);
     }
 }
 
@@ -42,65 +56,25 @@
     }
 }
 
-.button--header-cta {
-    top: 0;
-    font-size: 13px;
-    background-color: rgba(0,0,0,.4);
-    padding: .65rem 1.5rem;
-    border-radius: 0 0 3px 3px;
-    margin-bottom: 0;
-    z-index: $z2;
-
-    &:hover {
-        background-color: $deepindigo;
-    }
-}
-
-// Hero
-
-.hero--image,
-.hero--pattern,
-.hero--overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: $z1;
-}
-
-.hero--image {
-    background-color: $deepindigo;
-    filter: grayscale(100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.hero--overlay {
-    background-color: rgba($deepindigo, .75);
-    pointer-events: none;
-}
-
-.hero--pattern {
-    background-image: url(/assets/images/wlapattern.jpg);
-    background-position: center center;
-}
-
-// Hero typography
-
-.header__title {
+.header__button {
+    background-color: rgba(100,100,100,.4);
+    border-bottom-left-radius: $global-radius;
+    border-bottom-right-radius: $global-radius;
+    border-top: 0;
     color: #fff;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 0;
+    padding: .65rem 1.5rem;
     position: relative;
+    top: 0;
     z-index: $z2;
-    margin-top: 2rem;
+    @include transition(background-color);
 
-    @media #{$medium-up} {
-        margin-top: 2.75rem;
-    }
-
-    @media #{$large-up} {
-        margin-top: 4rem;
+    &:active,
+    &:hover,
+    &:focus {
+        background-color: $gold;
+        color: white;
     }
 }
-
