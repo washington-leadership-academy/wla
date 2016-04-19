@@ -19,7 +19,7 @@ gulp.task('browserify', function () {
       .transform(babelify)
       .bundle()
       .pipe(source(file))
-      .pipe(gulp.dest('dist/assets/scripts/'))
+      .pipe(gulp.dest('public/assets/scripts/'))
       .pipe(livereload());
   });
 });

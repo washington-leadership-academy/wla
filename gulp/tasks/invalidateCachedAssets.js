@@ -8,11 +8,11 @@ var replace = require('gulp-replace');
  */
 gulp.task('invalidate-cached-assets', function () {
   var files = [
-    'dist/*.region',
-    'dist/collections/*.list',
-    'dist/collections/*.item',
-    'dist/blocks/*.block',
-    'dist/pages/*.page'
+    'public/*.region',
+    'public/collections/*.list',
+    'public/collections/*.item',
+    'public/blocks/*.block',
+    'public/pages/*.page'
   ];
 
   // Loops through selected files looking for things that are stored in /assets/

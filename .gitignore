@@ -1,7 +1,6 @@
-dist
-!dist/.gitignore
+public
+!public/.gitignore
 config.js
 node_modules
 npm-debug.log
-.sqs-cache
 .DS_Store

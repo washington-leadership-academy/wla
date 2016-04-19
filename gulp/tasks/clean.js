@@ -2,21 +2,18 @@ var gulp = require('gulp');
 var fs = require('fs');
 var del = require('del');
 var mkdirp = require('mkdirp');
+var paths = require('../paths');
 
 /**
  * Removes everything from dist except git files
  * Builds empty dist/styles and dist/scripts (required for squarespace server)
  */
 gulp.task('clean', function(){
-  del.sync([
-    'dist/**',
-    '!dist',  
-    '!dist/.git',
-    '!dist/.gitignore',
-    '!dist/.gitkeep']
-  );
-  mkdirp.sync('dist/styles');
-  mkdirp.sync('dist/scripts');
-  fs.writeFileSync('dist/styles/.gitkeep', '');
-  fs.writeFileSync('dist/scripts/.gitkeep', '');
+  var squarespaceCssDir = paths.dist.dir + '/styles/';
+  var squarespaceJsDir = paths.dist.dir + '/scripts/';
+  del.sync(paths.dist.files);
+  mkdirp.sync(squarespaceCssDir);
+  mkdirp.sync(squarespaceJsDir);
+  fs.writeFileSync(squarespaceCssDir + '.gitkeep', '');
+  fs.writeFileSync(squarespaceJsDir + '.gitkeep', '');
 });
