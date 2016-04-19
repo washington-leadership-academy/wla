@@ -1,0 +1,6 @@
+module.exports = {
+  server: {
+    siteurl: "https://mysite.squarespace.com",
+    sandbox: true
+  }
+};

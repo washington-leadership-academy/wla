@@ -1,5 +1,7 @@
+dist
+!dist/.gitignore
+config.js
 node_modules
 npm-debug.log
-sftp-config.json
 .sqs-cache
-template/assets/styles
+.DS_Store
