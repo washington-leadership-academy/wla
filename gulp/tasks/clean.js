@@ -11,6 +11,7 @@ var paths = require('../paths');
 gulp.task('clean', function(){
   var squarespaceCssDir = paths.dist.dir + '/styles/';
   var squarespaceJsDir = paths.dist.dir + '/scripts/';
+  
   del.sync(paths.dist.files);
   mkdirp.sync(squarespaceCssDir);
   mkdirp.sync(squarespaceJsDir);
