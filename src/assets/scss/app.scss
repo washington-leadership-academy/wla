@@ -40,15 +40,17 @@
 // @import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
 
-// WLA Components
+// WLA Base Elements
+@import "base";
 @import "components/typography";
 @import "components/animations";
 @import "components/buttons";
+@import "components/utilities";
+
+// WLA Components
+@import "components/announcement-bar";
 @import "components/navigation";
 @import "components/header";
 @import "components/hero";
 @import "components/footer";
-@import "components/announcement-bar";
-@import "components/utilities";
-
-@import "base"
+@import "components/contentblock";

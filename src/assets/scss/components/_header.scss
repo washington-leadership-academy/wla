@@ -13,14 +13,17 @@
 }
 
 .header--homepage {
+    margin-bottom: 3rem;
     min-height: rem-calc(450);
     @include transition(min-height);
 
     @media #{$medium-up} {
+        margin-bottom: 2rem;
         min-height: rem-calc(500);
     }
 
     @media #{$large-up} {
+        margin-bottom: 1rem;
         min-height: rem-calc(650);
     }
 }
