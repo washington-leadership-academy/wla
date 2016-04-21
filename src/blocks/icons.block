@@ -2,14 +2,14 @@
 
 <section class="contentblock">
     <div class="row">
-        <div class="small-11 medium-10 columns small-centered text-center">
+        <div class="small-11 medium-10 columns small-centered">
             <article>
                 {.if title}
-                    <h2 class="contentblock__header">{title}</h2>
+                    <h2 class="contentblock__header text-center">{title}</h2>
                 {.end}
                 <div class="row">
 
-                    <div class="iconblock-wrapper small-12 large-4 columns text-center">
+                    <div class="iconblock-wrapper small-12 large-4 columns">
                         <div class="iconblock">
                             <span class="iconblock__icon">
                                 <svg width="29" height="27" viewBox="0 0 29 27" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +21,7 @@
                         </div>
                     </div>
 
-                    <div class="iconblock-wrapper small-12 large-4 columns text-center">
+                    <div class="iconblock-wrapper small-12 large-4 columns">
                         <div class="iconblock">
                             <span class="iconblock__icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" viewBox="0 0 38 24">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
 
-                    <div class="iconblock-wrapper small-12 large-4 columns text-center">
+                    <div class="iconblock-wrapper small-12 large-4 columns">
                         <div class="iconblock">
                             <span class="iconblock__icon">
                                 <svg width="32" height="28" viewBox="0 0 32 28" xmlns="http://www.w3.org/2000/svg">

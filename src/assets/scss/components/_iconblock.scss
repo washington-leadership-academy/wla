@@ -21,9 +21,9 @@
 }
 
 .iconblock {
-    margin: auto;
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 .iconblock__icon {
@@ -33,6 +33,5 @@
 }
 
 .iconblock__text {
-    text-align: left;
     margin-left: 1rem;
 }
