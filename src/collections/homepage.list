@@ -1,11 +1,15 @@
 {.repeated section items}
     {.section customContent}
 
+        {.equal? customType "summaryBlock"}
+            {@|apply summary.block}
+        {.end}
+
     {.or}
-    <!-- Generic Content Block-->
+    <!-- Generic Text Block-->
         <section class="contentblock">
         <div class="row">
-            <div class="small-8 columns small-centered text-center">
+            <div class="small-11 columns small-centered">
                 <article>
                     {.if title}
                         <h2 class="contentblock__header">{title}</h2>
