@@ -1,0 +1,10 @@
+// Content Block
+
+.contentblock {
+    margin-bottom: 4rem;
+}
+
+.contentblock__header {
+    @extend %heading--subheader;
+    color: $accent-color;
+}

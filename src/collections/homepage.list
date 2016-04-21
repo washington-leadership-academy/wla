@@ -1,38 +1,41 @@
 {.repeated section items}
-    <div class="row show-for-large-up">
-        <div class="small-12 columns">
+    {.section customContent}
+        {.equal? customType "iconsBlock"}
 
-  <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
-    <!--MAIN IMAGE-->
-
-    {.main-image?}
-      <a href="{fullUrl}" class="main-image content-fill">
-        <img {@|image-meta} />
-      </a>
-    {.end}
-
-    <!--POST TILE-->
-
-    <h1 class="title" data-content-field="title">
-      {.passthrough?}
-        <a href="{sourceUrl}" target="_blank">{title}</a>
-      {.or}
-        <a href="{fullUrl}">{title}</a>
-      {.end}
-    </h1>
-
-    <!--EXCERPT OR BODY-->
-
-    {.if excerpt}
-      {excerpt}
-      <a class="link" href="{fullUrl}">Read More</a>
+            <div class="row">
+                <div class="small-8 columns small-centered text-center">
+                    <article>
+                    {.if title}
+                        <h2 class="contentblock__header">{title}</h2>
+                    {.end}
+                    <p>{item1}</p>
+                    <p>{item2}</p>
+                    <p>{item3}</p>
+                    </article>
+                </div>
+            </div>
+            {.if title}
+                <h1 class="heading--large">{title}</h1>
+            {.end}
+            {.if heroDescription}
+                <p class="type--medium">{heroDescription}</p>
+            {.end}
+            {.if buttonLink}
+                <a class="button button--ghost button--ghost-alt" href="{buttonLink}">{buttonText}</a>
+            {.end}
+        {.end}
     {.or}
-
-      <!--MAIN CONTENT-->
-
-      {body}
-
-    {.end}
+    <section class="contentblock">
+    <div class="row">
+        <div class="small-8 columns small-centered text-center">
+            <article>
+                {.if title}
+                    <h2 class="contentblock__header">{title}</h2>
+                {.end}
+                {body}
+            </article>
         </div>
     </div>
+    </section>
+    {.end}
 {.end}
