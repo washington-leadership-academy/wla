@@ -7,4 +7,9 @@
 .contentblock__header {
     @extend %heading--subheader;
     color: $accent-color;
+    margin-bottom: 1rem;
+    
+    @media #{$large-up} {
+        margin-bottom: 1.5rem;
+    }
 }
