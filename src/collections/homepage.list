@@ -1,41 +1,19 @@
 {.repeated section items}
     {.section customContent}
-        {.equal? customType "iconsBlock"}
 
-            <div class="row">
-                <div class="small-8 columns small-centered text-center">
-                    <article>
+    {.or}
+    <!-- Generic Content Block-->
+        <section class="contentblock">
+        <div class="row">
+            <div class="small-8 columns small-centered text-center">
+                <article>
                     {.if title}
                         <h2 class="contentblock__header">{title}</h2>
                     {.end}
-                    <p>{item1}</p>
-                    <p>{item2}</p>
-                    <p>{item3}</p>
-                    </article>
-                </div>
+                    {body}
+                </article>
             </div>
-            {.if title}
-                <h1 class="heading--large">{title}</h1>
-            {.end}
-            {.if heroDescription}
-                <p class="type--medium">{heroDescription}</p>
-            {.end}
-            {.if buttonLink}
-                <a class="button button--ghost button--ghost-alt" href="{buttonLink}">{buttonText}</a>
-            {.end}
-        {.end}
-    {.or}
-    <section class="contentblock">
-    <div class="row">
-        <div class="small-8 columns small-centered text-center">
-            <article>
-                {.if title}
-                    <h2 class="contentblock__header">{title}</h2>
-                {.end}
-                {body}
-            </article>
         </div>
-    </div>
-    </section>
+        </section>
     {.end}
 {.end}
