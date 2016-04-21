@@ -7,7 +7,8 @@ gulp.task('build', function(done) {
   runSequence(
     'clean',
     'setupConfig',
-    ['copy', 'sass', 'browserify', 'invalidate-cached-assets'],
+    'copy',
+    ['sass', 'browserify'],
     done
   )
 });

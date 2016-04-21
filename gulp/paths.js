@@ -15,6 +15,8 @@ module.exports = {
     dir: 'public',
     cssDir: 'public/assets/styles',
     jsDir: 'public/assets/scripts',
+    assets: 'public/assets/**/*',
+    assetsDir: 'public/assets',
     files: [
       'public/**',
       '!public',  

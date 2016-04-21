@@ -21,7 +21,7 @@ To get started, you'll need [node.js](https://nodejs.org/en/), [gulp-cli](https:
 #### Develop
 1. Run `gulp`. This will build your site in `/public` and start up `gulp watch`.
 2. In a new terminal window, `cd public`. Run `sqs server` to start the server. The default port is `localhost:5050`. (You'll need to enter your squarespace credentials in the browser the first time around.)
-3. Make changes in `/src`. Gulp will watch for and build any changes you make. If you use the [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) chrome extension, your site will reload automatically with your changes.
+3. Make all your changes in `/src`. Gulp will watch for and build any changes you make to `/public`. If you use the [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) chrome extension, your site will reload automatically with your changes.
 
 
 #### Deploy
@@ -31,5 +31,5 @@ To get started, you'll need [node.js](https://nodejs.org/en/), [gulp-cli](https:
 2. Add your squarespace git repo: `git remote add origin https://{{mysite}}.squarespace.com/template.git` where `{{mysite}}` is your squarespace subdomain.
 
 ##### Deploy to Squarespace
-1. Run `gulp build` to build your site with the latest changes.
+1. Run `gulp build:deploy` to build your site with revisioned assets.
 2. `cd public`, then `git push origin master` (The first time you'll need to do `git push -f origin master` and enter your squarespace credentials.)
