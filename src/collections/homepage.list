@@ -5,6 +5,10 @@
             {@|apply summary.block}
         {.end}
 
+        {.equal? customType "iconsBlock"}
+            {@|apply icons.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">
