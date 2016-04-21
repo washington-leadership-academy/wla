@@ -1,0 +1,21 @@
+.news-article {
+
+    padding-top: 4.375rem;
+
+    .image-block-wrapper {
+        box-shadow: $wla-block-shadow;
+    }
+}
+
+.news-article__body {
+    h1, h2 {
+        @extend .heading--small;
+    }
+    h3 {
+        @extend .heading--subheader;
+    }
+
+    .image-caption {
+        margin-top: 1rem;
+    }
+}
