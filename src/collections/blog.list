@@ -52,7 +52,7 @@
 
       {.if excerpt}
         {excerpt}
-        <a class="link--accent" href="{fullUrl}">Read More</a>
+        <a class="link--accent-right" href="{fullUrl}">Read More</a>
       {.or}
     {.end}
 
