@@ -92,7 +92,31 @@
     text-decoration: underline;
 }
 
-.link--accent,
-.link--accent:hover {
-    color: $accent-color;
+// Global link styles within <article> content
+
+article {
+    a {
+        color: darken($accent-color, 10%);
+        @include transition(color);
+
+        &:hover {
+            color: darken($accent-color, 20%);
+        }
+    }
+}
+
+// Accented link with arrow
+a.link--accent {
+    position: relative;
+
+    &:after {
+        content: '\02192';
+        position: absolute;
+        margin-left: .25rem;
+        transition: transform 100ms;
+    }
+
+    &:hover:after {
+        transform: translateX(.25rem);
+    }
 }

@@ -1,9 +1,23 @@
 // Media Highlights Block
 
+$triangle-base: 1.5rem;
+$triangle-base-large: $triangle-base * 1.5;
+
 .mediablock {
     background-color: $jerseywhite;
     padding-top: 8rem;
     padding-bottom: 8rem;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        border-left: $triangle-base-large solid transparent;
+        border-right: $triangle-base-large solid transparent;
+        border-top: $triangle-base-large solid $body-bg;
+        left: calc(50% - #{$triangle-base-large}/2);
+        top: 0;
+    }
 
     .summary__header {
         margin-bottom: 4rem;
@@ -16,9 +30,16 @@
     }
 }
 
-.media-highlight--last {
+.media-highlight--alt {
+
     .media-highlight__image {
         order: 2;
+
+        &:before {
+            border-left: $triangle-base solid #fff;
+            border-right: 0;
+            left: 0;
+        }
     }
 
     .media-highlight__content {
@@ -31,6 +52,19 @@
     background-size: cover;
     min-height: 12rem;
     padding: 3rem 2rem;
+    position: relative;
+
+    &:before {
+        @media #{$medium-up} {
+            content: '';
+            position: absolute;
+            border-top: $triangle-base solid transparent;
+            border-bottom: $triangle-base solid transparent;
+            border-right: $triangle-base solid #fff;
+            top: calc(50% - #{$triangle-base}/2);
+            right: 0;
+        }
+    }
 
     @media #{$medium-up} {
         flex: 2;
