@@ -10,11 +10,7 @@
         <!--POST TILE-->
 
         <h1 class="article-title heading--medium" data-content-field="title">
-          {.passthrough?}
-            <a href="{sourceUrl}" target="_blank">{title}</a>
-          {.or}
-            <a href="{fullUrl}">{title}</a>
-          {.end}
+          {title}
         </h1>
 
         <!--MAIN CONTENT-->
@@ -112,8 +108,8 @@
       <!--OLDER PAGE-->
 
       {.section nextItem}
-        <a href="{fullUrl}" class="article-pagination--older heading--subheader">
-          &larr; Older
+        <a href="{fullUrl}" class="article-pagination--older link--accent-left heading--subheader">
+          Older
         </a>
       {.or}
        
@@ -122,8 +118,8 @@
       <!--NEWER PAGE-->
 
       {.section prevItem}
-        <a href="{fullUrl}" class="article-pagination--newer heading--subheader">
-          Newer &rarr;
+        <a href="{fullUrl}" class="article-pagination--newer link--accent-right heading--subheader">
+          Newer
         </a>
       {.or}
        

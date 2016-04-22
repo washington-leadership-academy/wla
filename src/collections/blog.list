@@ -53,16 +53,8 @@
 
       {.if excerpt}
         {excerpt}
-        <a class="link" href="{fullUrl}">Read More</a>
+        <a class="link--accent" href="{fullUrl}">Read More</a>
       {.or}
-      <p class="text--medium">
-        Our new football team is the bee’s knees. Just as ferocious as you’d imagine an angry, robotic panda to be. They’re the best at what they do, and so are you! Join our team, you won’t regret it.
-      </p>
-      <a class="link" href="{fullUrl}">Read More</a>
-    </div>
-    
-
-
     {.end}
 
     <!--BLOG INJECTION-->
