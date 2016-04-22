@@ -77,16 +77,12 @@
 %type--quote,
 .type--quote {
     font-family: $font-family-serif;
-    font-size: 1.25rem;
-    line-height: 1.4;
+    font-size: 1.15rem;
+    line-height: 1.5;
 
     @media #{$medium-up} {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 1.5;
-    }
-    @media #{$large-up} {
-        font-size: 2rem;
-        line-height: 1.3125;
     }
 }
 
@@ -94,4 +90,33 @@
 
 .text-underline {
     text-decoration: underline;
+}
+
+// Global link styles within <article> content
+
+article {
+    a {
+        color: darken($accent-color, 10%);
+        @include transition(color);
+
+        &:hover {
+            color: darken($accent-color, 20%);
+        }
+    }
+}
+
+// Accented link with arrow
+a.link--accent {
+    position: relative;
+
+    &:after {
+        content: '\02192';
+        position: absolute;
+        margin-left: .25rem;
+        transition: transform 100ms;
+    }
+
+    &:hover:after {
+        transform: translateX(.25rem);
+    }
 }

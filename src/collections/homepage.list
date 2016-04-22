@@ -9,6 +9,10 @@
             {@|apply icons.block}
         {.end}
 
+        {.equal? customType "mediaBlock"}
+            {@|apply media.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">
