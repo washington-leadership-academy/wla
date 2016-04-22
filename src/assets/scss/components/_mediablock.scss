@@ -11,11 +11,11 @@ $triangle-base-large: $triangle-base * 1.5;
 
     &:before {
         content: '';
-        position: absolute;
         border-left: $triangle-base-large solid transparent;
         border-right: $triangle-base-large solid transparent;
         border-top: $triangle-base-large solid $body-bg;
         left: calc(50% - #{$triangle-base-large}/2);
+        position: absolute;
         top: 0;
     }
 
@@ -57,12 +57,12 @@ $triangle-base-large: $triangle-base * 1.5;
     &:before {
         @media #{$medium-up} {
             content: '';
-            position: absolute;
-            border-top: $triangle-base solid transparent;
             border-bottom: $triangle-base solid transparent;
             border-right: $triangle-base solid #fff;
-            top: calc(50% - #{$triangle-base}/2);
+            border-top: $triangle-base solid transparent;
+            position: absolute;
             right: 0;
+            top: calc(50% - #{$triangle-base}/2);
         }
     }
 
