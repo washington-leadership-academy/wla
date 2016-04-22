@@ -46,6 +46,13 @@
 
         svg {
             fill: $deepindigo;
+            transition: all .2s;
+        }
+
+        &:hover {
+            svg {
+                transform: translateY(-3px);
+            }
         }
     }
 }
