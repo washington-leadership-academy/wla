@@ -1,0 +1,27 @@
+{.repeated section items}
+    {.section customContent}
+
+        {.equal? customType "summaryBlock"}
+            {@|apply summary.block}
+        {.end}
+
+        {.equal? customType "mediaBlock"}
+            {@|apply media.block}
+        {.end}
+
+    {.or}
+    <!-- Generic Text Block-->
+        <section class="contentblock">
+        <div class="row">
+            <div class="small-11 columns small-centered">
+                <article>
+                    {.if title}
+                        <h2 class="contentblock__header">{title}</h2>
+                    {.end}
+                    {body}
+                </article>
+            </div>
+        </div>
+        </section>
+    {.end}
+{.end}
