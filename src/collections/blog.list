@@ -33,7 +33,6 @@
         
       </div>
     </a>
-        
 
     
     <div class="news-list__article-summary block-shadow">
@@ -55,6 +54,7 @@
         {excerpt}
         <a class="link--accent" href="{fullUrl}">Read More</a>
       {.or}
+
     {.end}
 
     <!--BLOG INJECTION-->

@@ -75,21 +75,7 @@
           {.section sourceUrl}
             <a href="{@}" class="source" target="_blank">Source</a>.
           {.end}
-        </p>     -->   
-
-        <!--LOCATION
-
-        {.section location}
-          {.section addressTitle}
-            {addressTitle}
-            {addressLine1}
-            {addressLine2}
-            {addressCountry}
-          {.end}
-        {.end}-->
-
-       
-
+        </p>    -->
       </article>
     </div>
   </div>
