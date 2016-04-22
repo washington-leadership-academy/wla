@@ -32,4 +32,4 @@ To get started, you'll need [node.js](https://nodejs.org/en/), [gulp-cli](https:
 
 ##### Deploy to Squarespace
 1. Run `gulp build:deploy` to build your site with revisioned assets.
-2. `cd public`, then `git push origin master` (The first time you'll need to do `git push -f origin master` and enter your squarespace credentials.)
+2. `cd public` and git add/commit all the changes, then push: `git push origin master`. (The first time you may need to `git push -f origin master` and enter your squarespace credentials.)
