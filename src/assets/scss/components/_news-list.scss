@@ -56,6 +56,15 @@
 
 .article-summary__heading {
     margin-bottom: 0px;
+
+    a {
+        color: $deepindigo;
+
+        &:hover {
+            color: $deepindigo;
+            text-decoration: underline;
+        }
+    }
 }
 
 .article-summary__timestamp {

@@ -26,7 +26,7 @@
                             {highlightDescription-1.html}
 
                             {.if highlightLinkUrl-1}
-                                <a class="link--accent" href="{highlightLinkUrl-1}">{highlightLinkText-1}</a>
+                                <a class="link--accent-right" href="{highlightLinkUrl-1}">{highlightLinkText-1}</a>
                             {.end}
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                 <div class="media-callout">
                     <h3 class="type--quote">{calloutText}</h3>
                     {.if calloutLinkUrl}
-                        <a class="link--accent" href="{calloutLinkUrl}">{calloutLinkText}</a>
+                        <a class="link--accent-right" href="{calloutLinkUrl}">{calloutLinkText}</a>
                     {.end}
                 </div>
 
@@ -55,7 +55,7 @@
                             {highlightDescription-2.html}
 
                             {.if highlightLinkUrl-2}
-                                <a class="link--accent" href="{highlightLinkUrl-2}">{highlightLinkText-2}</a>
+                                <a class="link--accent-right" href="{highlightLinkUrl-2}">{highlightLinkText-2}</a>
                             {.end}
                         </div>
                     </div>
