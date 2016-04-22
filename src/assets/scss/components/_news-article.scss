@@ -92,7 +92,7 @@
     padding: 0 2rem;
 }
 
-.article-pagination--older, .article-pagination--newer {
+.article-pagination--left, .article-pagination--right {
   font-size: .75rem;
   opacity: .4;
   transition: all .2s;
@@ -102,11 +102,11 @@
   }
 }
 
-.article-pagination--older {
+.article-pagination--left {
  
 }
 
-.article-pagination--newer {
+.article-pagination--right {
     float: right;
     margin-top: .375rem;
 }

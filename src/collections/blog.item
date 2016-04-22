@@ -108,8 +108,8 @@
       <!--OLDER PAGE-->
 
       {.section nextItem}
-        <a href="{fullUrl}" class="article-pagination--older link--accent-left heading--subheader">
-          Older
+        <a href="{fullUrl}" class="article-pagination--left link--accent-left heading--subheader">
+          Newer
         </a>
       {.or}
        
@@ -118,8 +118,8 @@
       <!--NEWER PAGE-->
 
       {.section prevItem}
-        <a href="{fullUrl}" class="article-pagination--newer link--accent-right heading--subheader">
-          Newer
+        <a href="{fullUrl}" class="article-pagination--right link--accent-right heading--subheader">
+          Older
         </a>
       {.or}
        

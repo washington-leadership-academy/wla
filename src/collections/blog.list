@@ -89,24 +89,30 @@
 
 <!--PAGINATION-->
 
+
+
+
+<!--PAGINATION-->
+  
 {.if pagination}
-  <nav>
+  <div class="row">
+    <nav class="news-article__pagination columns small-12 medium-10 medium-offset-1 large-8 large-offset-2">
+      
+      <!--NEWER PAGE-->
 
-    <!--NEWER PAGE-->
+      {.if pagination.prevPage}
+        <a href="{pagination.prevPageUrl}" class="article-pagination--left link--accent-left heading--subheader">
+          Newer
+        </a>
+      {.end}
 
-    {.if pagination.prevPage}
-      <a href="{pagination.prevPageUrl}">Newer</a>
-    {.or}
-      <a class="disabled">Newer</a>
-    {.end}
+      <!--NEWER PAGE-->
+      {.if pagination.nextPage}
+        <a href="{pagination.nextPageUrl}" class="article-pagination--right link--accent-right heading--subheader">
+          Older
+        </a>
+      {.end}
+    </nav>
+  </div>
 
-    <!--OLDER PAGE-->
-
-    {.if pagination.nextPage}
-      <a href="{pagination.nextPageUrl}">Older</a>
-    {.or}
-      <a class="disabled">Older</a>
-    {.end}
-
-  </nav>
 {.end}
