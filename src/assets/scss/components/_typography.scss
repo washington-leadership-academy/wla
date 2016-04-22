@@ -77,16 +77,12 @@
 %type--quote,
 .type--quote {
     font-family: $font-family-serif;
-    font-size: 1.25rem;
-    line-height: 1.4;
+    font-size: 1.15rem;
+    line-height: 1.5;
 
     @media #{$medium-up} {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 1.5;
-    }
-    @media #{$large-up} {
-        font-size: 2rem;
-        line-height: 1.3125;
     }
 }
 
@@ -94,4 +90,9 @@
 
 .text-underline {
     text-decoration: underline;
+}
+
+.link--accent,
+.link--accent:hover {
+    color: $accent-color;
 }

@@ -2,12 +2,14 @@
 
 <section class="contentblock">
     <div class="row">
-        <div class="small-11 medium-8 columns small-centered text-center">
+        <div class="small-11 medium-7 columns small-centered text-center">
             <article>
                 {.if title}
-                    <h2 class="contentblock__header">{title}</h2>
+                    <h2 class="summary__header summary__header--accent">{title}</h2>
                 {.end}
-                {summaryDescription.html}
+                <div class="summary__content">
+                    {summaryDescription.html}
+                </div>
             </article>
         </div>
     </div>

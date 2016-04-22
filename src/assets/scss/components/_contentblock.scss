@@ -1,15 +1,25 @@
-// Content Block
+// Content and Summary Block
 
 .contentblock {
     margin-bottom: 4rem;
 }
 
-.contentblock__header {
+.summary__header {
     @extend %heading--subheader;
-    color: $accent-color;
+    color: $primary-color;
     margin-bottom: 1rem;
     
     @media #{$large-up} {
         margin-bottom: 1.5rem;
+    }
+}
+
+.summary__header--accent {
+    color: $accent-color;
+}
+
+.summary__content {
+    p {
+        @extend %type--medium;
     }
 }

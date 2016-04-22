@@ -1,0 +1,54 @@
+<!-- Media Block Component-->
+
+<section class="mediablock">
+    <div class="row">
+        <div class="small-12 medium-11 columns small-centered">
+            <article>
+                {.if title}
+                    <h2 class="summary__header text-center">
+                    {title}
+                    </h2>
+                {.end}
+
+                <div class="media-highlight">
+                    <div class="media-highlight__image" style="background-image: url({highlightImage-1.assetUrl}?format=750w);">
+                    </div>
+                    <div class="media-highlight__content">
+                        <div>
+                            <h3 class="heading--small">{highlightTitle-1}</h3>
+                            {highlightDescription-1.html}
+
+                            {.if highlightLinkUrl-1}
+                                <a class="link--accent" href="{highlightLinkUrl-1}">{highlightLinkText-1} &rarr;</a>
+                            {.end}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-callout">
+                    <h3 class="type--quote">{calloutText}</h3>
+                    {.if calloutLinkUrl}
+                        <a class="link--accent" href="{calloutLinkUrl}">{calloutLinkText} &rarr;</a>
+                    {.end}
+                </div>
+
+                <div class="media-highlight media-highlight--last">
+                    <div class="media-highlight__image" style="background-image: url({highlightImage-2.assetUrl}?format=750w);">
+                    </div>
+                    <div class="media-highlight__content">
+                        <div>
+                            <h3 class="heading--small">{highlightTitle-2}</h3>
+                            {highlightDescription-2.html}
+
+                            {.if highlightLinkUrl-2}
+                                <a class="link--accent" href="{highlightLinkUrl-2}">{highlightLinkText-2} &rarr;</a>
+                            {.end}
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</section>
+ 

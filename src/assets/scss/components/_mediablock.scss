@@ -1,0 +1,80 @@
+// Media Highlights Block
+
+.mediablock {
+    background-color: $jerseywhite;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    .summary__header {
+        margin-bottom: 4rem;
+    }
+}
+
+.media-highlight {
+    @media #{$medium-up} {
+        display: flex;
+    }
+}
+
+.media-highlight--last {
+    .media-highlight__image {
+        order: 2;
+    }
+
+    .media-highlight__content {
+        order: 1;
+    }
+}
+
+.media-highlight__image {
+    background-position: center center;
+    background-size: cover;
+    min-height: 12rem;
+    padding: 3rem 2rem;
+
+    @media #{$medium-up} {
+        flex: 2;
+        min-height: 20rem;
+        padding: 3rem;
+    }
+
+    @media #{$large-up} {
+        flex: 2;
+    }
+}
+
+.media-highlight__content {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem 2rem;
+
+    @media #{$medium-up} {
+        flex: 3;
+        padding: 3rem;
+    }
+
+    @media #{$large-up} {
+        flex: 2;
+    }
+}
+
+.media-callout {
+    background-color: $primary-color;
+    padding: 4rem 2rem;
+    text-align: center;
+
+    @media #{$medium-up} {
+        flex: 2;
+        padding: 5rem 3rem;
+    }
+
+    .type--quote {
+        color: #fff;
+        margin-bottom: 1rem;
+
+        @media #{$medium-up} {
+            margin-bottom: 1rem;
+        }
+    }
+}
