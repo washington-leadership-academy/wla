@@ -1,5 +1,5 @@
 .news-list {
-    margin-top: 1.25rem;
+    margin-top: 2.5rem;
 
     @media #{$medium-up} { 
         margin-top: 5rem;
@@ -8,7 +8,11 @@
 
 .news-list__news-article {
     position: relative;
-    margin-bottom: 6.25rem;
+    margin-bottom: 3.25rem;
+
+    @media #{$medium-up} { 
+        margin-bottom: 6.25rem;
+    }
 }
 
 .news-list__article-image, .news-list__article-summary {
@@ -16,21 +20,20 @@
 }
 
 .news-list__article-image {
-    max-height: 250px;
+    height: 250px;
     width: 100%;
     overflow: hidden;
 
-    img {
-        width: 100%;
-    }
+    background-position: center center;
+    background-size: cover;
 
     @media #{$medium-up} { 
-        max-height: 350px;
+        height: 300px;
     }
 
     @media #{$large-up} { 
         width: 65%;
-        max-height: 500px;
+        height: 410px;
     }
 }
 

@@ -27,13 +27,13 @@
 
   <article id="post-{id}" class="{@|item-classes} columns small-12 news-list__news-article" data-item-id="{id}">
     <!--MAIN IMAGE-->
-
-    <div class="news-list__article-image">
-      <a href="{fullUrl}" class="main-image content-fill">
-        <img src="{assetUrl}?format=original" />
-      </a>
-    </div>
-      
+    <a href="{fullUrl}" class="main-image content-fill">
+      <div class="news-list__article-image" style="background-image: url({assetUrl}?format=original);">
+       
+        
+      </div>
+    </a>
+        
 
     
     <div class="news-list__article-summary block-shadow">
