@@ -1,6 +1,14 @@
 .news-article {
 
-    padding-top: 4.375rem;
+    padding-top: 2rem;
+
+    @media #{$medium-up} { 
+        padding-top: 3rem;
+    }
+
+    @media #{$large-up} { 
+        padding-top: 4.375rem;
+    }
 
     .image-block-wrapper {
         box-shadow: $wla-block-shadow;
@@ -81,6 +89,7 @@
 .news-article__pagination {
     position: relative;
     margin-bottom: 70px;
+    padding: 0 2rem;
 }
 
 .article-pagination--older, .article-pagination--newer {
@@ -99,4 +108,5 @@
 
 .article-pagination--newer {
     float: right;
+    margin-top: .375rem;
 }

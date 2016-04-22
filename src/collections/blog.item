@@ -4,7 +4,7 @@
   <!--WRAPPER-->
 
   <div class="row">
-    <div class="columns small-12 medium-8 medium-offset-2">
+    <div class="columns small-12 medium-10 medium-offset-1 large-8 large-offset-2">
       <article id="post-{id}" class="{@|item-classes} news-article" data-item-id="{id}">
         
         <!--POST TILE-->
@@ -103,7 +103,7 @@
   
 {.section pagination}
   <div class="row">
-    <nav class="news-article__pagination columns small-12 medium-8 medium-offset-2">
+    <nav class="news-article__pagination columns small-12 medium-10 medium-offset-1 large-8 large-offset-2">
       
       <!--OLDER PAGE-->
 
