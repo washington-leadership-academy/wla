@@ -1,0 +1,29 @@
+<!-- Quote Block Component-->
+
+<section class="diagonalblock quoteblock {.if authorImage}quoteblock--alt{.end}">
+    <div class="row">
+        <div class="small-11 columns small-centered {.if textAlignment}{.or}text-center{.end}">
+            <article>
+                {.if authorImage}
+                    <div class="quoteblock__image" style="background-image: url({authorImage.assetUrl}?format=300w);">
+                    </div>
+                {.end}
+
+                {.if quoteText}
+                    <p class="type--quote">
+                    &ldquo;{quoteText}&rdquo;
+                    </p>
+                {.end}
+                
+                {.if authorName}
+                    <p class="type--medium">
+                        &mdash; {authorName}
+                        {.if authorPosition}
+                            , {authorPosition}
+                        {.end}
+                    </p>
+                {.end}
+            </article>
+        </div>
+    </div>
+</section>

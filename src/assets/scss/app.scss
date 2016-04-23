@@ -40,6 +40,10 @@
 // @import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
 
+// WLA Mixins
+@import "mixins/tint";
+@import "mixins/shade";
+
 // WLA Base Elements
 @import "base";
 @import "components/typography";
@@ -56,3 +60,5 @@
 @import "components/contentblock";
 @import "components/iconblock";
 @import "components/mediablock";
+@import "components/quoteblock";
+@import "components/diagonalblock";

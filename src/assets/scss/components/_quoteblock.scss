@@ -1,0 +1,58 @@
+// Quote Block
+
+.quoteblock {
+    background: $secondary-color;
+    color: $primary-color;
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+
+    @media #{$medium-up} {
+        padding-top: 10rem;
+        padding-bottom: 9rem;
+    }
+
+    @media #{$large-up} {
+        padding-top: 14rem;
+        padding-bottom: 12rem;
+    }
+
+    &:nth-of-type(odd) {
+        background: $accent-color;
+
+        .quoteblock__image {
+            border: 5px solid shade($accent-color, 5%);
+        }
+    }
+
+    &.quoteblock--alt {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+
+        @media #{$medium-up} {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+
+        @media #{$large-up} {
+            padding-top: 12rem;
+            padding-bottom: 11rem;
+        }
+    }
+}
+
+.quoteblock__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px solid shade($secondary-color, 5%);
+    margin: auto;
+    margin-bottom: 2rem;
+    height: 6rem;
+    width: 6rem;
+
+    @media #{$medium-up} {
+        width: 7rem;
+        height: 7rem;
+    }
+}
