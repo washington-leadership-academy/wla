@@ -1,0 +1,26 @@
+.calltoaction {
+    background-color: $primary-color;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+
+    .button {
+        margin-top: 1.5rem;
+        
+        @media #{$medium-up} {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.calltoaction--overlay {
+    background: linear-gradient(to right, rgba($deepindigo, .8), rgba($deepindigo, .99) 85%);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+}

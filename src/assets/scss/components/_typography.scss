@@ -74,8 +74,20 @@
     line-height: 1.5;
 }
 
-%type--quote,
-.type--quote {
+%type--callout,
+.type--callout {
+    font-family: $font-family-serif;
+    font-size: 1.15rem;
+    line-height: 1.5;
+
+    @media #{$medium-up} {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+}
+
+%type--callout-large,
+.type--callout-large {
     font-family: $font-family-serif;
     font-size: 1.25rem;
     line-height: 1.4;
@@ -87,18 +99,6 @@
     @media #{$large-up} {
         font-size: 1.75rem;
         line-height: 1.3125;
-    }
-}
-
-%type--callout,
-.type--callout {
-    font-family: $font-family-serif;
-    font-size: 1.15rem;
-    line-height: 1.5;
-
-    @media #{$medium-up} {
-        font-size: 1.25rem;
-        line-height: 1.5;
     }
 }
 

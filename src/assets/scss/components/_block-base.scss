@@ -1,6 +1,23 @@
+// Base Block Helper
+
+.block {
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+
+    @media #{$medium-up} {
+        padding-top: 10rem;
+        padding-bottom: 9rem;
+    }
+
+    @media #{$large-up} {
+        padding-top: 14rem;
+        padding-bottom: 12rem;
+    }
+}
+
 // Diagonal Block Helper
 
-.diagonalblock:nth-of-type(odd) {
+.block--diagonal:nth-of-type(odd) {
     clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
     margin-top: -3.75rem;
 
@@ -9,7 +26,7 @@
     }
 }
 
-.diagonalblock:nth-of-type(even) {
+.block--diagonal:nth-of-type(even) {
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%); 
     margin-top: -3.75rem;
 
@@ -18,6 +35,6 @@
     }
 }
 
-.diagonalblock + .footer {
+.block--diagonal + .footer {
     margin-top: -3.75rem;
 }

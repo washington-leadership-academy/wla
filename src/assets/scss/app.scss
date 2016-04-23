@@ -44,12 +44,11 @@
 @import "mixins/tint";
 @import "mixins/shade";
 
-// WLA Base Elements
-@import "base";
+// WLA Elements
 @import "components/typography";
 @import "components/animations";
 @import "components/buttons";
-@import "components/utilities";
+@import "components/block-base";
 
 // WLA Components
 @import "components/announcement-bar";
@@ -61,4 +60,8 @@
 @import "components/iconblock";
 @import "components/mediablock";
 @import "components/quoteblock";
-@import "components/diagonalblock";
+@import "components/calltoaction";
+
+// Base Layout and Utilities
+@import "base";
+@import "components/utilities";
