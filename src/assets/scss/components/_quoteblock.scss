@@ -3,18 +3,6 @@
 .quoteblock {
     background: $secondary-color;
     color: $primary-color;
-    padding-top: 9rem;
-    padding-bottom: 8rem;
-
-    @media #{$medium-up} {
-        padding-top: 10rem;
-        padding-bottom: 9rem;
-    }
-
-    @media #{$large-up} {
-        padding-top: 14rem;
-        padding-bottom: 12rem;
-    }
 
     &:nth-of-type(odd) {
         background: $accent-color;

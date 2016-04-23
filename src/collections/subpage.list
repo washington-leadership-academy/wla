@@ -13,6 +13,10 @@
             {@|apply quote.block}
         {.end}
 
+        {.equal? customType "calltoactionBlock"}
+            {@|apply calltoaction.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">
