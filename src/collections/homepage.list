@@ -13,6 +13,10 @@
             {@|apply media.block}
         {.end}
 
+        {.equal? customType "quoteBlock"}
+            {@|apply quote.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">

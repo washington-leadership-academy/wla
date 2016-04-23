@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="media-callout">
-                    <h3 class="type--quote">{calloutText}</h3>
+                    <h3 class="type--callout">{calloutText}</h3>
                     {.if calloutLinkUrl}
                         <a class="link--accent" href="{calloutLinkUrl}">{calloutLinkText}</a>
                     {.end}

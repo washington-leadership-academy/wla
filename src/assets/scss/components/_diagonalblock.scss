@@ -1,0 +1,23 @@
+// Diagonal Block Helper
+
+.diagonalblock:nth-of-type(odd) {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    margin-top: -3.75rem;
+
+    @media #{$medium-up} {
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    }
+}
+
+.diagonalblock:nth-of-type(even) {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%); 
+    margin-top: -3.75rem;
+
+    @media #{$medium-up} {
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+    }
+}
+
+.diagonalblock + .footer {
+    margin-top: -3.75rem;
+}
