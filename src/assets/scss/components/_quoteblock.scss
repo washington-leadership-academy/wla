@@ -4,12 +4,8 @@
     background: $secondary-color;
     color: $primary-color;
 
-    &:nth-of-type(odd) {
-        background: $accent-color;
-
-        .quoteblock__image {
-            border: 5px solid shade($accent-color, 5%);
-        }
+    .quoteblock__image {
+        border: 5px solid shade($accent-color, 5%);
     }
 
     &.quoteblock--alt {
