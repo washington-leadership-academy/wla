@@ -5,7 +5,7 @@
     color: $primary-color;
 
     .quoteblock__image {
-        border: 5px solid shade($accent-color, 5%);
+        border: 5px solid shade($secondary-color, 5%);
     }
 
     &.quoteblock--alt {
