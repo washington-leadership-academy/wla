@@ -1,7 +1,21 @@
 // Content and Summary Block
 
 .contentblock {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+
+    .header--homepage + & {
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+
+        @media #{$medium-up} {
+            margin-top: 2rem;
+        }
+
+        @media #{$large-up} {
+            margin-top: 1rem;
+        }
+    }
 }
 
 .summary__header {
