@@ -17,6 +17,10 @@
             {@|apply calltoaction.block}
         {.end}
 
+        {.equal? customType "featureBlock"}
+            {@|apply feature.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">
