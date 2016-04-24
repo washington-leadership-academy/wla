@@ -21,6 +21,10 @@
             {@|apply feature.block}
         {.end}
 
+        {.equal? customType "textHighlights"}
+            {@|apply texthighlights.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">
