@@ -1,10 +1,15 @@
 // Content and Summary Block
 
 .contentblock {
-    margin-bottom: 8rem;
-    margin-top: 8rem;
+    margin-bottom: 6rem;
+    margin-top: 6rem;
 
-    .header--homepage + & {
+    @media #{$medium-up} {
+        margin-bottom: 7rem;
+        margin-top: 7rem;
+    }
+
+    .homepage & {
         margin-bottom: 4rem;
         margin-top: 4rem;
 
