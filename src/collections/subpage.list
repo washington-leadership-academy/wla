@@ -29,6 +29,10 @@
             {@|apply imagehighlights.block}
         {.end}
 
+        {.equal? customType "imageGallery"}
+            {@|apply gallery.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">

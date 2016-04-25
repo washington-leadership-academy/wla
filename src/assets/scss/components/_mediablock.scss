@@ -48,8 +48,7 @@ $triangle-base-large: $triangle-base * 1.5;
 }
 
 .media-highlight__image {
-    background-position: center center;
-    background-size: cover;
+    @include background-cover;
     min-height: 12rem;
     padding: 3rem 2rem;
     position: relative;
