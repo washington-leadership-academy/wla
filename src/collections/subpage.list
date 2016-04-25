@@ -33,6 +33,10 @@
             {@|apply gallery.block}
         {.end}
 
+        {.equal? customType "teamBlock"}
+            {@|apply teamBlock.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">

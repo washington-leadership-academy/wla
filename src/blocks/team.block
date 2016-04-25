@@ -1,0 +1,16 @@
+<!-- Team Block Component-->
+
+<section class="mediablock">
+    <div class="row">
+        <div class="small-12 medium-11 columns small-centered">
+            <article>
+                {.if title}
+                    <h2 class="summary__header text-center">
+                    {title}
+                    </h2>
+                {.end}
+            </article>
+        </div>
+    </div>
+</section>
+ 
