@@ -34,7 +34,7 @@
         {.end}
 
         {.equal? customType "teamBlock"}
-            {@|apply teamBlock.block}
+            {@|apply team.block}
         {.end}
 
     {.or}
