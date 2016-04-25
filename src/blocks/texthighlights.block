@@ -1,0 +1,114 @@
+<!-- Call to Action Block Component-->
+
+<section class="highlightsblock highlightsblock--text">
+    <div class="row">
+        <div class="small-12 columns small-centered">
+            <article>
+                <div class="row">
+                    <div class="small-12 medium-8 medium-centered columns">
+                        {.if title}
+                            <h2 class="heading--medium text-center">
+                                {title}
+                            </h2>
+                        {.end}
+
+                        {.if description}
+                            <div class="highlightsblock__summary text-center">
+                                {description.html}
+                            </div>
+                        {.end}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 columns">
+
+                        <div class="highlights-group">
+                            
+                            {.if itemtitle_1}
+                                <div class="highlight">
+                                    <div class="highlight__title">
+                                        {itemtitle_1}
+                                    </div>
+                                    <div>{itemDescription_1.html}</div>
+                                </div>
+                            {.end}
+
+                            {.if itemtitle_2}
+                            <div class="highlight">
+                                <div class="highlight__title">
+                                    {itemtitle_2}
+                                </div>
+                                <div>{itemDescription_2.html}</div>
+                            </div>
+                            {.end}
+
+                            {.if itemtitle_3}
+                            <div class="highlight">
+                                <div class="highlight__title">
+                                    {itemtitle_3}
+                                </div>
+                                <div>{itemDescription_3.html}</div>
+                            </div>
+                            {.end}
+
+                            {.if itemtitle_4}
+                                <div class="highlight">
+                                    <div class="highlight__title">
+                                        {itemtitle_4}
+                                    </div>
+                                    <div>{itemDescription_4.html}</div>
+                                </div>
+                            {.end}
+
+                            {.if itemtitle_5}
+                                <div class="highlight">
+                                    <div class="highlight__title">
+                                        {itemtitle_5}
+                                    </div>
+                                    <div>{itemDescription_5.html}</div>
+                                </div>
+                            {.end}
+
+                            {.if itemtitle_6}
+                                <div class="highlight">
+                                    <div class="highlight__title">
+                                        {itemtitle_6}
+                                    </div>
+                                    <div>{itemDescription_6.html}</div>
+                                </div>
+                            {.end}
+
+                            {.if itemtitle_7}
+                                <div class="highlight">
+                                    <div class="highlight__title">
+                                        {itemtitle_7}
+                                    </div>
+                                    <div>{itemDescription_7.html}</div>
+                                </div>
+                            {.end}
+
+                            {.if itemtitle_8}
+                                <div class="highlight">
+                                    <div class="highlight__title">
+                                        {itemtitle_8}
+                                    </div>
+                                    <div>{itemDescription_8.html}</div>
+                                </div>
+                            {.end}
+
+                            {.if itemtitle_9}
+                                <div class="highlight">
+                                    <div class="highlight__title">
+                                        {itemtitle_9}
+                                    </div>
+                                    <div>{itemDescription_9.html}</div>
+                                </div>
+                            {.end}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>

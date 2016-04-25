@@ -1,0 +1,26 @@
+// Quote Block
+
+.quoteblock {
+    background: $secondary-color;
+    color: $primary-color;
+    
+    // Different padding for quote block with images
+    &.quoteblock--hasimage {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+
+        @media #{$medium-up} {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+
+        @media #{$large-up} {
+            padding-top: 12rem;
+            padding-bottom: 11rem;
+        }
+    }
+}
+
+.quoteblock__image {
+    @include image-rounded($secondary-color);
+}

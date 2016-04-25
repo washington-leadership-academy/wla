@@ -1,0 +1,40 @@
+// Feature Block
+
+.featureblock {
+    background-color: $primary-color;
+    color: $jerseywhite;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+    
+    @media #{$large-up} {
+        padding-top: 8rem;
+        padding-bottom: 9rem;
+    }
+
+    .featureblock__content {
+        margin-bottom: 3rem;
+
+        @media #{$large-up} {
+            margin-bottom: 0;
+            margin-right: 2rem;
+        }
+
+        .heading--medium {
+            color: inherit;
+
+            @media #{$large-up} {
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        p {
+            @extend %type--medium;
+        }        
+    }
+    
+    .featureblock__image {
+        max-height: 350px;
+        box-shadow: shade($primary-color, 35%) 15px 15px;
+    }
+}

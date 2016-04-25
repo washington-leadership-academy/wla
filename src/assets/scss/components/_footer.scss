@@ -1,10 +1,12 @@
 // Footer
 
 .footer {
-    background: $deepindigo;
+    background: shade($primary-color, 15%);
     color: $paleindigo;
+    margin-top: -2px;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    position: relative;
 
     a {
         color: $paleindigo;
@@ -62,7 +64,7 @@
 }
 
 .footer__bar {
-    background-color: darken($deepindigo, 5%);
+    background-color: darken($primary-color, 5%);
     padding: 1rem;
 
     .copyright {

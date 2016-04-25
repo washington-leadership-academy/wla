@@ -1,0 +1,127 @@
+// Text Highlights Component
+
+
+// Block Styles
+
+.highlightsblock {
+    color: $primary-color;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+
+    @media #{$large-up} {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .heading--medium {
+        margin-bottom: 2rem;
+    }
+}
+
+.highlightsblock--text {
+    background: $secondary-color;
+}
+
+.highlightsblock--image {
+    background: $accent-color;
+}
+
+.highlightsblock--gallery {
+    &:not(:first-of-type){
+        border-top: 1px solid #eee;
+    }
+}
+
+.highlightsblock__summary {
+    border-bottom: 1px solid rgba(255,255,255,.25);
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+ 
+    p {
+        @extend %type--medium;
+    }
+}
+
+
+// Flex styles for highlights
+
+.highlights-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+// Styles for individual highlight
+.highlight {
+    margin: 1rem 2rem;
+    max-width: 350px;
+
+    @media #{$medium-up} {
+        width: 265px;
+        margin: 1.5rem 2rem;
+    }
+
+    @media #{$large-up} {
+        margin: 1.5rem 1.25rem;
+    }
+}
+
+.highlight__title {
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+    position: relative;
+
+    .highlightsblock--text & {
+        left: -6px;
+
+        // Caret
+        &:before {
+            content: '';
+            display: inline-block;
+            position: relative;
+            left: -.75rem;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 6px solid $deepindigo;
+        }
+    }
+}
+
+.highlight__image {
+    @include image-rounded($accent-color);
+}
+
+
+// Gallery images in a highlight block
+
+.gallery__image {
+    @include background-cover;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: $global-radius;
+    margin: auto;
+    margin-bottom: 1rem;
+    height: 5rem;
+    width: 7rem;
+
+    @media #{$medium-up} {
+        height: 7rem;
+        width: 10rem;
+    }
+
+    @media #{$large-up} {
+        height: 9rem;
+        width: 14rem;
+    }
+
+    .gallery__image-link & {
+        @include transition(opacity);
+        opacity: 1;
+    }
+        
+    .gallery__image-link &:hover {
+        opacity: .75;
+    }
+}

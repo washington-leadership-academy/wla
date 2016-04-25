@@ -6,7 +6,7 @@ $triangle-base-large: $triangle-base * 1.5;
 .mediablock {
     background-color: $jerseywhite;
     padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-bottom:10rem;
     position: relative;
 
     &:before {
@@ -48,8 +48,7 @@ $triangle-base-large: $triangle-base * 1.5;
 }
 
 .media-highlight__image {
-    background-position: center center;
-    background-size: cover;
+    @include background-cover;
     min-height: 12rem;
     padding: 3rem 2rem;
     position: relative;
@@ -103,7 +102,7 @@ $triangle-base-large: $triangle-base * 1.5;
         padding: 5rem 3rem;
     }
 
-    .type--quote {
+    .type--callout {
         color: #fff;
         margin-bottom: 1rem;
 

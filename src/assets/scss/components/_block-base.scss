@@ -1,0 +1,56 @@
+// Base Block Helper
+
+.block {
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+
+    @media #{$medium-up} {
+        padding-top: 10rem;
+        padding-bottom: 9rem;
+    }
+
+    @media #{$large-up} {
+        padding-top: 14rem;
+        padding-bottom: 12rem;
+    }
+}
+
+// Diagonal Block Helper
+
+.block--diagonal:nth-of-type(odd) {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    margin-top: -3.75rem;
+
+    @media #{$medium-up} {
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+        margin-top: -4.25rem;
+    }
+}
+
+.block--diagonal:nth-of-type(even) {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+    margin-top: -3.75rem;
+
+    @media #{$medium-up} {
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+        margin-top: -4.25rem;
+    }
+}
+
+.block--diagonal:last-child:nth-of-type(odd) {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+
+    @media #{$medium-up} {
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -4.25rem;
+    }
+}
+
+.block--diagonal:last-child:nth-of-type(even) {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+
+    @media #{$medium-up} {
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+        margin-top: -4.25rem;
+    }
+}

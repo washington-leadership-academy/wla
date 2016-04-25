@@ -1,0 +1,26 @@
+<!-- Feature Block Component-->
+
+<section class="featureblock">
+    <div class="row">
+        <div class="small-11 small-centered medium-8 medium-centered large-6 large-uncentered columns">
+            <article class="featureblock__content">
+                {.if title}
+                    <h3 class="heading--medium">
+                        {title}
+                    </h3>
+                {.end}
+
+                {.if featureDescription}
+                    <p class="type--large">
+                        {featureDescription.html}
+                    </p>
+                {.end}
+            </article>
+        </div>
+        <div class="small-11 small-centered medium-8 medium-centered large-6 large-uncentered columns">
+            {.if featureImage}
+                <img class="featureblock__image" src="{featureImage.assetUrl}?format=750w">
+            {.end}
+        </div>
+    </div>
+</section>

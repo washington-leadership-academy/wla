@@ -1,0 +1,20 @@
+<!-- Call to Action Block Component-->
+
+<section class="block block--diagonal calltoaction" {.if ctaImage}style="background-image: url({ctaImage.assetUrl}?format=1000w);"{.end}>
+    <div class="calltoaction--overlay"></div>
+    <div class="row">
+        <div class="small-11 medium-10 columns small-centered text-center">
+            <article>
+                {.if ctaText}
+                    <p class="type--callout-large">
+                        {ctaText}
+                    </p>
+                {.end}
+
+                {.if buttonLink}
+                    <a class="button button--ghost button--ghost-alt" href="{buttonLink}">{buttonText}</a>
+                {.end}
+            </article>
+        </div>
+    </div>
+</section>

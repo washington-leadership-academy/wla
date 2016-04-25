@@ -9,6 +9,30 @@
             {@|apply media.block}
         {.end}
 
+        {.equal? customType "quoteBlock"}
+            {@|apply quote.block}
+        {.end}
+
+        {.equal? customType "calltoactionBlock"}
+            {@|apply calltoaction.block}
+        {.end}
+
+        {.equal? customType "featureBlock"}
+            {@|apply feature.block}
+        {.end}
+
+        {.equal? customType "textHighlights"}
+            {@|apply texthighlights.block}
+        {.end}
+
+        {.equal? customType "imageHighlights"}
+            {@|apply imagehighlights.block}
+        {.end}
+
+        {.equal? customType "imageGallery"}
+            {@|apply gallery.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">

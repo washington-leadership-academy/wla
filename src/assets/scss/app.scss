@@ -40,12 +40,17 @@
 // @import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
 
-// WLA Base Elements
-@import "base";
+// WLA Mixins
+@import "mixins/transition";
+@import "mixins/tint";
+@import "mixins/shade";
+@import "mixins/background-cover.scss";
+@import "mixins/image-rounded.scss";
+
+// WLA Elements
 @import "components/typography";
-@import "components/animations";
 @import "components/buttons";
-@import "components/utilities";
+@import "components/block-base";
 
 // WLA Components
 @import "components/announcement-bar";
@@ -56,5 +61,13 @@
 @import "components/contentblock";
 @import "components/iconblock";
 @import "components/mediablock";
+@import "components/quoteblock";
+@import "components/calltoaction";
+@import "components/featureblock";
+@import "components/highlights";
 @import "components/news-list";
 @import "components/news-article";
+
+// Base Layout and Utilities
+@import "base";
+@import "components/utilities";

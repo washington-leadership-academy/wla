@@ -1,0 +1,46 @@
+<!-- Image Highlights Component-->
+
+<section class="highlightsblock highlightsblock--gallery">
+    <div class="row">
+        <div class="small-12 columns small-centered">
+            <article>
+                <div class="row">
+                    <div class="small-12 medium-8 medium-centered columns">
+                        {.if title}
+                            <h2 class="heading--medium text-center">
+                                {title}
+                            </h2>
+                        {.end}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 columns">
+
+                        <div class="highlights-group text-center">
+                            {.repeated section galleryImages}
+                                <div class="highlight">
+                                    {.if clickthroughUrl}<a class="gallery__image-link" href="{clickthroughUrl}">{.end}
+                                        <div class="gallery__image" style="background-image: url({assetUrl}?format=300w);">
+                                        </div>
+                                    {.if clickthroughUrl}</a>{.end}
+
+                                    {.if title}
+                                        <div class="highlight__title">
+                                            {title}
+                                        </div>
+                                    {.end}
+
+                                    {.if body}
+                                        <div>{body.html}</div>
+                                    {.end}
+                                </div>
+                            {.end}
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
