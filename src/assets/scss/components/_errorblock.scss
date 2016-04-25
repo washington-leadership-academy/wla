@@ -1,0 +1,26 @@
+// Error Block, primary used for 404
+
+.errorblock {
+    background: $primary-color;
+    height: 100%;
+    color: $jerseywhite;
+    display: flex;
+    align-items: middle;
+    justify-content: center;
+
+    svg {
+        width: 100%;
+        max-width: 175px;
+        margin-bottom: 4rem;
+    }
+
+    h1 {
+        color: inherit;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: #ccc;
+        margin-bottom: 2rem;
+    }
+}
