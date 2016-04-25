@@ -25,6 +25,10 @@
             {@|apply texthighlights.block}
         {.end}
 
+        {.equal? customType "imageHighlights"}
+            {@|apply imagehighlights.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">

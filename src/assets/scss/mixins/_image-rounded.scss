@@ -1,0 +1,21 @@
+// Create a rounded image
+// @param {Color} $bordercolor - border color, no border created if not provided
+
+@mixin image-rounded($bordercolor:"") {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    @if $bordercolor != "" {
+        border: 5px solid shade($bordercolor, 5%);
+    }
+    margin: auto;
+    margin-bottom: 2rem;
+    height: 6rem;
+    width: 6rem;
+
+    @media #{$medium-up} {
+        width: 7rem;
+        height: 7rem;
+    }
+}

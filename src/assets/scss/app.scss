@@ -43,6 +43,7 @@
 // WLA Mixins
 @import "mixins/tint";
 @import "mixins/shade";
+@import "mixins/image-rounded.scss";
 
 // WLA Elements
 @import "components/typography";
@@ -62,7 +63,7 @@
 @import "components/quoteblock";
 @import "components/calltoaction";
 @import "components/featureblock";
-@import "components/texthighlights";
+@import "components/highlights";
 
 // Base Layout and Utilities
 @import "base";

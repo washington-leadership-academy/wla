@@ -1,0 +1,60 @@
+<!-- Image Highlights Component-->
+
+<section class="highlightsblock highlightsblock--image">
+    <div class="row">
+        <div class="small-12 columns small-centered">
+            <article>
+                <div class="row">
+                    <div class="small-12 medium-8 medium-centered columns">
+                        {.if title}
+                            <h2 class="heading--medium text-center">
+                                {title}
+                            </h2>
+                        {.end}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 columns">
+
+                        <div class="highlights-group text-center">
+                            
+                            {.if itemImage_1}
+                                <div class="highlight">
+                                    <div class="highlight__image" style="background-image: url({itemImage_1.assetUrl}?format=300w);">
+                                    </div>
+                                    <div class="highlight__title">
+                                        {itemTitle_1}
+                                    </div>
+                                    <div>{itemDescription_1.html}</div>
+                                </div>
+                            {.end}
+
+                            {.if itemImage_2}
+                                <div class="highlight">
+                                    <div class="highlight__image" style="background-image: url({itemImage_2.assetUrl}?format=300w);">
+                                    </div>
+                                    <div class="highlight__title">
+                                        {itemTitle_2}
+                                    </div>
+                                    <div>{itemDescription_2.html}</div>
+                                </div>
+                            {.end}
+
+                            {.if itemImage_3}
+                                <div class="highlight">
+                                    <div class="highlight__image" style="background-image: url({itemImage_3.assetUrl}?format=300w);">
+                                    </div>
+                                    <div class="highlight__title">
+                                        {itemTitle_3}
+                                    </div>
+                                    <div>{itemDescription_3.html}</div>
+                                </div>
+                            {.end}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
