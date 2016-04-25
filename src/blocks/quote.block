@@ -1,6 +1,6 @@
 <!-- Quote Block Component-->
 
-<section class="block block--diagonal quoteblock {.if authorImage}quoteblock--alt{.end}">
+<section class="block block--diagonal quoteblock {.if authorImage}quoteblock--hasimage{.end}">
     <div class="row">
         <div class="small-11 medium-10 columns small-centered {.if textAlignment}{.or}text-center{.end}">
             <article>

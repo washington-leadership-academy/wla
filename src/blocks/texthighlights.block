@@ -1,6 +1,6 @@
 <!-- Call to Action Block Component-->
 
-<section class="texthighlights">
+<section class="highlightsblock highlightsblock--text">
     <div class="row">
         <div class="small-12 columns small-centered">
             <article>
@@ -13,7 +13,7 @@
                         {.end}
 
                         {.if description}
-                            <div class="texthighlights__summary text-center">
+                            <div class="highlightsblock__summary text-center">
                                 {description.html}
                             </div>
                         {.end}

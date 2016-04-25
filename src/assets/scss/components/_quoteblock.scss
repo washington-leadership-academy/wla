@@ -3,12 +3,9 @@
 .quoteblock {
     background: $secondary-color;
     color: $primary-color;
-
-    .quoteblock__image {
-        border: 5px solid shade($secondary-color, 5%);
-    }
-
-    &.quoteblock--alt {
+    
+    // Different padding for quote block with images
+    &.quoteblock--hasimage {
         padding-top: 7rem;
         padding-bottom: 7rem;
 
@@ -25,18 +22,5 @@
 }
 
 .quoteblock__image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    border: 5px solid shade($secondary-color, 5%);
-    margin: auto;
-    margin-bottom: 2rem;
-    height: 6rem;
-    width: 6rem;
-
-    @media #{$medium-up} {
-        width: 7rem;
-        height: 7rem;
-    }
+    @include image-rounded($secondary-color);
 }

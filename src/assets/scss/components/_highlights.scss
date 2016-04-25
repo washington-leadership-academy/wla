@@ -1,7 +1,9 @@
 // Text Highlights Component
 
-.texthighlights {
-    background: $secondary-color;
+
+// Block Styles
+
+.highlightsblock {
     color: $primary-color;
     padding-top: 5rem;
     padding-bottom: 4rem;
@@ -10,18 +12,33 @@
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
+
+    .heading--medium {
+        margin-bottom: 2rem;
+    }
 }
 
-.texthighlights__summary {
+.highlightsblock--text {
+    background: $secondary-color;
+}
+
+.highlightsblock--image {
+    background: $accent-color;
+}
+
+.highlightsblock__summary {
     border-bottom: 1px solid rgba(255,255,255,.25);
     padding-bottom: 2rem;
     margin-top: 1rem;
     margin-bottom: 3rem;
-
+ 
     p {
         @extend %type--medium;
     }
 }
+
+
+// Flex styles for highlights
 
 .highlights-group {
     display: flex;
@@ -29,6 +46,8 @@
     justify-content: center;
 }
 
+
+// Styles for individual highlight
 .highlight {
     margin: 1rem 2rem;
     max-width: 350px;
@@ -47,16 +66,23 @@
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
     position: relative;
-    left: -6px;
 
-    // Caret
-    &:before {
-        content: '';
-        display: inline-block;
-        position: relative;
-        left: -.75rem;
-        border-top: 6px solid transparent;
-        border-bottom: 6px solid transparent;
-        border-left: 6px solid $deepindigo;
+    .highlightsblock--text & {
+        left: -6px;
+
+        // Caret
+        &:before {
+            content: '';
+            display: inline-block;
+            position: relative;
+            left: -.75rem;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 6px solid $deepindigo;
+        }
     }
+}
+
+.highlight__image {
+    @include image-rounded($accent-color);
 }
