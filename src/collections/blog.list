@@ -10,7 +10,12 @@
             <!--MAIN IMAGE-->
 
             <a href="{fullUrl}" class="main-image content-fill">
-                <div class="news-list__article-image" style="background-image: url({assetUrl}?format=original);"></div>
+                {.if assetUrl}
+                    <div class="news-list__article-image" style="background-image: url({assetUrl}?format=original);"></div>
+                {.or}
+                    <div class="news-list__article-image news-list__article-image--pattern"></div>
+                {.end}  
+               
             </a>
             <div class="news-list__article-summary block-shadow">
                 <!--POST TILE-->

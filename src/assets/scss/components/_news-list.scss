@@ -30,7 +30,6 @@
     }
 }
 
-.news-list__article-image, 
 .news-list__article-summary {
     background: $white;
 }
@@ -38,7 +37,6 @@
 .news-list__article-image {
     background-position: center center;
     background-size: cover;
-    background-image: url(../images/wlapattern.jpg);
     border: 2px solid $jerseywhite;
     height: 250px;
     overflow: hidden;
@@ -53,6 +51,10 @@
         max-width: 37.5rem; //(600px)
         height: 410px;
     }
+}
+
+.news-list__article-image--pattern {
+    background-image: url(../images/wlapattern.jpg);
 }
 
 .news-list__article-summary {
