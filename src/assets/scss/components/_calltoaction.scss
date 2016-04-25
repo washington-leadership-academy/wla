@@ -1,8 +1,6 @@
 .calltoaction {
     background-color: $primary-color;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include background-cover;
     color: #fff;
     position: relative;
 

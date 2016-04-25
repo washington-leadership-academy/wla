@@ -41,13 +41,14 @@
 @import 'foundation/components/visibility';
 
 // WLA Mixins
+@import "mixins/transition";
 @import "mixins/tint";
 @import "mixins/shade";
+@import "mixins/background-cover.scss";
 @import "mixins/image-rounded.scss";
 
 // WLA Elements
 @import "components/typography";
-@import "components/animations";
 @import "components/buttons";
 @import "components/block-base";
 

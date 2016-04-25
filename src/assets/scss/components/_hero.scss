@@ -12,11 +12,9 @@
 }
 
 .hero--image {
+    @include background-cover;
     background-color: $deepindigo;
     filter: grayscale(100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
 }
 
 .hero--overlay {
