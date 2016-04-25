@@ -1,118 +1,64 @@
-
-<!-- CATEGORY FILTER RESULTS ex: http://base-template.squarespace.com/blog/?category=category1 -->
-
-{.section categoryFilter}
-  <p>Filtering by Category: {@|safe}</p>
-{.end}
-
-<!-- TAG FILTER RESULTS ex: http://base-template.squarespace.com/blog/?tag=tag2 -->
-
-{.section tagFilter}
-  <p>Filtering by Tag: {@|safe}</p>
-{.end}
-
-<!-- AUTHOR FILTER RESULTS ex: http://www.base-template.com/blog?author=4f046df4d09ae2cf23d1aaa2 -->
-
-{.if authorFilter}
-  <p>Filtering by Author: {author.displayName}</p>
-{.end}
-
 <!--ITEM LOOP-->
 
-<div class="row news-list">
+<div class="news-list">
+    <div class="row">
+    {.repeated section items}
+        <!--WRAPPER-->
 
-{.repeated section items}
+        <article id="post-{id}" class="{@|item-classes} columns small-12 news-list__news-article" data-item-id="{id}">
+            <!--MAIN IMAGE-->
 
-  <!--WRAPPER-->
+            <a href="{fullUrl}" class="main-image content-fill">
+                <div class="news-list__article-image" style="background-image: url({assetUrl}?format=original);"></div>
+            </a>
+            <div class="news-list__article-summary block-shadow">
+                <!--POST TILE-->
 
-  <article id="post-{id}" class="{@|item-classes} columns small-12 news-list__news-article" data-item-id="{id}">
-    <!--MAIN IMAGE-->
-    <a href="{fullUrl}" class="main-image content-fill">
-      <div class="news-list__article-image" style="background-image: url({assetUrl}?format=original);">
-       
-        
-      </div>
-    </a>
+                <h1 class="article-summary__heading heading--medium" data-content-field="title">
+                    {.passthrough?}
+                        <a href="{sourceUrl}" target="_blank">{title}</a>
+                    {.or}
+                        <a href="{fullUrl}">{title}</a>
+                    {.end}
+                </h1>
+                <p class="article-summary__timestamp text--small">
+                    <time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time>
+                </p>
+                <!--EXCERPT OR BODY-->
 
-    
-    <div class="news-list__article-summary block-shadow">
-      <!--POST TILE-->
-      <h1 class="article-summary__heading heading--medium" data-content-field="title">
-        {.passthrough?}
-          <a href="{sourceUrl}" target="_blank">{title}</a>
+                {.if excerpt}
+                    {excerpt}
+                    <a class="link-arrow link-arrow--right" href="{fullUrl}">Read More</a>
+                {.or}
+            {.end}
+        </article>
         {.or}
-          <a href="{fullUrl}">{title}</a>
-        {.end}
-      </h1>
-      <p class="article-summary__timestamp text--small">
-        <time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time>
-      </p>
-
-      <!--EXCERPT OR BODY-->
-
-      {.if excerpt}
-        {excerpt}
-        <a class="link--accent-right" href="{fullUrl}">Read More</a>
-      {.or}
+            No news posts yet.
     {.end}
+    </div> <!-- end .row -->
 
-    <!--BLOG INJECTION-->
+    <!--PAGINATION-->
+        
+    {.if pagination}
+        <div class="row">
+            <div class="columns small-12">
+                <nav class="news-article__pagination">
+                    <!--NEWER PAGE-->
 
-    {postItemInjectCode}
+                    {.if pagination.prevPage}
+                        <a href="{pagination.prevPageUrl}" class="article-pagination--left link-arrow link-arrow--left heading--subheader">
+                            Newer
+                        </a>
+                    {.end}
 
-    
-
-    <!--LINK TO COMMENTS-->
-
-    {.comments?}
-      {@|comment-link}
+                    <!--NEWER PAGE-->
+                    {.if pagination.nextPage}
+                        <a href="{pagination.nextPageUrl}" class="article-pagination--right link-arrow link-arrow--right heading--subheader">
+                            Older
+                        </a>
+                    {.end}
+                </nav>
+            </div>
+        </div>
     {.end}
-
-    <!--LOCATION-->
-
-    {.section location}
-      {.section addressTitle}
-        {addressTitle}
-        {addressLine1}
-        {addressLine2}
-        {addressCountry}
-      {.end}
-    {.end}
-
-  </article>
-
-  {.or}
-    No blog posts yet.
-{.end}
-
-</div> <!-- end .row -->
-
-<!--PAGINATION-->
-
-
-
-
-<!--PAGINATION-->
-  
-{.if pagination}
-  <div class="row">
-    <nav class="news-article__pagination columns small-12 medium-10 medium-offset-1 large-8 large-offset-2">
-      
-      <!--NEWER PAGE-->
-
-      {.if pagination.prevPage}
-        <a href="{pagination.prevPageUrl}" class="article-pagination--left link--accent-left heading--subheader">
-          Newer
-        </a>
-      {.end}
-
-      <!--NEWER PAGE-->
-      {.if pagination.nextPage}
-        <a href="{pagination.nextPageUrl}" class="article-pagination--right link--accent-right heading--subheader">
-          Older
-        </a>
-      {.end}
-    </nav>
-  </div>
-
-{.end}
+</div>
