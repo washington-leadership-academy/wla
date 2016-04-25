@@ -3,9 +3,10 @@
 <div class="news-list">
     <div class="row">
     {.repeated section items}
+    
         <!--WRAPPER-->
 
-        <article id="post-{id}" class="{@|item-classes} columns small-12 news-list__news-article" data-item-id="{id}">
+        <article id="post-{id}" class="{@|item-classes} columns small-12 medium-10 medium-offset-1 end news-list__news-article" data-item-id="{id}">
             <!--MAIN IMAGE-->
 
             <a href="{fullUrl}" class="main-image content-fill">
@@ -27,11 +28,14 @@
                 <!--EXCERPT OR BODY-->
 
                 {.if excerpt}
-                    {excerpt}
+                    <div class="article-summary__excerpt">
+                        {excerpt}
+                    </div>
                     <a class="link-arrow link-arrow--right" href="{fullUrl}">Read More</a>
                 {.or}
             {.end}
         </article>
+    
         {.or}
             No news posts yet.
     {.end}
@@ -41,7 +45,7 @@
         
     {.if pagination}
         <div class="row">
-            <div class="columns small-12">
+            <div class="columns small-12 medium-10 medium-offset-1 end">
                 <nav class="news-article__pagination">
                     <!--NEWER PAGE-->
 
