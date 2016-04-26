@@ -1,0 +1,105 @@
+// Secondary nav
+
+.secondarynav-wrapper {
+    border-bottom: 1px solid #ddd;
+
+     // Remove column padding just for small screens
+    .columns {
+        padding: 0;
+
+        @media #{$medium-up} {
+            padding-left: .9375rem;
+            padding-right: .9375rem;
+        }
+    }
+}
+
+.secondarynav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.secondarynav__item {
+    @extend %type--alt;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: .75rem;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+
+    @media (min-width: 400px) {
+        width: 50%;
+    }
+
+    // Add borders in between small/medium
+    &:nth-of-type(odd) {
+        @media (min-width: 400px) {
+            border-right: 1px solid #f0f0f0;
+        }
+
+        @media #{$medium-up} {
+            border-right: 0;
+        }
+    }
+
+    // No borders on last child if it is also odd
+    &:last-child:nth-of-type(odd) {
+        @media (min-width: 400px) {
+            border-right: 0;
+            border-bottom: 0;
+            flex: 2;
+        }
+
+        @media #{$medium-up} {
+            flex: none;
+        }
+    }
+
+    @media #{$medium-up} {
+        border: 0;
+        display: inline-block;
+        margin: 0;
+        margin-right: 2rem;
+        width: auto;
+    }
+
+    @media #{$large-up} {
+        margin-right: 4rem;
+    }
+}
+
+.secondarynav__link {
+    @include transition(color, border);
+    color: tint($primary-color, 65%);
+    display: block;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    &:before {
+        content: '';
+        background: $secondary-color;
+        bottom: 0;
+        height: 4px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        transform: translateY(12px);
+        width: 100%;
+        @include transition(opacity, transform);
+    }
+}
+
+.secondarynav__item:hover,
+.secondarynav__item.is-current {
+    
+    .secondarynav__link {
+        color: $primary-color;
+    }
+
+    .secondarynav__link:before {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
