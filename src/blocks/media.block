@@ -1,6 +1,6 @@
 <!-- Media Block Component-->
 
-<section class="mediablock">
+<section class="block--caret mediablock">
     <div class="row">
         <div class="small-12 medium-11 columns small-centered">
             <article>

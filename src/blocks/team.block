@@ -1,0 +1,604 @@
+<!-- Team Block Component-->
+
+<section class="block--caret">
+    <div class="row">
+        <div class="small-12 columns small-centered">
+            <article>
+                <div class="row">
+                    <div class="small-12 medium-11 small-centered columns">
+                        {.if title}
+                            <h2 class="summary__header text-center">
+                                {title}
+                            </h2>
+                        {.end}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="team-group">
+                            {.if name_1}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_1.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_1.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_1.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_1.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_1}</h3>
+                                                <h4 class="type--small">{title_1}</h4>
+                                            </div>
+                                        </div>
+                                        {description_1.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_2}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_2.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_2.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_2.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_2.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_2}</h3>
+                                                <h4 class="type--small">{title_2}</h4>
+                                            </div>
+                                        </div>
+                                        {description_2.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_3}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_3.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_3.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_3.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_3.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_3}</h3>
+                                                <h4 class="type--small">{title_3}</h4>
+                                            </div>
+                                        </div>
+                                        {description_3.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_4}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_4.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_4.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_4.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_4.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_4}</h3>
+                                                <h4 class="type--small">{title_4}</h4>
+                                            </div>
+                                        </div>
+                                        {description_4.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_5}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_5.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_5.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_5.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_5.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_5}</h3>
+                                                <h4 class="type--small">{title_5}</h4>
+                                            </div>
+                                        </div>
+                                        {description_5.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_6}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_6.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_6.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_6.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_6.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_6}</h3>
+                                                <h4 class="type--small">{title_6}</h4>
+                                            </div>
+                                        </div>
+                                        {description_6.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_7}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_7.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_7.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_7.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_7.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_7}</h3>
+                                                <h4 class="type--small">{title_7}</h4>
+                                            </div>
+                                        </div>
+                                        {description_7.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_8}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_8.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_8.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_8.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_8.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_8}</h3>
+                                                <h4 class="type--small">{title_8}</h4>
+                                            </div>
+                                        </div>
+                                        {description_8.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_9}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_9.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_9.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_9.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_9.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_9}</h3>
+                                                <h4 class="type--small">{title_9}</h4>
+                                            </div>
+                                        </div>
+                                        {description_9.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_10}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_10.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_10.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_10.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_10.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_10}</h3>
+                                                <h4 class="type--small">{title_10}</h4>
+                                            </div>
+                                        </div>
+                                        {description_10.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_11}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_11.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_11.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_11.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_11.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_11}</h3>
+                                                <h4 class="type--small">{title_11}</h4>
+                                            </div>
+                                        </div>
+                                        {description_11.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_12}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_12.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_12.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_12.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_12.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_12}</h3>
+                                                <h4 class="type--small">{title_12}</h4>
+                                            </div>
+                                        </div>
+                                        {description_12.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_13}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_13.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_13.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_13.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_13.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_13}</h3>
+                                                <h4 class="type--small">{title_13}</h4>
+                                            </div>
+                                        </div>
+                                        {description_13.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_14}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_14.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_14.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_14.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_14.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_14}</h3>
+                                                <h4 class="type--small">{title_14}</h4>
+                                            </div>
+                                        </div>
+                                        {description_14.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_15}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_15.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_15.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_15.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_15.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_15}</h3>
+                                                <h4 class="type--small">{title_15}</h4>
+                                            </div>
+                                        </div>
+                                        {description_15.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_16}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_16.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_16.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_16.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_16.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_16}</h3>
+                                                <h4 class="type--small">{title_16}</h4>
+                                            </div>
+                                        </div>
+                                        {description_16.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_17}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_17.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_17.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_17.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_17.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_17}</h3>
+                                                <h4 class="type--small">{title_17}</h4>
+                                            </div>
+                                        </div>
+                                        {description_17.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_18}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_18.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_18.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_18.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_18.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_18}</h3>
+                                                <h4 class="type--small">{title_18}</h4>
+                                            </div>
+                                        </div>
+                                        {description_18.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_19}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_19.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_19.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_19.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_19.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_19}</h3>
+                                                <h4 class="type--small">{title_19}</h4>
+                                            </div>
+                                        </div>
+                                        {description_19.html}
+                                    </div>
+                                </div>
+                            {.end}
+
+                            {.if name_20}
+                                <div class="team-card">
+                                    <div class="show-for-medium-up">
+                                        {.if photo_20.assetUrl}
+                                            <div class="team-card__photo" style="background-image: url({photo_20.assetUrl}?format=300w);"></div>
+                                        {.or}
+                                            <div class="team-card__photo team-card__photo--placeholder"></div>
+                                        {.end}
+                                    </div>
+
+                                    <div class="team-card__content">
+                                        <div class="team-card__header">
+                                            <div class="hide-for-medium-up">
+                                                {.if photo_20.assetUrl}
+                                                    <div class="team-card__photo" style="background-image: url({photo_20.assetUrl}?format=300w);"></div>
+                                                {.or}
+                                                    <div class="team-card__photo team-card__photo--placeholder"></div>
+                                                {.end}
+                                            </div>
+                                            <div>
+                                                <h3 class="heading--small">{name_20}</h3>
+                                                <h4 class="type--small">{title_20}</h4>
+                                            </div>
+                                        </div>
+                                        {description_20.html}
+                                    </div>
+                                </div>
+                            {.end}
+                        </div>
+                    </div>
+            </article>
+        </div>
+    </div>
+</section>

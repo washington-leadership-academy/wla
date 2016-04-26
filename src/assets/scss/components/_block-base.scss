@@ -15,6 +15,38 @@
     }
 }
 
+
+// Caret Block Helper
+
+$triangle-base: 1.5rem;
+$triangle-base-large: $triangle-base * 1.5;
+
+.block--caret {
+    background-color: $jerseywhite;
+    padding-top: 8rem;
+    padding-bottom:10rem;
+    position: relative;
+
+    &:before {
+        content: '';
+        border-left: $triangle-base-large solid transparent;
+        border-right: $triangle-base-large solid transparent;
+        border-top: $triangle-base-large solid $body-bg;
+        left: calc(50% - #{$triangle-base-large}/2);
+        position: absolute;
+        top: 0;
+    }
+}
+
+// remove caret and add a border on stacked block--carets
+.block--caret + .block--caret {
+    border-top: 1px solid shade($jerseywhite, 5%);
+    margin-top: -4rem;
+    &:before {
+        content: none;
+    }
+}
+
 // Diagonal Block Helper
 
 .block--diagonal:nth-of-type(odd) {
