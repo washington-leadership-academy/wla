@@ -41,11 +41,15 @@
 }
 
 .team-card__photo--placeholder {
-    background-image: url(../images/wlapattern.jpg);
+    background-image: url(../images/wlapattern_small-light.png);
 }
 
 .team-card__content {
     flex: 1;
+
+    .team-card__header {
+        display: flex;
+    }
 
     .heading--small {
         margin-top: 0;
