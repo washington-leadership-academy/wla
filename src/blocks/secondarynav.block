@@ -1,0 +1,27 @@
+<!-- Secondary nav -->
+
+<nav class="secondarynav-wrapper" data-content-field="navigation">
+    <div class="row">
+        <div class="small-12 columns">
+            <div class="secondarynav">
+            {.repeated section items}
+                <div class="secondarynav__item {.section active} is-current{.end}">
+
+                    {.section collection}
+                        <a class="secondarynav__link" href="{fullUrl}">
+                            {navigationTitle}
+                        </a>
+                    {.end}
+
+                    {.section externalLink}
+                        <a class="secondarynav__link" href="{url}"{.section newWindow} target="_blank"{.end}>
+                            {title}
+                        </a>
+                    {.end}
+
+                </div>        
+            {.end}
+            </div>
+        </div>
+    </div>
+</nav>
