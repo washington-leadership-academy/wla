@@ -6,21 +6,26 @@
     
     // Different padding for quote block with images
     &.quoteblock--hasimage {
-        padding-top: 7rem;
-        padding-bottom: 7rem;
+        padding-top: 6rem;
+        padding-bottom: 8rem;
 
         @media #{$medium-up} {
-            padding-top: 8rem;
-            padding-bottom: 8rem;
+            padding-top: 7rem;
+            padding-bottom: 9rem;
         }
 
         @media #{$large-up} {
-            padding-top: 12rem;
-            padding-bottom: 11rem;
+            padding-top: 10rem;
+            padding-bottom: 12rem;
         }
     }
 }
 
 .quoteblock__image {
     @include image-rounded($secondary-color);
+    margin: auto auto 1.5rem;
+
+    @media #{$medium-up} {
+        margin: auto auto 2rem;
+    }
 }
