@@ -55,12 +55,11 @@
 
 // Styles for individual highlight
 .highlight {
-    margin: 1rem 2rem;
+    margin: .5rem 2rem;
     max-width: 350px;
 
     @media #{$medium-up} {
         width: 265px;
-        margin: 1.5rem 2rem;
     }
 
     @media #{$large-up} {
@@ -70,8 +69,12 @@
 
 .highlight__title {
     font-weight: $font-weight-bold;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     position: relative;
+
+    @media #{$medium-up} {
+        margin-bottom: 1rem;
+    }
 
     .highlightsblock--text & {
         left: -6px;
@@ -91,6 +94,11 @@
 
 .highlight__image {
     @include image-rounded($accent-color);
+    margin-bottom: 1rem;
+
+    @media #{$medium-up} {
+        margin: auto auto 2rem;
+    }
 }
 
 
