@@ -1,24 +1,7 @@
 // Media Highlights Block
 
-$triangle-base: 1.5rem;
-$triangle-base-large: $triangle-base * 1.5;
 
 .mediablock {
-    background-color: $jerseywhite;
-    padding-top: 8rem;
-    padding-bottom:10rem;
-    position: relative;
-
-    &:before {
-        content: '';
-        border-left: $triangle-base-large solid transparent;
-        border-right: $triangle-base-large solid transparent;
-        border-top: $triangle-base-large solid $body-bg;
-        left: calc(50% - #{$triangle-base-large}/2);
-        position: absolute;
-        top: 0;
-    }
-
     .summary__header {
         margin-bottom: 4rem;
     }

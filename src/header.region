@@ -66,3 +66,4 @@
             {.end}
         {.end}
     </header>
+    <squarespace:folder-navigation template="secondarynav"/>
