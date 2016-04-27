@@ -33,10 +33,20 @@
 }
 
 .highlightsblock__summary {
-    border-bottom: 1px solid rgba(255,255,255,.25);
-    padding-bottom: 2rem;
     margin-top: 1rem;
     margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &:after {
+        content: '';
+        background: rgba(0,0,0,.1);
+        width: 5rem;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 2.5rem);
+    }
  
     p {
         @extend %type--medium;
@@ -55,12 +65,11 @@
 
 // Styles for individual highlight
 .highlight {
-    margin: 1rem 2rem;
+    margin: .5rem 2rem;
     max-width: 350px;
 
     @media #{$medium-up} {
         width: 265px;
-        margin: 1.5rem 2rem;
     }
 
     @media #{$large-up} {
@@ -70,8 +79,12 @@
 
 .highlight__title {
     font-weight: $font-weight-bold;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     position: relative;
+
+    @media #{$medium-up} {
+        margin-bottom: 1rem;
+    }
 
     .highlightsblock--text & {
         left: -6px;
@@ -91,6 +104,11 @@
 
 .highlight__image {
     @include image-rounded($accent-color);
+    margin-bottom: 1rem;
+
+    @media #{$medium-up} {
+        margin-bottom: 2rem;
+    }
 }
 
 
@@ -103,17 +121,17 @@
     border-radius: $global-radius;
     margin: auto;
     margin-bottom: 1rem;
-    height: 11rem;
-    width: 15.71rem;
+    height: 5rem;
+    width: 7rem;
 
     @media #{$medium-up} {
-        height: 10rem;
-        width: 14.2rem;
+        height: 7rem;
+        width: 10rem;
     }
 
     @media #{$large-up} {
-        height: 11rem;
-        width: 15.71rem;
+        height: 9rem;
+        width: 14rem;
     }
 
     .gallery__image-link & {
