@@ -121,10 +121,12 @@ article {
     }
 }
 
-// Accented link with arrow
-a.link--accent {
+// Accented link with arrow 
+a.link-arrow {
     position: relative;
+}
 
+a.link-arrow--right {
     &:after {
         content: '\02192';
         position: absolute;
@@ -134,5 +136,19 @@ a.link--accent {
 
     &:hover:after {
         transform: translateX(.25rem);
+    }
+}
+
+a.link-arrow--left {
+    &:before {
+        content: '\02190';
+        position: absolute;
+        transform: translateX(-1rem);
+        transition: transform 100ms;
+        margin-top: .3rem;
+    }
+
+    &:hover:before {
+        transform: translateX(-1.25rem);
     }
 }

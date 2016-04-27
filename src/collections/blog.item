@@ -1,94 +1,87 @@
+<div class="article-container">
+    {.section item}
 
-{.section item}
+        <!--WRAPPER-->
 
-  <!--WRAPPER-->
-  
-  <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
-    
-    <!--POST TILE-->
+        <div class="row">
+            <div class="columns small-12 medium-10 medium-offset-1 large-8 large-offset-2">
+                <article id="post-{id}" class="{@|item-classes} news-article" data-item-id="{id}">
+                    
+                    <!--POST TILE-->
 
-    <h1 class="title" data-content-field="title">
-      {.passthrough?}
-        <a href="{sourceUrl}" target="_blank">{title}</a>
-      {.or}
-        <a href="{fullUrl}">{title}</a>
-      {.end}
-    </h1>
+                    <h1 class="article-title heading--medium" data-content-field="title">
+                        {title}
+                    </h1>
+                    <p class="article-summary__timestamp text--small">
+                        <time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time>
+                    </p>
 
-    <!--MAIN CONTENT-->
+                    <!--MAIN CONTENT-->
+                    <div class="news-article__body">
+                        {body}
+                    </div>
 
-    {body}
-
-    <!--BLOG INJECTION-->
-
-    {postItemInjectCode}    
-
-    <!--CATEGORIES-->
-
-    {.repeated section categories}
-      <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
+                    <div class="news-article__sharing">
+                        <span>Share</span>
+                        <div class="sharing__social-links">
+                                <a href="mailto:?subject=Check Out this Article from the Washington Leadership Academy&amp;body={website.baseUrl}{fullUrl}" class="social-links__email">
+                                    <svg viewBox="0 0 481 345" xmlns="http://www.w3.org/2000/svg">
+                                            <title>email icon</title>
+                                            <path d="M336.764,45.945H45.354C20.346,45.945,0,65.484,0,89.5v203.117c0,24.016,20.346,43.555,45.354,43.555h291.41
+                                                c25.008,0,45.353-19.539,45.353-43.555V89.5C382.117,65.484,361.772,45.945,336.764,45.945z M336.764,297.72H45.354
+                                                c-3.676,0-6.9-2.384-6.9-5.103V116.359l131.797,111.27c2.702,2.282,6.138,3.538,9.676,3.538l22.259,0.001
+                                                c3.536,0,6.974-1.257,9.677-3.539l131.803-111.274v176.264C343.664,295.336,340.439,297.72,336.764,297.72z M191.059,192.987
+                                                L62.87,84.397h256.378L191.059,192.987z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.facebook.com/sharer.php?u={website.baseUrl}{fullUrl}" target="_blank" class="social-links__facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M268 512V284h78.978l11.736-92H268v-62.426c0-26.352 7.665-44.31 45.455-44.31L362 85.24V3.837C353 2.728 324.7.25 291.416.25 221.926.25 174 42.666 174 120.56V192H96v92h78v228h94z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://twitter.com/share?text=Check+out+this+article+from+the+Washington+Leadership+Academy%21+" class="social-links__twitter" target="_blank">
+                                    <svg class="geomicon" data-icon="twitter" viewBox="0 0 32 32">
+                                            <title>twitter icon</title>
+                                            <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"/>
+                                    </svg>
+                                </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
     {.end}
+            
 
-    <!--TAGS-->
+    <!--PAGINATION-->
+        
+    {.section pagination}
+        <div class="row">
+            <nav class="news-article__pagination columns small-12 medium-10 medium-offset-1 large-8 large-offset-2">
+                
+                <!--OLDER PAGE-->
 
-    {.repeated section tags}
-      <a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}</a>{.alternates with},
+                {.section nextItem}
+                    <a href="{fullUrl}" class="link-arrow link-arrow--left heading--subheader">
+                        Newer
+                    </a>
+                {.or}
+                 
+                {.end}
+
+                <!--NEWER PAGE-->
+
+                {.section prevItem}
+                    <a href="{fullUrl}" class="article-pagination--right link-arrow link-arrow--right heading--subheader">
+                        Older
+                    </a>
+                {.or}
+                 
+                {.end}
+
+            </nav>
+        </div>
+
     {.end}
-
-    <!--SHARE AND LIKE-->
-
-    {@|like-button}
-    {@|social-button}
-
-    <!--AUTHOR AND DATE-->
-    
-    <p class="meta">
-      Published on <a href="{fullUrl}"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a> by <a href="{collection.fullUrl}?author={author.id}">{author.displayName}</a>.
-      {.section sourceUrl}
-        <a href="{@}" class="source" target="_blank">Source</a>.
-      {.end}
-    </p>        
-
-    <!--LOCATION-->
-
-    {.section location}
-      {.section addressTitle}
-        {addressTitle}
-        {addressLine1}
-        {addressLine2}
-        {addressCountry}
-      {.end}
-    {.end}
-
-    <!--COMMENTS-->
-
-    {@|comments}
-
-  </article>
-
-{.end}
-    
-
-<!--PAGINATION-->
-  
-{.section pagination}
-  <nav>
-
-    <!--NEWER PAGE-->
-
-    {.section prevItem}
-      <a href="{fullUrl}">Newer</a>
-    {.or}
-      <a class="disabled">Newer</a>
-    {.end}
-    
-    <!--OLDER PAGE-->
-
-    {.section nextItem}
-      <a href="{fullUrl}">Older</a>
-    {.or}
-      <a class="disabled">Older</a>
-    {.end}
-
-  </nav>
-{.end}
+</div>
