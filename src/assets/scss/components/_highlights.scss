@@ -111,17 +111,17 @@
     border-radius: $global-radius;
     margin: auto;
     margin-bottom: 1rem;
-    height: 11rem;
-    width: 15.71rem;
+    height: 5rem;
+    width: 7rem;
 
     @media #{$medium-up} {
-        height: 10rem;
-        width: 14.2rem;
+        height: 7rem;
+        width: 10rem;
     }
 
     @media #{$large-up} {
-        height: 11rem;
-        width: 15.71rem;
+        height: 9rem;
+        width: 14rem;
     }
 
     .gallery__image-link & {
