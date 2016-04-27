@@ -33,10 +33,20 @@
 }
 
 .highlightsblock__summary {
-    border-bottom: 1px solid rgba(255,255,255,.25);
-    padding-bottom: 2rem;
     margin-top: 1rem;
     margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &:after {
+        content: '';
+        background: rgba(0,0,0,.1);
+        width: 5rem;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 2.5rem);
+    }
  
     p {
         @extend %type--medium;
