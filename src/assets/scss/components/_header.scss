@@ -33,6 +33,7 @@
 
 .logo {
     width: 150px;
+    max-height: 55px;
     opacity: 1;
     @include transition(opacity, width);
 
@@ -42,6 +43,7 @@
 
     @media #{$medium-up} {
         width: 175px;
+        max-height: 65px;
     }
 
     // Show small logo on extra small screens
