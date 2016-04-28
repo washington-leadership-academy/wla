@@ -150,45 +150,51 @@
 // Dropdown
 .navigation__dropdown-menu {
     background: #fff;
+    display: none;
     margin-left: -1rem;
     min-width: rem-calc(225);
     opacity: 0;
     padding: 1rem;
-    pointer-events: none;
     position: absolute;
     transform: translateY(8px);
     z-index: $z3;
     @include transition(opacity, transform);
 
-    &.is-active {
+    &.is-available {
+        display: block;
+    }
+
+    &.is-visible {
         opacity: 1;
-        pointer-events: all;
         transform: translateY(0);
     }
 }
 
 .navigation--small {
     background: $gold;
+    display: none;
     height: 100%;
     left: 0;
     opacity: 0;
     overflow: hidden;
-    pointer-events: none;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: $z9;
     @include transition(opacity);
 
-    &.is-active {
+    &.is-available {
+        display: block;
+    }
+
+    &.is-visible {
         opacity: 1;
-        pointer-events: all;
     }
 
     > ul {
         height: 100%;
         margin: 0;
-        overflow: scroll;
+        overflow-y: auto;
         padding-bottom: 3rem;
         padding-top: 10rem;
         text-align: center;
@@ -205,6 +211,7 @@
         border-radius: $global-radius;
         display: inline-block;
         font-size: 1rem;
+        margin-bottom: 3rem; // Fix for IE10
 
         &:hover {
             background-color: rgba(255,255,255, .3);
@@ -245,9 +252,4 @@
             transform: translateY(-6px) rotate(-45deg);
         }
     }
-}
-
-body.is-unscrollable {
-    height: 100%;
-    overflow: hidden;
 }

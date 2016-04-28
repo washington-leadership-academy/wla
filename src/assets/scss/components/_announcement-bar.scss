@@ -2,6 +2,7 @@
 
 .sqs-announcement-bar-content {
     background-color: $secondary-color;
+    border-bottom: 1px solid rgba(0,0,0,.05);
 
     .sqs-announcement-bar-text {
         margin-right: 2rem;

@@ -1,9 +1,7 @@
-/**
- * This is the entrypoint to the JS in your app.
- * ES6 features are supported inside this file.
- */
+import { navigation } from './modules/navigation.js';
 
-import { MyModule } from './modules/my-module.js';
-
-
-MyModule.init();
+(function($) {
+  $(document).ready(function() {
+    navigation.init();
+  });
+})(jQuery);
