@@ -51,14 +51,14 @@
         </div>
         {.section collection}
             {.if homepage}
-                {.if mainImage.assetUrl}
+                {.if mainImage.originalSize}
                     <div class="hero hero--image hero--homepage" style="background-image: url({mainImage.assetUrl}?format=original);"></div>
                     <div class="hero hero--gradient"></div>
                 {.or}
                     <div class="hero hero--pattern hero--homepage"></div>
                 {.end}
             {.or}
-                {.if mainImage.assetUrl}
+                {.if mainImage.originalSize}
                     <div class="hero hero--image" style="background-image: url({mainImage.assetUrl}?format=original);"></div>
                     <div class="hero hero--overlay"></div>
                 {.or}

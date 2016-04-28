@@ -48,7 +48,6 @@
         @media (min-width: 400px) {
             border-right: 0;
             border-bottom: 0;
-            flex: 2;
         }
 
         @media #{$medium-up} {
@@ -85,9 +84,8 @@
         left: 0;
         opacity: 0;
         position: absolute;
-        transform: translateY(12px);
         width: 100%;
-        @include transition(opacity, transform);
+        @include transition(opacity);
     }
 }
 
@@ -100,6 +98,5 @@
 
     .secondarynav__link:before {
         opacity: 1;
-        transform: translateY(0);
     }
 }

@@ -14,7 +14,7 @@
                     <div class="media-highlight__image" style="background-image: url({highlightImage-1.assetUrl}?format=750w);">
                     </div>
                     <div class="media-highlight__content">
-                        <div>
+                        <div class="media-highlight__content-wrapper">
                             {.if highlightLinkUrl-1}
                                 <a href="{highlightLinkUrl-1}">
                                     <h3 class="heading--small">{highlightTitle-1}</h3>
@@ -26,7 +26,7 @@
                             {highlightDescription-1.html}
 
                             {.if highlightLinkUrl-1}
-                                <a class="link-arrow link-arrow--right" href="{highlightLinkUrl-1}">{highlightLinkText-1}</a>
+                                <a class="link-arrow link-arrow--left" href="{highlightLinkUrl-1}">{highlightLinkText-1}</a>
                             {.end}
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                     <div class="media-highlight__image" style="background-image: url({highlightImage-2.assetUrl}?format=750w);">
                     </div>
                     <div class="media-highlight__content">
-                        <div>
+                        <div class="media-highlight__content-wrapper">
                             {.if highlightLinkUrl-2}
                                 <a href="{highlightLinkUrl-2}">
                                     <h3 class="heading--small">{highlightTitle-2}</h3>

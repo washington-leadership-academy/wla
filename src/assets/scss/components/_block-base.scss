@@ -38,7 +38,14 @@ $triangle-base-large: $triangle-base * 1.5;
     }
 }
 
-// remove caret and add a border on stacked block--carets
+// Remove caret if it is the first child block
+.block--caret:first-child {
+    &:before {
+        content: none;
+    }
+}
+
+// Remove caret and add a border on stacked block--carets
 .block--caret + .block--caret {
     border-top: 1px solid shade($jerseywhite, 5%);
     margin-top: -4rem;
@@ -46,6 +53,26 @@ $triangle-base-large: $triangle-base * 1.5;
         content: none;
     }
 }
+
+// Fill caret with color of sibling
+.highlightsblock--text + .block--caret {
+    &:before {
+        border-top-color: $secondary-color;
+    }
+}
+
+.highlightsblock--image + .block--caret {
+    &:before {
+        border-top-color: $accent-color;
+    }
+}
+
+.featureblock + .block--caret {
+    &:before {
+        border-top-color: $primary-color;
+    }
+}
+
 
 // Diagonal Block Helper
 

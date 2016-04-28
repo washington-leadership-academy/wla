@@ -51,23 +51,28 @@
         
     {.if pagination}
         <div class="row">
-            <div class="columns small-12 medium-10 medium-offset-1 end">
-                <nav class="news-article__pagination">
-                    <!--NEWER PAGE-->
+            <div class="columns small-12 medium-10 small-centered">
+                <section class="pagination">
+                    <div class="row">
 
-                    {.if pagination.prevPage}
-                        <a href="{pagination.prevPageUrl}" class="article-pagination--left link-arrow link-arrow--left heading--subheader">
-                            Newer
-                        </a>
-                    {.end}
+                        <div class="small-6 columns">
+                            {.section prevItem}
+                                <a href="{fullUrl}" class="link-arrow link-arrow--left type--alt">
+                                    Previous
+                                </a>
+                            {.end}
+                        </div>
 
-                    <!--NEWER PAGE-->
-                    {.if pagination.nextPage}
-                        <a href="{pagination.nextPageUrl}" class="article-pagination--right link-arrow link-arrow--right heading--subheader">
-                            Older
-                        </a>
-                    {.end}
-                </nav>
+                        <div class="small-6 columns text-right">
+                            {.section nextItem}
+                                <a href="{fullUrl}" class="link-arrow link-arrow--right type--alt">
+                                    Next
+                                </a>
+                            {.end}
+                        </div>
+
+                    </div>
+                </section>
             </div>
         </div>
     {.end}

@@ -1,0 +1,14 @@
+// Pagination
+
+.pagination {
+    padding-bottom: 4.5rem;
+
+    .link-arrow {
+        opacity: .4;
+        @include transition(opacity);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
