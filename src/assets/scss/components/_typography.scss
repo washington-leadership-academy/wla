@@ -49,7 +49,6 @@
     font-size: .875rem;
     font-weight: $font-weight-bold;
     letter-spacing: 2px;
-    line-height: 1.3;
     text-transform: uppercase;
 }
 
@@ -122,33 +121,38 @@ article {
 }
 
 // Accented link with arrow 
-a.link-arrow {
+.link-arrow {
     position: relative;
+
+    &:before,    
+    &:after {
+        position: absolute;
+        transition: transform 100ms;
+    }
 }
 
-a.link-arrow--right {
+.link-arrow--right {
+    padding-right: 1.5rem;
+
     &:after {
         content: '\02192';
-        position: absolute;
-        margin-left: .25rem;
-        transition: transform 100ms;
+        transform: translateX(.25rem);
     }
 
     &:hover:after {
-        transform: translateX(.25rem);
+        transform: translateX(.5rem);
     }
 }
 
-a.link-arrow--left {
+.link-arrow--left {
+    padding-left: 1.5rem;
+
     &:before {
         content: '\02190';
-        position: absolute;
-        transform: translateX(-1rem);
-        transition: transform 100ms;
-        margin-top: .3rem;
+        transform: translateX(-1.25rem);
     }
 
     &:hover:before {
-        transform: translateX(-1.25rem);
+        transform: translateX(-1.5rem);
     }
 }

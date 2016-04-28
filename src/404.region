@@ -30,7 +30,7 @@
                     <p class="type--medium">
                         The page you're looking for is missing or doesn't exist.
                     </p>
-                    <a class="link--accent" href="/">
+                    <a class="link-arrow link-arrow--right" href="/">
                         Go back to the homepage
                     </a>
                 </article>

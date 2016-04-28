@@ -4,7 +4,7 @@
         <!--WRAPPER-->
 
         <div class="row">
-            <div class="columns small-12 medium-10 medium-offset-1 large-8 large-offset-2">
+            <div class="small-10 medium-8 large-7 columns small-centered">
                 <article id="post-{id}" class="{@|item-classes} news-article" data-item-id="{id}">
                     
                     <!--POST TILE-->
@@ -57,31 +57,31 @@
     <!--PAGINATION-->
         
     {.section pagination}
-        <div class="row">
-            <nav class="news-article__pagination columns small-12 medium-10 medium-offset-1 large-8 large-offset-2">
-                
-                <!--OLDER PAGE-->
+    <div class="row">
+        <div class="small-10 medium-8 large-7 columns small-centered">
+            <section class="pagination">
+                <div class="row">
 
-                {.section nextItem}
-                    <a href="{fullUrl}" class="link-arrow link-arrow--left heading--subheader">
-                        Newer
-                    </a>
-                {.or}
-                 
-                {.end}
+                    <div class="small-6 columns">
+                        {.section prevItem}
+                            <a href="{fullUrl}" class="link-arrow link-arrow--left type--alt">
+                                Previous
+                            </a>
+                        {.end}
+                    </div>
 
-                <!--NEWER PAGE-->
+                    <div class="small-6 columns text-right">
+                        {.section nextItem}
+                            <a href="{fullUrl}" class="link-arrow link-arrow--right type--alt">
+                                Next
+                            </a>
+                        {.end}
+                    </div>
 
-                {.section prevItem}
-                    <a href="{fullUrl}" class="article-pagination--right link-arrow link-arrow--right heading--subheader">
-                        Older
-                    </a>
-                {.or}
-                 
-                {.end}
-
-            </nav>
+                </div>
+            </section>
         </div>
-
+    </div>
     {.end}
+
 </div>
