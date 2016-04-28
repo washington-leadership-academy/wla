@@ -1,6 +1,9 @@
 // Base layout styles
 
+html,
 body {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
     &.is-unscrollable {
         overflow: hidden !important;
         height: 100% !important;

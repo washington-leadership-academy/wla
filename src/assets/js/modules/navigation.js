@@ -1,9 +1,10 @@
+'use strict';
 
 /**
- * @exports MyModule
+ * @exports navigation
  */
 
-var MyModule = {
+const navigation = {
 
   /**
    * Say hello.
@@ -16,7 +17,7 @@ var MyModule = {
 
     // Executes callback in a debounced resize window event
     function resizeWindow(callback) {
-      var resizeTimer;
+      let resizeTimer;
 
       $(window).on('resize', function() {
         clearTimeout(resizeTimer);
@@ -28,22 +29,29 @@ var MyModule = {
 
     // activate dropdown
     $('.js-nav-dropdown').mouseenter(function(){
-      $(this).find('.js-nav-dropdown-anchor').toggleClass('is-active');
-      $(this).find('.js-nav-dropdown-menu').toggleClass('is-active');
+      $(this).find('.js-nav-dropdown-anchor').delay(1).toggleClass('is-active');
+      $(this).find('.js-nav-dropdown-menu').toggleClass('is-available').delay(1).queue(function(next) {
+        $('.js-nav-dropdown-menu').toggleClass('is-visible')
+        next();
+      });
     });
 
     // close dropdown
     $('.js-nav-dropdown').mouseleave(function(){
       $(this).find('.js-nav-dropdown-anchor').toggleClass('is-active');
-      $(this).find('.js-nav-dropdown-menu').toggleClass('is-active');
+      $(this).find('.js-nav-dropdown-menu').toggleClass('is-available is-visible');
     });
 
     // Toggle navigation
     function toggleNavigation() {
       $('.nav-icon').toggleClass('is-active');
       $('body').toggleClass('is-unscrollable');
+      $('html').toggleClass('is-unscrollable');
       $('.header--mobile').toggleClass('is-active');
-      $('.navigation--small').toggleClass('is-active');
+      $('.navigation--small').toggleClass('is-available').delay(1).queue(function(next) {
+        $('.navigation--small').toggleClass('is-visible')
+        next();
+      });
       $('.logo').toggleClass('is-small');
     }
 
@@ -61,4 +69,4 @@ var MyModule = {
   }
 };
 
-export { MyModule };
+export { navigation };
