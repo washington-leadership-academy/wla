@@ -112,6 +112,19 @@
 }
 
 
+// Gallery highlight styles
+
+.highlightsblock--gallery {
+    .highlight {
+        margin: .5rem 1rem;
+
+        @media #{$medium-up} {
+            margin: .5rem 2rem;
+        }
+    }
+}
+
+
 // Gallery images in a highlight block
 
 .gallery__image {
@@ -121,15 +134,10 @@
     border-radius: $global-radius;
     margin: auto;
     margin-bottom: 1rem;
-    height: 5rem;
-    width: 7rem;
+    height: 6rem;
+    width: 8rem;
 
     @media #{$medium-up} {
-        height: 7rem;
-        width: 10rem;
-    }
-
-    @media #{$large-up} {
         height: 9rem;
         width: 14rem;
     }
