@@ -73,6 +73,11 @@
     @media #{$large-up} {
         flex: 2;
     }
+
+    // IE fix to prevent content from overflowing
+    .media-highlight__content-wrapper {
+        max-width: 100%;
+    }
 }
 
 .media-callout {
