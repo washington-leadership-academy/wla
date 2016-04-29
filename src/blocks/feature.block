@@ -2,7 +2,7 @@
 
 <section class="featureblock">
     <div class="row">
-        <div class="small-11 small-centered medium-8 medium-centered large-6 large-uncentered columns">
+        <div class="small-11 small-centered medium-8 medium-centered large-5 large-uncentered large-offset-1 columns">
             <article class="featureblock__content">
                 {.if title}
                     <h3 class="heading--medium">
@@ -17,7 +17,7 @@
                 {.end}
             </article>
         </div>
-        <div class="small-11 small-centered medium-8 medium-centered large-6 large-uncentered columns">
+        <div class="small-11 small-centered medium-8 medium-centered large-5 large-uncentered columns">
             {.if featureImage}
                 <img class="featureblock__image" src="{featureImage.assetUrl}?format=750w">
             {.end}

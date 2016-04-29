@@ -57,7 +57,7 @@ $triangle-base-large: $triangle-base * 1.5;
 // Fill caret with color of sibling
 .highlightsblock--text + .block--caret {
     &:before {
-        border-top-color: $secondary-color;
+        border-top-color: $accent-color;
     }
 }
 
