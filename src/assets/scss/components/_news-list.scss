@@ -85,8 +85,9 @@
     }
 }
 
-.article-summary__timestamp {
+.article__timestamp {
     color: $palegray;
+    text-transform: uppercase;
 }
 
 .article-summary__excerpt {
