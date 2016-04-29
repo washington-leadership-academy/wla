@@ -28,7 +28,9 @@
             <div class="small-11 columns small-centered">
                 <article>
                     {.if title}
-                        <h2 class="contentblock__header">{title}</h2>
+                        <h2 class="contentblock__header">
+                            {title|smartypants}
+                        </h2>
                     {.end}
                     {body}
                 </article>

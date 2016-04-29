@@ -6,7 +6,7 @@
             <article>
                 {.if title}
                     <h2 class="summary__header text-center">
-                    {title}
+                        {title|smartypants}
                     </h2>
                 {.end}
 
@@ -17,10 +17,10 @@
                         <div class="media-highlight__content-wrapper">
                             {.if highlightLinkUrl-1}
                                 <a href="{highlightLinkUrl-1}">
-                                    <h3 class="heading--small">{highlightTitle-1}</h3>
+                                    <h3 class="heading--small">{highlightTitle-1|smartypants}</h3>
                                 </a>
                             {.or}
-                                <h3 class="heading--small">{highlightTitle-1}</h3>
+                                <h3 class="heading--small">{highlightTitle-1|smartypants}</h3>
                             {.end}
 
                             {highlightDescription-1.html}
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="media-callout">
-                    <h3 class="type--callout">{calloutText}</h3>
+                    <h3 class="type--callout">{calloutText|smartypants}</h3>
                     {.if calloutLinkUrl}
                         <a class="link-arrow link-arrow--right" href="{calloutLinkUrl}">{calloutLinkText}</a>
                     {.end}
@@ -46,10 +46,10 @@
                         <div class="media-highlight__content-wrapper">
                             {.if highlightLinkUrl-2}
                                 <a href="{highlightLinkUrl-2}">
-                                    <h3 class="heading--small">{highlightTitle-2}</h3>
+                                    <h3 class="heading--small">{highlightTitle-2|smartypants}</h3>
                                 </a>
                             {.or}
-                                <h3 class="heading--small">{highlightTitle-2}</h3>
+                                <h3 class="heading--small">{highlightTitle-2|smartpants}</h3>
                             {.end}
 
                             {highlightDescription-2.html}

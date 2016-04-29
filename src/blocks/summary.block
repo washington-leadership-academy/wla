@@ -5,7 +5,7 @@
         <div class="small-11 medium-7 columns small-centered text-center">
             <article>
                 {.if title}
-                    <h2 class="summary__header summary__header--accent">{title}</h2>
+                    <h2 class="summary__header summary__header--accent">{title|smartypants}</h2>
                 {.end}
                 <div class="summary__content">
                     {summaryDescription.html}

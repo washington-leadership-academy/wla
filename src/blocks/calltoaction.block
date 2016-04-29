@@ -7,7 +7,7 @@
             <article>
                 {.if ctaText}
                     <p class="type--callout-large">
-                        {ctaText}
+                        {ctaText|smartypants}
                     </p>
                 {.end}
 
