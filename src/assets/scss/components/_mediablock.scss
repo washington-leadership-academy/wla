@@ -87,12 +87,14 @@
 
     @media #{$medium-up} {
         flex: 2;
-        padding: 5rem 3rem;
+        padding: 6rem 3rem;
     }
 
     .type--callout {
         color: #fff;
+        margin: auto;
         margin-bottom: 1rem;
+        max-width: 45rem;
 
         @media #{$medium-up} {
             margin-bottom: 1rem;
