@@ -35,7 +35,7 @@
     border: 1px solid darken($jerseywhite, 5%);
     border-top: 0;
     padding: 1.5rem;
-    right: 0;
+    right: 10px; //account for box shadow
 
     @media #{$large-up} { 
         border-top: 1px solid darken($jerseywhite, 5%);
