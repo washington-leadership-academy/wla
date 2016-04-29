@@ -7,6 +7,10 @@
     }
 }
 
+.article-list {
+    background: $jerseywhite;
+}
+
 .article__body {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -22,7 +26,7 @@
     }
 
     .image-block-wrapper {
-        border: 1px solid #eee;
+        border: 1px solid darken($jerseywhite, 5%);
         width: 110%;
         margin-left: -5%;
 
@@ -49,7 +53,7 @@
 .shareblock {
     margin-top: 3rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid darken($jerseywhite, 5%);
     padding-bottom: 3rem;
 
     span {

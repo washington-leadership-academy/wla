@@ -1,3 +1,5 @@
+<!-- Article -->
+
 <section class="article">
     {.section item}
         <div class="row">
@@ -7,9 +9,9 @@
                     <h1 class="heading--large" data-content-field="title">
                         {title}
                     </h1>
-                    <span class="article__timestamp">
+                    <div class="article__timestamp">
                         <time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time>
-                    </span>
+                    </div>
 
                     <!-- Post content -->
                     <div class="article__body">
@@ -47,7 +49,6 @@
         </div>
     {.end}
             
-
     <!-- Prev/Next article navigation -->
     {.section pagination}
         <div class="row">
