@@ -49,7 +49,7 @@
                                     <h3 class="heading--small">{highlightTitle-2|smartypants}</h3>
                                 </a>
                             {.or}
-                                <h3 class="heading--small">{highlightTitle-2|smartpants}</h3>
+                                <h3 class="heading--small">{highlightTitle-2|smartypants}</h3>
                             {.end}
 
                             {highlightDescription-2.html}
