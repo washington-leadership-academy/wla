@@ -4,7 +4,7 @@
 <!-- Header Subscribe button -->
 <div class="row show-for-large-up">
     <div class="small-12 columns">
-        <a class="header__button right" href="http://mailchimp.com">
+        <a class="header__button right" href="http://eepurl.com/bZE9gT" target="_blank">
             Subscribe to Our Newsletter
         </a>
     </div>
@@ -121,7 +121,7 @@
             {.end}
                 <!-- Header Subscribe button is embedded in mobile nav -->
                 <li>
-                    <a class="header__button mt1" href="http://mailchimp.com">
+                    <a class="header__button mt1" href="http://eepurl.com/bZE9gT" target="_blank">
                         Subscribe to Our Newsletter
                     </a>
                 </li>

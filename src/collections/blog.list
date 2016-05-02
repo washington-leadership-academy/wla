@@ -1,71 +1,65 @@
-<!--ITEM LOOP-->
+<!-- Article Cards -->
 
-<div class="news-list">
+<div class="article article-list">
     <div class="row">
-    {.repeated section items}
-    
-        <!--WRAPPER-->
+        <div class="small-11 medium-8 large-9 columns small-centered">
 
-        <article id="post-{id}" class="{@|item-classes} columns small-12 medium-10 medium-offset-1 end news-list__news-article" data-item-id="{id}">
-            <!--MAIN IMAGE-->
-
-            <a href="{fullUrl}" class="main-image content-fill">
-                <!-- Use originalSize as a flag to check for a custom image -->
-                {.if originalSize}
-                    <div class="news-list__article-image" style="background-image: url({assetUrl}?format=original);"></div>
-                {.or}
-                    <div class="news-list__article-image news-list__article-image--pattern"></div>
-                {.end}  
-               
-            </a>
-            <div class="news-list__article-summary block-shadow">
-                <!--POST TILE-->
-
-                <h1 class="article-summary__heading heading--medium" data-content-field="title">
-                    {.passthrough?}
-                        <a href="{sourceUrl}" target="_blank">{title}</a>
+        {.repeated section items}
+            <article class="article-card">
+                <!-- Card image -->
+                <a href="{fullUrl}">
+                    <!-- Use originalSize as a flag to check for a custom image -->
+                    {.if originalSize}
+                        <div class="article-card__image" style="background-image: url({assetUrl}?format=750w);"></div>
                     {.or}
-                        <a href="{fullUrl}">{title}</a>
+                        <div class="article-card__image article-card__image--pattern"></div>
                     {.end}
-                </h1>
-                <p class="article-summary__timestamp text--small">
-                    <time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time>
-                </p>
-                <!--EXCERPT OR BODY-->
+                </a>
 
-                {.if excerpt}
-                    <div class="article-summary__excerpt">
-                        {excerpt}
+                <!-- Card content -->
+                <div class="article-card__content">
+                    <h1 class="article-card__heading" data-content-field="title">
+                        {.passthrough?}
+                            <a href="{sourceUrl}" target="_blank">{title}</a>
+                        {.or}
+                            <a href="{fullUrl}">{title}</a>
+                        {.end}
+                    </h1>
+                    <div class="article__timestamp">
+                        <time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time>
                     </div>
-                    <a class="link-arrow link-arrow--right" href="{fullUrl}">Read More</a>
-                {.or}
-            {.end}
-        </article>
-    
-        {.or}
-            No news posts yet.
-    {.end}
-    </div> <!-- end .row -->
 
-    <!--PAGINATION-->
-        
-    {.if pagination}
+                    {.if excerpt}
+                        <div class="article__excerpt">
+                            {excerpt}
+                        </div>
+                    {.end}
+                    <a class="link-arrow link-arrow--right" href="{fullUrl}">Read More</a>
+                </div>
+            </article>
+        {.or}
+            <h2 class="heading--medium text-center mt3 mb3">No news posts yet.</h2>
+        {.end}
+    </div>
+
+    <!-- Pagination -->
+    {.section pagination}
         <div class="row">
-            <div class="columns small-12 medium-10 small-centered">
+            <div class="columns small-11 medium-8 large-9 columns small-centered">
                 <section class="pagination">
                     <div class="row">
 
                         <div class="small-6 columns">
-                            {.section prevItem}
-                                <a href="{fullUrl}" class="link-arrow link-arrow--left type--alt">
+                            {.if pagination.nextPage}
+                                <a href="{pagination.nextPageUrl}" class="link-arrow link-arrow--left type--alt">
                                     Previous
                                 </a>
                             {.end}
                         </div>
 
                         <div class="small-6 columns text-right">
-                            {.section nextItem}
-                                <a href="{fullUrl}" class="link-arrow link-arrow--right type--alt">
+                            {.if pagination.prevPage}
+                                <a href="{pagination.prevPageUrl}" class="link-arrow link-arrow--right type--alt">
                                     Next
                                 </a>
                             {.end}
