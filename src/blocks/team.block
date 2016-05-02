@@ -8,7 +8,7 @@
                     <div class="small-12 medium-11 small-centered columns">
                         {.if title}
                             <h2 class="summary__header text-center">
-                                {title}
+                                {title|smartypants}
                             </h2>
                         {.end}
                     </div>

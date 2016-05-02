@@ -78,7 +78,8 @@
     <div class="row">
         <div class="columns small-12">
             <div class="copyright text-center">
-                Copyright {website.contentModifiedOn|date %Y} &middot; {websiteSettings.storeSettings.businessName}
+                 Copyright {website.contentModifiedOn|date %Y} &middot; {websiteSettings.storeSettings.businessName} 
+                 &middot; <a href="https://github.com/washington-leadership-academy/wla">Open Source</a> by <a href="https://isl.co/">ISL</a>
             </div>
         </div>
     </div>

@@ -32,7 +32,7 @@ $triangle-base-large: $triangle-base * 1.5;
         border-left: $triangle-base-large solid transparent;
         border-right: $triangle-base-large solid transparent;
         border-top: $triangle-base-large solid $body-bg;
-        left: calc(50% - #{$triangle-base-large}/2);
+        left: calc(50% - #{$triangle-base-large});
         position: absolute;
         top: 0;
     }
@@ -57,7 +57,7 @@ $triangle-base-large: $triangle-base * 1.5;
 // Fill caret with color of sibling
 .highlightsblock--text + .block--caret {
     &:before {
-        border-top-color: $secondary-color;
+        border-top-color: $accent-color;
     }
 }
 

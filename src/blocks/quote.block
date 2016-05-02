@@ -11,7 +11,7 @@
 
                 {.if quoteText}
                     <p class="type--callout-large">
-                        &ldquo;{quoteText}&rdquo;
+                        &ldquo;{quoteText|smartypants}&rdquo;
                     </p>
                 {.end}
                 

@@ -7,7 +7,7 @@
                 <article>
                     <!-- Post title -->
                     <h1 class="heading--large" data-content-field="title">
-                        {title}
+                        {title|smartypants}
                     </h1>
                     <div class="article__timestamp">
                         <time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time>

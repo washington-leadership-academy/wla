@@ -23,10 +23,10 @@
                                 {.section customContent}
                                     {.equal? customType "heroBlock"}
                                         {.if title}
-                                            <h1 class="heading--large">{title}</h1>
+                                            <h1 class="heading--large">{title|smartypants}</h1>
                                         {.end}
                                         {.if heroDescription}
-                                            <p class="type--medium">{heroDescription}</p>
+                                            <p class="type--medium">{heroDescription|smartypants}</p>
                                         {.end}
                                         {.if buttonLink}
                                             <a class="button button--ghost button--ghost-alt" href="{buttonLink}">{buttonText}</a>
@@ -42,7 +42,7 @@
                     {.if title}
                     <div class="small-12 columns">
                         <div class="hero__content">
-                            <h1 class="heading--large hero__title small-only-text-center">{title}</h1>
+                            <h1 class="heading--large hero__title small-only-text-center">{title|smartypants}</h1>
                         </div>
                     </div>
                     {.end}

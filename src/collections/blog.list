@@ -20,9 +20,9 @@
                 <div class="article-card__content">
                     <h1 class="article-card__heading" data-content-field="title">
                         {.passthrough?}
-                            <a href="{sourceUrl}" target="_blank">{title}</a>
+                            <a href="{sourceUrl}" target="_blank">{title|smartypants}</a>
                         {.or}
-                            <a href="{fullUrl}">{title}</a>
+                            <a href="{fullUrl}">{title|smartypants}</a>
                         {.end}
                     </h1>
                     <div class="article__timestamp">

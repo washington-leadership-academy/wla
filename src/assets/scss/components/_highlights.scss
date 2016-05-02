@@ -19,7 +19,7 @@
 }
 
 .highlightsblock--text {
-    background: $secondary-color;
+    background: $accent-color;
 }
 
 .highlightsblock--image {
@@ -27,9 +27,7 @@
 }
 
 .highlightsblock--gallery {
-    &:not(:first-of-type){
-        border-top: 1px solid #eee;
-    }
+    background: $jerseywhite;
 }
 
 .highlightsblock__summary {

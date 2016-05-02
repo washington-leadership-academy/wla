@@ -72,7 +72,16 @@
         opacity: .75;
         text-transform: uppercase;
         font-family: $montserrat;
-        font-size: rem-calc(12);
+        font-size: .75rem;
         letter-spacing: 1px;
+
+        a {
+            color: $paleindigo;
+            @include transition(color);
+
+            &:hover {
+                color: tint($paleindigo, 50%);
+            }
+        }
     }
 }
