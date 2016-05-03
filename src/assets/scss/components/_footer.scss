@@ -33,6 +33,7 @@
 
             &:after {
                 content: '|';
+                color: tint($deepindigo, 20%);
                 margin-left: .5rem;
                 margin-right: .5rem;
             }
@@ -64,7 +65,7 @@
 }
 
 .footer__bar {
-    background-color: darken($primary-color, 7%);
+    background-color: darken($primary-color, 8%);
     padding: 1rem;
 
     .copyright {
