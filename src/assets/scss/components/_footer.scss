@@ -1,15 +1,15 @@
 // Footer
 
 .footer {
-    background: shade($primary-color, 15%);
-    color: $paleindigo;
+    background: shade($primary-color, 20%);
+    color: $palegray;
     margin-top: -2px;
     padding-top: 3rem;
     padding-bottom: 3rem;
     position: relative;
 
     a {
-        color: $paleindigo;
+        color: $palegray;
         @include transition(color);
 
         &:hover {
@@ -20,7 +20,7 @@
 
 .footer__logo {
     // TOOD: Replace with SVG asset so we can style the fill
-    opacity: .2;
+    opacity: .5;
 }
 
 .footer__contact-details {
@@ -33,6 +33,7 @@
 
             &:after {
                 content: '|';
+                color: tint($deepindigo, 20%);
                 margin-left: .5rem;
                 margin-right: .5rem;
             }
@@ -52,7 +53,7 @@
 
         svg {
             path {
-                fill: $paleindigo;
+                fill: $palegray;
                 @include transition(fill);
             }
 
@@ -64,11 +65,11 @@
 }
 
 .footer__bar {
-    background-color: darken($primary-color, 5%);
+    background-color: darken($primary-color, 8%);
     padding: 1rem;
 
     .copyright {
-        color: $paleindigo;
+        color: $palegray;
         opacity: .75;
         text-transform: uppercase;
         font-family: $montserrat;
@@ -76,11 +77,11 @@
         letter-spacing: 1px;
 
         a {
-            color: $paleindigo;
+            color: $palegray;
             @include transition(color);
 
             &:hover {
-                color: tint($paleindigo, 50%);
+                color: $jerseywhite;
             }
         }
     }

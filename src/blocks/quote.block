@@ -17,10 +17,7 @@
                 
                 {.if authorName}
                     <p class="type--medium">
-                        &mdash; {authorName}
-                        {.if authorPosition}
-                            , {authorPosition}
-                        {.end}
+                        &mdash; {authorName}{.if authorPosition}, {authorPosition}{.end}
                     </p>
                 {.end}
             </article>

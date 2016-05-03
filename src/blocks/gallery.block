@@ -20,7 +20,7 @@
                         <div class="highlights-group text-center">
                             {.repeated section galleryImages}
                                 <div class="highlight">
-                                    {.if clickthroughUrl}<a class="gallery__image-link" href="{clickthroughUrl}">{.end}
+                                    {.if clickthroughUrl}<a class="gallery__image-link" href="{clickthroughUrl}" target="_blank">{.end}
                                         <div class="gallery__image" style="background-image: url({assetUrl}?format=300w);">
                                         </div>
                                     {.if clickthroughUrl}</a>{.end}
