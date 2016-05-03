@@ -1,6 +1,6 @@
 <!-- Summary Block Component-->
 
-<section class="contentblock">
+<section class="contentblock buttonblock {.if buttonStyle-1}buttonblock--gold{.end} {.if buttonStyle-2}buttonblock--teal{.end}">
     <div class="row">
         <div class="small-11 medium-8 columns small-centered text-center">
             <article>
@@ -9,6 +9,7 @@
                 {.end}
                 <div class="summary__content">
                     {summaryDescription.html}
+                    {body}
                 </div>
             </article>
         </div>

@@ -37,6 +37,10 @@
             {@|apply team.block}
         {.end}
 
+        {.equal? customType "buttonBlock"}
+            {@|apply button.block}
+        {.end}
+
     {.or}
     <!-- Generic Text Block-->
         <section class="contentblock">
