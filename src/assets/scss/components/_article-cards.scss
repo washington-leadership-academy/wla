@@ -27,7 +27,9 @@
 }
 
 .article-card__image--pattern {
-    background-image: url(../images/wlapattern.jpg);
+    background-image: url(../images/wlapattern_small-light.png);
+    background-repeat: repeat;
+    background-size: 25%;
 }
 
 .article-card__content {

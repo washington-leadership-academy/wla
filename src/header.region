@@ -29,7 +29,7 @@
                                             <p class="type--medium">{heroDescription|smartypants}</p>
                                         {.end}
                                         {.if buttonLink}
-                                            <a class="button button--ghost button--ghost-alt" href="{buttonLink}">{buttonText}</a>
+                                            <a class="button button--alt" href="{buttonLink}">{buttonText}</a>
                                         {.end}
                                     {.end}
                                 {.end}

@@ -9,3 +9,22 @@ body {
         height: 100% !important;
     }
 }
+
+// Sidebar styles
+.sidebarblock {
+    .social-links a {
+        &:first-child {
+            margin-left: 0;
+        }
+
+        svg {
+            path {
+                fill: $deepindigo;
+            }
+
+            &:hover {
+                path { fill: lighten($deepindigo, 15%); }
+            }
+        }
+    }
+}

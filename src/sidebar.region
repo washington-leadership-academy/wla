@@ -1,0 +1,60 @@
+<main id="content" class="content" role="main" data-content-field="main-content">
+    <div class="row">
+
+        <div class="small-11 large-8 columns small-centered large-uncentered">
+            {squarespace.main-content}
+        </div>
+
+        <div class="small-11 large-4 columns small-centered large-uncentered">
+            <section class="contentblock sidebarblock">
+                <article>
+                    <h3 class="type--alt">Address</h3>
+
+                    {.section website.location}
+                        <div class="mb2">
+                            {.section addressLine1}{@}{.end}
+                            <br>
+                            {.section addressLine2}{@}{.end}
+                        </div>
+                    {.end}
+                    {.section websiteSettings}
+                        <div class="mb2">
+                            {.section contactPhoneNumber}{@}{.end}
+                            <br>
+                            {.section contactEmail}
+                                <a href="mailto:{@}">{@}</a>
+                            {.end}
+                        </div>
+                    {.end}
+
+                    <div class="social-links">
+                        {.repeated section website.socialAccounts}
+                            <a href="{profileUrl}">
+                                {.equal? serviceName "facebook"}
+                                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <title>Facebook Icon</title>
+                                        <path fill="#000" d="M268 512V284h78.978l11.736-92H268v-62.426c0-26.352 7.665-44.31 45.455-44.31L362 85.24V3.837C353 2.728 324.7.25 291.416.25 221.926.25 174 42.666 174 120.56V192H96v92h78v228h94z"/>
+                                    </svg>
+                                {.or equal? serviceName "twitter"}
+                                    <svg width="16" height="16" data-icon="twitter" viewBox="0 0 32 32" style="fill:currentcolor">
+                                        <title>Twitter Icon</title>
+                                        <path fill="#000" d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"></path>
+                                    </svg>
+                                {.or equal? serviceName "instagram"}
+                                    <svg width="16" height="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <title>Instagram Icon</title>
+                                        <path fill="#000" fill-rule="evenodd" d="M58.966 511.373c-32.562 0-58.964-26.41-58.964-58.996V59.213C.002 26.647 26.404.25 58.966.25h393.2c32.566 0 58.964 26.397 58.964 58.963v393.164c0 32.585-26.398 58.996-58.964 58.996h-393.2zm393.2-294.9H407.67c3.242 12.584 5.157 25.733 5.157 39.33 0 86.87-70.406 157.27-157.263 157.27-86.852 0-157.263-70.4-157.263-157.27 0-13.597 1.925-26.747 5.167-39.33H58.965v216.262c0 10.842 8.805 19.643 19.68 19.643h353.842c10.873 0 19.68-8.8 19.68-19.643V216.472zm0-137.604c0-10.852-8.805-19.657-19.68-19.657h-58.963c-10.86 0-19.656 8.805-19.656 19.656v58.986c0 10.85 8.796 19.656 19.656 19.656h58.964c10.873 0 19.68-8.805 19.68-19.656V78.87zM255.563 157.51c-54.29 0-98.294 44-98.294 98.29 0 54.28 44.003 98.303 98.293 98.303 54.29 0 98.303-44.022 98.303-98.303 0-54.29-44.012-98.29-98.303-98.29z"/>
+                                    </svg>
+                                {.or}
+                                    {serviceName}
+                                {.end}
+                            </a>
+                        {.end}
+                    </div>
+
+                </article>
+            </section>
+        </div>
+
+    </div>
+</main>

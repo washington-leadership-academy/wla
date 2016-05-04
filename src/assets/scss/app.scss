@@ -22,7 +22,7 @@
 // @import 'foundation/components/magellan';
 // @import 'foundation/components/orbit';
 // @import 'foundation/components/pagination';
-@import 'foundation/components/panels';
+// @import 'foundation/components/panels';
 // @import 'foundation/components/pricing-tables';
 // @import 'foundation/components/progress-bars';
 // @import 'foundation/components/range-slider';
@@ -50,6 +50,7 @@
 // WLA Elements
 @import "components/typography";
 @import "components/buttons";
+@import "components/forms";
 @import "components/block-base";
 
 // WLA Components
@@ -65,7 +66,6 @@
 @import "components/quoteblock";
 @import "components/calltoaction";
 @import "components/featureblock";
-@import "components/buttonblock";
 @import "components/highlights";
 @import "components/article";
 @import "components/article-cards";

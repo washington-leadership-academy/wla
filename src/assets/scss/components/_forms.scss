@@ -1,0 +1,37 @@
+// Squarespace form styles
+
+.contentblock {
+    .form-wrapper .field-list {
+        .title {
+            @extend %type--alt;
+
+            .required {
+                display: none;
+            }
+        }
+        
+        .field .field-element {
+            @extend %type--small;
+            border: 0 !important;
+            background-color: shade($jerseywhite, 2%);
+        }
+
+        .field textarea.field-element {
+            min-height: 12rem;
+        }
+
+        .field .caption {
+            @extend %type--small;
+            font-size: .8rem;
+            text-transform: uppercase;
+            opacity: .75;
+        }
+    }
+
+    .form-button-wrapper {
+        .sqs-system-button {
+
+            width: 100% !important;
+        }
+    }
+}
