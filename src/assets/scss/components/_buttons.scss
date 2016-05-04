@@ -5,6 +5,11 @@
     padding: 1.25em 2em;
 }
 
+.button--alt {
+    background-color: #fff;
+    color: $primary-color;
+}
+
 .button--ghost {
     border-color: $primary-color;
     border-width: 2px;
