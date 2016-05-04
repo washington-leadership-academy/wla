@@ -5,7 +5,7 @@
             {squarespace.main-content}
         </div>
 
-        <div class="small-11 large-4 columns small-centered large-uncentered">
+        <div class="large-4 columns large-uncentered visible-for-large-up">
             <section class="contentblock sidebarblock">
                 <article>
                     <h3 class="type--alt">Address</h3>
