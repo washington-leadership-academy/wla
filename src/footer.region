@@ -6,11 +6,7 @@
             <h1 class="site-title" data-content-field="site-title">
                 <div class="footer__logo text-center mb2">
                     <a href="/">
-                    {.section logoImageUrl}
-                        <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}">
-                        {.or}
                         <img class="logo" width="200" src="/assets/images/wla-logo.svg" alt="{siteTitle}">
-                    {.end}
                     </a>
                 </div>
             </h1>

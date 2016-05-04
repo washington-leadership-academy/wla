@@ -51,7 +51,7 @@
                             {title|smartypants}
                         </h2>
                     {.end}
-                    <article>
+                    <article class="textblock">
                         {body}
                     </article>
                 </div>

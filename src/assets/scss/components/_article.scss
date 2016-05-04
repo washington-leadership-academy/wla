@@ -16,10 +16,8 @@
     margin-bottom: 3rem;
 }
 
-article,
+.textblock,
 .article__body {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
 
     h1, h2 {
         @extend %heading--small;
