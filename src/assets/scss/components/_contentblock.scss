@@ -19,6 +19,10 @@
     }
 }
 
+.contentblock__header {
+    @extend %heading--large;
+}
+
 .summary__header {
     @extend %heading--subheader;
     color: $primary-color;

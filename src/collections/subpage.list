@@ -45,13 +45,13 @@
     <!-- Text Block-->
         <section class="contentblock">
             <div class="row">
-                <div class="small-11 medium-9 columns small-centered">
+                <div class="small-11 medium-8 columns small-centered">
+                    {.if title}
+                        <h2 class="contentblock__header">
+                            {title|smartypants}
+                        </h2>
+                    {.end}
                     <article>
-                        {.if title}
-                            <h2 class="contentblock__header">
-                                {title|smartypants}
-                            </h2>
-                        {.end}
                         {body}
                     </article>
                 </div>
