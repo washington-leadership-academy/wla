@@ -23,3 +23,54 @@
         color: $primary-color;
     }
 }
+
+
+
+// Squarespace Button Overrides
+
+.contentblock {
+    .sqs-donate-button,
+    .sqs-block-button-element,
+    .sqs-system-button {
+        font-family: $font-family-sans-alt !important;
+        font-size: .875rem !important;
+        font-weight: $font-weight-bold !important;
+        letter-spacing: 2px !important;
+        text-transform: uppercase !important;
+        padding: 1.25em 2em !important;
+        margin-top: 1rem !important;
+        border-width: 2px !important;
+        background-color: transparent !important;
+        }
+}
+
+.contentblock,
+.contentblock.buttonblock--gold {
+    .sqs-donate-button,
+    .sqs-block-button-element,
+    .sqs-system-button {
+        border-color: $secondary-color !important;
+        border-width: 2px !important;
+        color: $secondary-color !important;
+
+        &:hover {
+            background-color: $secondary-color !important;
+            color: $primary-color !important;
+        }
+    }
+}
+
+.contentblock.buttonblock--teal {
+    .sqs-donate-button,
+    .sqs-block-button-element,
+    .sqs-system-button {
+        border-color: $accent-color !important;
+        border-width: 2px !important;
+        color: $accent-color !important;
+
+        &:hover {
+            background-color: $accent-color !important;
+            color: $primary-color !important;
+        }
+    }
+}

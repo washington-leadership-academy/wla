@@ -42,20 +42,20 @@
         {.end}
 
     {.or}
-    <!-- Generic Text Block-->
+    <!-- Text Block-->
         <section class="contentblock">
-        <div class="row">
-            <div class="small-11 columns small-centered">
-                <article>
-                    {.if title}
-                        <h2 class="contentblock__header">
-                            {title|smartypants}
-                        </h2>
-                    {.end}
-                    {body}
-                </article>
+            <div class="row">
+                <div class="small-11 medium-9 columns small-centered">
+                    <article>
+                        {.if title}
+                            <h2 class="contentblock__header">
+                                {title|smartypants}
+                            </h2>
+                        {.end}
+                        {body}
+                    </article>
+                </div>
             </div>
-        </div>
         </section>
     {.end}
 {.end}
