@@ -8,6 +8,11 @@
 .button--alt {
     background-color: #fff;
     color: $primary-color;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $primary-color;
+    }
 }
 
 .button--ghost {
@@ -45,8 +50,9 @@
         padding: 1.25em 2em !important;
         margin-top: 1rem !important;
         border-width: 2px !important;
+        border-style: solid !important;
         background-color: transparent !important;
-        }
+    }
 }
 
 .contentblock,
